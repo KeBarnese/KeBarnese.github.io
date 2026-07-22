@@ -296,7 +296,7 @@ function render(){
       const per = e.p ? `<span class="per">P${e.p}</span>` : '';
       const cls = `ev k-${e.k}`;
       html += e.hw
-        ? `<a class="${cls}" href="${hwUrl(e.hw)}" target="_top">${e.t}${per}</a>`
+        ? : `<a href="?week=${i+1}" data-week="${i}">${label}</a>`;
         : `<span class="${cls}">${e.t}${per}</span>`;
     }
     html += '</div>';
@@ -330,6 +330,13 @@ sel.onchange = () => { current = +sel.value; render(); };
 document.getElementById('prev').onclick  = () => { current = clamp(current-1); render(); };
 document.getElementById('next').onclick  = () => { current = clamp(current+1); render(); };
 document.getElementById('todayBtn').onclick = () => { current = clamp(weekOf(new Date())); render(); };
+document.getElementById('weeklinks').onclick = (ev) => {
+  const a = ev.target.closest('a[data-week]');   // was a week link clicked?
+  if (!a) return;                                 // no: let the browser be
+  ev.preventDefault();                            // yes: cancel the page load
+  current = +a.dataset.week;                      // '7' -> 7 (the + coerces)
+  render();                                       // redraw in place
+};  
 
 render();
 </script>
