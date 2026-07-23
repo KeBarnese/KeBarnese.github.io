@@ -56,6 +56,7 @@
   .k-due{background:var(--due-bg);color:var(--due)}
   .k-info{background:var(--info-bg);color:var(--info)}
   .k-hol{background:var(--hol-bg);color:var(--hol);font-weight:600}
+  .k-lit{background:#f3eefa;color:#5a3d8a;font-weight:600}
   .empty{color:var(--muted);font-size:.8rem;font-style:italic}
   .noweek{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px;
           text-align:center;color:var(--muted);font-style:italic}
@@ -186,13 +187,13 @@ const HOLIDAYS = [
   {d:'2026-11-25', p:0, k:'hol', t:'Thanksgiving Break',              hw:null},
   {d:'2026-11-26', p:0, k:'hol', t:'Thanksgiving Break',              hw:null},
   {d:'2026-11-27', p:0, k:'hol', t:'Thanksgiving Break',              hw:null},
-  {d:'2026-09-01', p:0, k:'info', t:'Liturgy',              hw:null},
-  {d:'2026-11-05', p:0, k:'info', t:'Liturgy',              hw:null},
-  {d:'2026-12-08', p:0, k:'info', t:'Liturgy',              hw:null}
+  {d:'2026-09-01', p:0, k:'lit', t:'Liturgy',              hw:null},
+  {d:'2026-11-05', p:0, k:'lit', t:'Liturgy',              hw:null},
+  {d:'2026-12-08', p:0, k:'lit', t:'Liturgy',              hw:null}
 ];
 /* ==== schedule data (generated from Loyola_Schedule.xlsx) ===============
    p: 0 = both periods, 1 = Period 1 only, 2 = Period 2 only
-   k: lect | lab | exam | due | info | hol                                 */
+   k: lect | lab | exam | due | info | hol | lit                                */
 const EVENTS = [{"d":"2026-08-17","p":0,"k":"info","t":"First day · A0: intro, syllabus, math skills","hw":null},{"d":"2026-08-18","p":0,"k":"lect","t":"Lecture A1","hw":"HW_A1"},{"d":"2026-08-20","p":0,"k":"lect","t":"Lecture A2","hw":"HW_A2"},{"d":"2026-08-20","p":0,"k":"due","t":"Due: HW A1","hw":"HW_A1"},{"d":"2026-08-24","p":0,"k":"lect","t":"Lecture A3","hw":"HW_A3"},{"d":"2026-08-24","p":0,"k":"due","t":"Due: HW A2","hw":"HW_A2"},{"d":"2026-08-25","p":0,"k":"lect","t":"Lecture A4","hw":"HW_A4"},{"d":"2026-08-25","p":0,"k":"due","t":"Due: HW A3","hw":"HW_A3"},{"d":"2026-08-26","p":1,"k":"lect","t":"Lecture A5","hw":"HW_A5"},{"d":"2026-08-26","p":1,"k":"due","t":"Due: HW A4","hw":"HW_A4"},{"d":"2026-08-27","p":2,"k":"lect","t":"Lecture A5","hw":"HW_A5"},{"d":"2026-08-27","p":2,"k":"due","t":"Due: HW A4","hw":"HW_A4"},{"d":"2026-08-28","p":0,"k":"lab","t":"Lab 1","hw":"Lab_1"},{"d":"2026-08-28","p":0,"k":"due","t":"Due: HW A5","hw":"HW_A5"},{"d":"2026-08-31","p":1,"k":"lect","t":"Lecture B1","hw":"HW_B1"},{"d":"2026-08-31","p":1,"k":"due","t":"Due: Lab 1","hw":"Lab_1"},{"d":"2026-09-01","p":2,"k":"lect","t":"Lecture B1","hw":"HW_B1"},{"d":"2026-09-01","p":2,"k":"due","t":"Due: Lab 1","hw":"Lab_1"},{"d":"2026-09-02","p":0,"k":"lect","t":"Lecture B2","hw":"HW_B2"},{"d":"2026-09-02","p":0,"k":"due","t":"Due: HW B1","hw":"HW_B1"},{"d":"2026-09-08","p":0,"k":"lect","t":"Lecture C1","hw":"HW_C1"},{"d":"2026-09-08","p":0,"k":"due","t":"Due: HW B2","hw":"HW_B2"},{"d":"2026-09-09","p":0,"k":"lect","t":"Lecture C2","hw":"HW_C2"},{"d":"2026-09-09","p":0,"k":"due","t":"Due: HW C1","hw":"HW_C1"},{"d":"2026-09-11","p":0,"k":"lect","t":"Lecture C3","hw":"HW_C3"},{"d":"2026-09-11","p":0,"k":"due","t":"Due: HW C2","hw":"HW_C2"},{"d":"2026-09-14","p":0,"k":"lab","t":"Lab 2","hw":"Lab_2"},{"d":"2026-09-14","p":0,"k":"due","t":"Due: HW C3","hw":"HW_C3"},{"d":"2026-09-16","p":0,"k":"exam","t":"Exam 1 · Multiple Choice","hw":null},{"d":"2026-09-16","p":0,"k":"due","t":"Due: Lab 2","hw":"Lab_2"},{"d":"2026-09-17","p":0,"k":"exam","t":"Exam 1 · Free Response","hw":null},{"d":"2026-09-21","p":0,"k":"lect","t":"Lecture D1","hw":"HW_D1"},{"d":"2026-09-22","p":1,"k":"lect","t":"Lecture D2","hw":"HW_D2"},{"d":"2026-09-22","p":1,"k":"due","t":"Due: HW D1","hw":"HW_D1"},{"d":"2026-09-23","p":2,"k":"lect","t":"Lecture D2","hw":"HW_D2"},{"d":"2026-09-23","p":2,"k":"due","t":"Due: HW D1","hw":"HW_D1"},{"d":"2026-09-24","p":0,"k":"lect","t":"Lecture D3","hw":"HW_D3"},{"d":"2026-09-24","p":0,"k":"due","t":"Due: HW D2","hw":"HW_D2"},{"d":"2026-09-28","p":0,"k":"lect","t":"Lecture D4","hw":"HW_D4"},{"d":"2026-09-28","p":0,"k":"due","t":"Due: HW D3","hw":"HW_D3"},{"d":"2026-09-29","p":1,"k":"lect","t":"Lecture D5","hw":"HW_D5"},{"d":"2026-09-29","p":1,"k":"due","t":"Due: HW D4","hw":"HW_D4"},{"d":"2026-09-30","p":2,"k":"lect","t":"Lecture D5","hw":"HW_D5"},{"d":"2026-09-30","p":2,"k":"due","t":"Due: HW D4","hw":"HW_D4"},{"d":"2026-10-01","p":0,"k":"lect","t":"Lecture D6","hw":"HW_D6"},{"d":"2026-10-01","p":0,"k":"due","t":"Due: HW D5","hw":"HW_D5"},{"d":"2026-10-05","p":0,"k":"lab","t":"Lab 3","hw":"Lab_3"},{"d":"2026-10-05","p":0,"k":"due","t":"Due: HW D6","hw":"HW_D6"},{"d":"2026-10-06","p":1,"k":"lect","t":"Lecture D7","hw":"HW_D7"},{"d":"2026-10-06","p":1,"k":"due","t":"Due: Lab 3","hw":"Lab_3"},{"d":"2026-10-07","p":2,"k":"lect","t":"Lecture D7","hw":"HW_D7"},{"d":"2026-10-07","p":2,"k":"due","t":"Due: Lab 3","hw":"Lab_3"},{"d":"2026-10-08","p":0,"k":"lect","t":"Lecture D8","hw":"HW_D8"},{"d":"2026-10-08","p":0,"k":"due","t":"Due: HW D7","hw":"HW_D7"},{"d":"2026-10-09","p":1,"k":"lect","t":"Lecture D9","hw":"HW_D9"},{"d":"2026-10-09","p":1,"k":"due","t":"Due: HW D8","hw":"HW_D8"},{"d":"2026-10-13","p":2,"k":"lect","t":"Lecture D9","hw":"HW_D9"},{"d":"2026-10-13","p":2,"k":"due","t":"Due: HW D8","hw":"HW_D8"},{"d":"2026-10-14","p":0,"k":"exam","t":"Exam 2 · Multiple Choice","hw":null},{"d":"2026-10-14","p":0,"k":"due","t":"Due: HW D9","hw":"HW_D9"},{"d":"2026-10-16","p":0,"k":"exam","t":"Exam 2 · Free Response","hw":null},{"d":"2026-10-19","p":0,"k":"lect","t":"Lecture E1","hw":"HW_E1"},{"d":"2026-10-21","p":0,"k":"lect","t":"Lecture E2","hw":"HW_E2"},{"d":"2026-10-21","p":0,"k":"due","t":"Due: HW E1","hw":"HW_E1"},{"d":"2026-10-22","p":0,"k":"lect","t":"Lecture E3","hw":"HW_E3"},{"d":"2026-10-22","p":0,"k":"due","t":"Due: HW E2","hw":"HW_E2"},{"d":"2026-10-26","p":0,"k":"lect","t":"Lecture E4","hw":"HW_E4"},{"d":"2026-10-26","p":0,"k":"due","t":"Due: HW E3","hw":"HW_E3"},{"d":"2026-10-27","p":0,"k":"lect","t":"Lecture E5","hw":"HW_E5"},{"d":"2026-10-27","p":0,"k":"due","t":"Due: HW E4","hw":"HW_E4"},{"d":"2026-10-29","p":0,"k":"lect","t":"Lecture E6","hw":"HW_E6"},{"d":"2026-10-29","p":0,"k":"due","t":"Due: HW E5","hw":"HW_E5"},{"d":"2026-11-02","p":0,"k":"lab","t":"Lab 4","hw":"Lab_4"},{"d":"2026-11-02","p":0,"k":"due","t":"Due: HW E6","hw":"HW_E6"},{"d":"2026-11-04","p":0,"k":"exam","t":"Exam 3 · Multiple Choice","hw":null},{"d":"2026-11-04","p":0,"k":"due","t":"Due: Lab 4","hw":"Lab_4"},{"d":"2026-11-05","p":1,"k":"exam","t":"Exam 3 · Free Response","hw":null},{"d":"2026-11-06","p":2,"k":"exam","t":"Exam 3 · Free Response","hw":null},{"d":"2026-11-10","p":0,"k":"lect","t":"Lecture F1","hw":"HW_F1"},{"d":"2026-11-12","p":0,"k":"lect","t":"Lecture F2","hw":"HW_F2"},{"d":"2026-11-12","p":0,"k":"due","t":"Due: HW F1","hw":"HW_F1"},{"d":"2026-11-13","p":0,"k":"lect","t":"Lecture F3","hw":"HW_F3"},{"d":"2026-11-13","p":0,"k":"due","t":"Due: HW F2","hw":"HW_F2"},{"d":"2026-11-17","p":0,"k":"lect","t":"Lecture F4","hw":"HW_F4"},{"d":"2026-11-17","p":0,"k":"due","t":"Due: HW F3","hw":"HW_F3"},{"d":"2026-11-18","p":1,"k":"lect","t":"Lecture F5","hw":"HW_F5"},{"d":"2026-11-18","p":1,"k":"due","t":"Due: HW F4","hw":"HW_F4"},{"d":"2026-11-19","p":2,"k":"lect","t":"Lecture F5","hw":"HW_F5"},{"d":"2026-11-19","p":2,"k":"due","t":"Due: HW F4","hw":"HW_F4"},{"d":"2026-11-20","p":0,"k":"lab","t":"Lab 5","hw":"Lab_5"},{"d":"2026-11-20","p":0,"k":"due","t":"Due: HW F5","hw":"HW_F5"},{"d":"2026-11-30","p":1,"k":"lect","t":"Lecture G1","hw":"HW_G1"},{"d":"2026-11-30","p":1,"k":"due","t":"Due: Lab 5","hw":"Lab_5"},{"d":"2026-12-01","p":2,"k":"lect","t":"Lecture G1","hw":"HW_G1"},{"d":"2026-12-01","p":2,"k":"due","t":"Due: Lab 5","hw":"Lab_5"},{"d":"2026-12-02","p":0,"k":"lect","t":"Lecture G2","hw":"HW_G2"},{"d":"2026-12-02","p":0,"k":"due","t":"Due: HW G1","hw":"HW_G1"},{"d":"2026-12-04","p":0,"k":"lect","t":"Lecture G3","hw":"HW_G3"},{"d":"2026-12-04","p":0,"k":"due","t":"Due: HW G2","hw":"HW_G2"},{"d":"2026-12-07","p":0,"k":"lect","t":"Lecture G4","hw":"HW_G4"},{"d":"2026-12-07","p":0,"k":"due","t":"Due: HW G3","hw":"HW_G3"},{"d":"2026-12-09","p":0,"k":"lect","t":"Lecture G5","hw":"HW_G5"},{"d":"2026-12-09","p":0,"k":"due","t":"Due: HW G4","hw":"HW_G4"},{"d":"2026-12-11","p":0,"k":"lab","t":"Lab 6","hw":"Lab_6"},{"d":"2026-12-11","p":0,"k":"due","t":"Due: HW G5","hw":"HW_G5"},{"d":"2026-12-15","p":0,"k":"exam","t":"Fall Final Exam","hw":null},{"d":"2026-12-15","p":0,"k":"due","t":"Due: Lab 6","hw":"Lab_6"}];
 /* Merge holidays into the master list, then index everything by date so a
    day's events can be looked up in one step: byDate['2026-09-16'] -> [...] */
@@ -206,8 +207,10 @@ const DAY = 864e5;                            // milliseconds in one day (86,400
 const fmt = (dt, opt) => dt.toLocaleDateString('en-US', opt);
 /* Build 'YYYY-MM-DD' from a Date in LOCAL time.  (Not .toISOString() --
    that converts to UTC first and can shift the date across midnight.)    */
-const iso = dt => `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}-${String(dt.getDate()).padStart(2,'0')}`;
-function weekStart(i){ return new Date(FIRST_MONDAY.getTime() + i*7*DAY); }
+/* Add n calendar days.  setDate() renormalizes through DST changes,
+   unlike adding n*24h of milliseconds (Nov 1 is a 25-hour day in LA). */
+function addDays(dt, n){ const x = new Date(dt); x.setDate(x.getDate() + n); return x; }
+function weekStart(i){ return addDays(FIRST_MONDAY, i*7); }
 /* Which week (0-based) does a date fall in?  Walk the date back to its
    Monday, then count how many weeks separate it from FIRST_MONDAY.
    (getDay(): Sun=0..Sat=6, so (day+6)%7 gives days-since-Monday.)        */
@@ -237,9 +240,9 @@ function lookaheadHtml(weekIdx){
   const start = weekStart(next);
   const items = [], seen = new Set();
   for (let d = 0; d < 5; d++){
-    const dt = new Date(start.getTime() + d*DAY);
+    const dt = addDays(start, d);
     for (const e of (byDate[iso(dt)] || [])){
-      if (e.k !== 'exam' && e.k !== 'hol' && e.k !== 'lab') continue;
+      if (e.k !== 'exam' && e.k !== 'hol' && e.k !== 'lab' && e.k!=='lit') continue;
       const key = e.t;                              // collapse repeats
       if (seen.has(key)) continue;
       seen.add(key);
@@ -263,7 +266,7 @@ function render(){
   document.getElementById('lookahead').innerHTML = lookaheadHtml(current);
   let anyEvent = false, html = '<div class="grid">';
   for (let d = 0; d < 5; d++){
-    const dt = new Date(start.getTime() + d*DAY), key = iso(dt);
+    const dt = addDays(start, d), key = iso(dt);
     const evs = byDate[key] || [];
     if (evs.length) anyEvent = true;
     const isToday = key === todayIso;
