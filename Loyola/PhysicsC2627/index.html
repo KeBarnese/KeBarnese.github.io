@@ -13,6 +13,7 @@
     --due:#8a6100;  --due-bg:#fdf3d8;
     --info:#4a5560; --info-bg:#eef1f4;
     --hol:#6b3fa0;  --hol-bg:#f0eaf8;
+    --rev:#0b6b72;  --rev-bg:#e0f2f4;
     --today:#1f5fa8;
   }
   *{box-sizing:border-box}
@@ -57,6 +58,7 @@
   .k-info{background:var(--info-bg);color:var(--info)}
   .k-hol{background:var(--hol-bg);color:var(--hol);font-weight:600}
   .k-lit{background:#f3eefa;color:#5a3d8a;font-weight:600}
+  .k-rev{background:var(--rev-bg);color:var(--rev)}
   .empty{color:var(--muted);font-size:.8rem;font-style:italic}
   .noweek{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px;
           text-align:center;color:var(--muted);font-style:italic}
@@ -91,20 +93,24 @@
   <div id="content"></div>
   <div class="weeklinks" id="weeklinks"></div>
   <div class="legend">
-    <span><span class="dot" style="background:var(--lect-bg);border:1px solid var(--lect)"></span>Lecture (HW assigned)</span>
+    <span><span class="dot" style="background:var(--lect-bg);border:1px solid var(--lect)"></span>Lecture (click for packet PDF)</span>
     <span><span class="dot" style="background:var(--lab-bg);border:1px solid var(--lab)"></span>Lab</span>
     <span><span class="dot" style="background:var(--due-bg);border:1px solid var(--due)"></span>Homework due</span>
     <span><span class="dot" style="background:var(--exam-bg);border:1px solid var(--exam)"></span>Exam</span>
+    <span><span class="dot" style="background:var(--rev-bg);border:1px solid var(--rev)"></span>Exam review PDF</span>
     <span><span class="dot" style="background:var(--hol-bg);border:1px solid var(--hol)"></span>No school</span>
+    <span><span class="dot" style="background:#f3eefa;border:1px solid #5a3d8a"></span>Liturgy — mass attire</span>
   </div>
   <footer>P1/P2 tags mark days that differ between periods; untagged items apply to both.
-    Click any homework or lab to open it in Canvas. Spring schedule posted in January.</footer>
+    Lectures open the packet PDF; homework, labs, and reviews open in Canvas (login required).
+    Spring schedule posted in January.</footer>
 </div>
 <script>
 'use strict';
 /* ==== Canvas links ======================================================
-   Fill ASSIGNMENT_IDS with the output of canvas_get_ids.py.  Any name not
-   in the map falls back to the course assignments list.                  */
+   ASSIGNMENT_IDS: from canvas_get_ids.py  (homework + lab assignments)
+   FILE_IDS:       from canvas_upload_lectures.py  (lecture + review PDFs)
+   Anything missing falls back to the course assignments / files list.    */
 const CANVAS = 'https://loyolahs.instructure.com/courses/6373';
 const ASSIGNMENT_IDS = {
   'HW_A1': 263628,
@@ -170,14 +176,93 @@ const ASSIGNMENT_IDS = {
   'Lab_8': 263688,
   'Lab_9': 263689,
 };
+/* Paste the block printed by canvas_upload_lectures.py here.
+   Keys: 'Lecture_A1' ... 'Lecture_K3', 'Exam_1_Review', 'Fall_Final_Review' */
+const FILE_IDS = {
+  'Exam_1_Review': 3009306,
+  'Exam_2_Review': 3009307,
+  'Exam_3_Review': 3009308,
+  'Exam_4_Review': 3009309,
+  'Exam_5_Review': 3009310,
+  'Fall_Final_Review': 3009311,
+  'Lecture_A0': 3009312,
+  'Lecture_A1': 3009313,
+  'Lecture_A2': 3009314,
+  'Lecture_A3': 3009315,
+  'Lecture_A4': 3009316,
+  'Lecture_A5': 3009317,
+  'Lecture_B1': 3009318,
+  'Lecture_B2': 3009319,
+  'Lecture_C1': 3009320,
+  'Lecture_C2': 3009321,
+  'Lecture_C3': 3009322,
+  'Lecture_D1': 3009323,
+  'Lecture_D2': 3009324,
+  'Lecture_D3': 3009325,
+  'Lecture_D4': 3009326,
+  'Lecture_D5': 3009327,
+  'Lecture_D6': 3009328,
+  'Lecture_D7': 3009329,
+  'Lecture_D8': 3009330,
+  'Lecture_D9': 3009331,
+  'Lecture_E1': 3009332,
+  'Lecture_E2': 3009333,
+  'Lecture_E3': 3009334,
+  'Lecture_E4': 3009335,
+  'Lecture_E5': 3009336,
+  'Lecture_E6': 3009337,
+  'Lecture_F1': 3009338,
+  'Lecture_F2': 3009339,
+  'Lecture_F3': 3009340,
+  'Lecture_F4': 3009341,
+  'Lecture_F5': 3009342,
+  'Lecture_G1': 3009343,
+  'Lecture_G2': 3009344,
+  'Lecture_G3': 3009345,
+  'Lecture_G4': 3009346,
+  'Lecture_G5': 3009347,
+  'Lecture_H1': 3009348,
+  'Lecture_H2': 3009349,
+  'Lecture_H3': 3009350,
+  'Lecture_H4': 3009351,
+  'Lecture_H5': 3009352,
+  'Lecture_H6': 3009353,
+  'Lecture_H7': 3009354,
+  'Lecture_I1': 3009355,
+  'Lecture_I2': 3009356,
+  'Lecture_I3': 3009357,
+  'Lecture_I4': 3009358,
+  'Lecture_I5': 3009359,
+  'Lecture_J1': 3009360,
+  'Lecture_J2': 3009361,
+  'Lecture_J3': 3009362,
+  'Lecture_K1': 3009363,
+  'Lecture_K2': 3009364,
+  'Lecture_K3': 3009365,
+};
+
 function hwUrl(name){
   const id = ASSIGNMENT_IDS[name];
   return id ? `${CANVAS}/assignments/${id}` : `${CANVAS}/assignments`;
 }
-/* ==== holidays ==========================================================
-   Add or correct entries here -- one line per no-school day.  These were
-   inferred from the gaps in the master schedule; check against the school
-   calendar.  Format matches the EVENTS entries below (k:'hol').          */
+function fileUrl(name){
+  const id = FILE_IDS[name];
+  return id ? `${CANVAS}/files/${id}` : `${CANVAS}/files`;
+}
+/* Where should an event's click go?
+   - e.f set            -> that file (reviews, A0 packet)
+   - lecture            -> its packet PDF (HW_A1 -> Lecture_A1)
+   - anything with hw   -> its Canvas assignment (labs, due pills)
+   - otherwise          -> no link (plain pill)                            */
+function eventHref(e){
+  if (e.f) return fileUrl(e.f);
+  if (e.k === 'lect' && e.hw) return fileUrl('Lecture_' + e.hw.slice(3));
+  if (e.hw) return hwUrl(e.hw);
+  return null;
+}
+/* ==== holidays & extra events ==========================================
+   Hand-maintained list: no-school days, liturgy days, and the exam-review
+   PDF pills that sit on each MC exam day.  One line per event.           */
 const HOLIDAYS = [
   {d:'2026-09-07', p:0, k:'hol', t:'Labor Day — no school',           hw:null},
   {d:'2026-10-12', p:0, k:'hol', t:'No school (holiday)',             hw:null},
@@ -187,14 +272,19 @@ const HOLIDAYS = [
   {d:'2026-11-25', p:0, k:'hol', t:'Thanksgiving Break',              hw:null},
   {d:'2026-11-26', p:0, k:'hol', t:'Thanksgiving Break',              hw:null},
   {d:'2026-11-27', p:0, k:'hol', t:'Thanksgiving Break',              hw:null},
-  {d:'2026-09-01', p:0, k:'lit', t:'Liturgy',              hw:null},
-  {d:'2026-11-05', p:0, k:'lit', t:'Liturgy',              hw:null},
-  {d:'2026-12-08', p:0, k:'lit', t:'Liturgy',              hw:null}
+  {d:'2026-09-01', p:0, k:'lit', t:'Liturgy',                         hw:null},
+  {d:'2026-11-05', p:0, k:'lit', t:'Liturgy',                         hw:null},
+  {d:'2026-12-08', p:0, k:'lit', t:'Liturgy',                         hw:null},
+  {d:'2026-09-16', p:0, k:'rev', t:'Exam 1 Review (PDF)',  hw:null, f:'Exam_1_Review'},
+  {d:'2026-10-14', p:0, k:'rev', t:'Exam 2 Review (PDF)',  hw:null, f:'Exam_2_Review'},
+  {d:'2026-11-04', p:0, k:'rev', t:'Exam 3 Review (PDF)',  hw:null, f:'Exam_3_Review'},
+  {d:'2026-12-15', p:0, k:'rev', t:'Final Review (PDF)',   hw:null, f:'Fall_Final_Review'}
 ];
 /* ==== schedule data (generated from Loyola_Schedule.xlsx) ===============
    p: 0 = both periods, 1 = Period 1 only, 2 = Period 2 only
-   k: lect | lab | exam | due | info | hol | lit                                */
-const EVENTS = [{"d":"2026-08-17","p":0,"k":"info","t":"First day · A0: intro, syllabus, math skills","hw":null},{"d":"2026-08-18","p":0,"k":"lect","t":"Lecture A1","hw":"HW_A1"},{"d":"2026-08-20","p":0,"k":"lect","t":"Lecture A2","hw":"HW_A2"},{"d":"2026-08-20","p":0,"k":"due","t":"Due: HW A1","hw":"HW_A1"},{"d":"2026-08-24","p":0,"k":"lect","t":"Lecture A3","hw":"HW_A3"},{"d":"2026-08-24","p":0,"k":"due","t":"Due: HW A2","hw":"HW_A2"},{"d":"2026-08-25","p":0,"k":"lect","t":"Lecture A4","hw":"HW_A4"},{"d":"2026-08-25","p":0,"k":"due","t":"Due: HW A3","hw":"HW_A3"},{"d":"2026-08-26","p":1,"k":"lect","t":"Lecture A5","hw":"HW_A5"},{"d":"2026-08-26","p":1,"k":"due","t":"Due: HW A4","hw":"HW_A4"},{"d":"2026-08-27","p":2,"k":"lect","t":"Lecture A5","hw":"HW_A5"},{"d":"2026-08-27","p":2,"k":"due","t":"Due: HW A4","hw":"HW_A4"},{"d":"2026-08-28","p":0,"k":"lab","t":"Lab 1","hw":"Lab_1"},{"d":"2026-08-28","p":0,"k":"due","t":"Due: HW A5","hw":"HW_A5"},{"d":"2026-08-31","p":1,"k":"lect","t":"Lecture B1","hw":"HW_B1"},{"d":"2026-08-31","p":1,"k":"due","t":"Due: Lab 1","hw":"Lab_1"},{"d":"2026-09-01","p":2,"k":"lect","t":"Lecture B1","hw":"HW_B1"},{"d":"2026-09-01","p":2,"k":"due","t":"Due: Lab 1","hw":"Lab_1"},{"d":"2026-09-02","p":0,"k":"lect","t":"Lecture B2","hw":"HW_B2"},{"d":"2026-09-02","p":0,"k":"due","t":"Due: HW B1","hw":"HW_B1"},{"d":"2026-09-08","p":0,"k":"lect","t":"Lecture C1","hw":"HW_C1"},{"d":"2026-09-08","p":0,"k":"due","t":"Due: HW B2","hw":"HW_B2"},{"d":"2026-09-09","p":0,"k":"lect","t":"Lecture C2","hw":"HW_C2"},{"d":"2026-09-09","p":0,"k":"due","t":"Due: HW C1","hw":"HW_C1"},{"d":"2026-09-11","p":0,"k":"lect","t":"Lecture C3","hw":"HW_C3"},{"d":"2026-09-11","p":0,"k":"due","t":"Due: HW C2","hw":"HW_C2"},{"d":"2026-09-14","p":0,"k":"lab","t":"Lab 2","hw":"Lab_2"},{"d":"2026-09-14","p":0,"k":"due","t":"Due: HW C3","hw":"HW_C3"},{"d":"2026-09-16","p":0,"k":"exam","t":"Exam 1 · Multiple Choice","hw":null},{"d":"2026-09-16","p":0,"k":"due","t":"Due: Lab 2","hw":"Lab_2"},{"d":"2026-09-17","p":0,"k":"exam","t":"Exam 1 · Free Response","hw":null},{"d":"2026-09-21","p":0,"k":"lect","t":"Lecture D1","hw":"HW_D1"},{"d":"2026-09-22","p":1,"k":"lect","t":"Lecture D2","hw":"HW_D2"},{"d":"2026-09-22","p":1,"k":"due","t":"Due: HW D1","hw":"HW_D1"},{"d":"2026-09-23","p":2,"k":"lect","t":"Lecture D2","hw":"HW_D2"},{"d":"2026-09-23","p":2,"k":"due","t":"Due: HW D1","hw":"HW_D1"},{"d":"2026-09-24","p":0,"k":"lect","t":"Lecture D3","hw":"HW_D3"},{"d":"2026-09-24","p":0,"k":"due","t":"Due: HW D2","hw":"HW_D2"},{"d":"2026-09-28","p":0,"k":"lect","t":"Lecture D4","hw":"HW_D4"},{"d":"2026-09-28","p":0,"k":"due","t":"Due: HW D3","hw":"HW_D3"},{"d":"2026-09-29","p":1,"k":"lect","t":"Lecture D5","hw":"HW_D5"},{"d":"2026-09-29","p":1,"k":"due","t":"Due: HW D4","hw":"HW_D4"},{"d":"2026-09-30","p":2,"k":"lect","t":"Lecture D5","hw":"HW_D5"},{"d":"2026-09-30","p":2,"k":"due","t":"Due: HW D4","hw":"HW_D4"},{"d":"2026-10-01","p":0,"k":"lect","t":"Lecture D6","hw":"HW_D6"},{"d":"2026-10-01","p":0,"k":"due","t":"Due: HW D5","hw":"HW_D5"},{"d":"2026-10-05","p":0,"k":"lab","t":"Lab 3","hw":"Lab_3"},{"d":"2026-10-05","p":0,"k":"due","t":"Due: HW D6","hw":"HW_D6"},{"d":"2026-10-06","p":1,"k":"lect","t":"Lecture D7","hw":"HW_D7"},{"d":"2026-10-06","p":1,"k":"due","t":"Due: Lab 3","hw":"Lab_3"},{"d":"2026-10-07","p":2,"k":"lect","t":"Lecture D7","hw":"HW_D7"},{"d":"2026-10-07","p":2,"k":"due","t":"Due: Lab 3","hw":"Lab_3"},{"d":"2026-10-08","p":0,"k":"lect","t":"Lecture D8","hw":"HW_D8"},{"d":"2026-10-08","p":0,"k":"due","t":"Due: HW D7","hw":"HW_D7"},{"d":"2026-10-09","p":1,"k":"lect","t":"Lecture D9","hw":"HW_D9"},{"d":"2026-10-09","p":1,"k":"due","t":"Due: HW D8","hw":"HW_D8"},{"d":"2026-10-13","p":2,"k":"lect","t":"Lecture D9","hw":"HW_D9"},{"d":"2026-10-13","p":2,"k":"due","t":"Due: HW D8","hw":"HW_D8"},{"d":"2026-10-14","p":0,"k":"exam","t":"Exam 2 · Multiple Choice","hw":null},{"d":"2026-10-14","p":0,"k":"due","t":"Due: HW D9","hw":"HW_D9"},{"d":"2026-10-16","p":0,"k":"exam","t":"Exam 2 · Free Response","hw":null},{"d":"2026-10-19","p":0,"k":"lect","t":"Lecture E1","hw":"HW_E1"},{"d":"2026-10-21","p":0,"k":"lect","t":"Lecture E2","hw":"HW_E2"},{"d":"2026-10-21","p":0,"k":"due","t":"Due: HW E1","hw":"HW_E1"},{"d":"2026-10-22","p":0,"k":"lect","t":"Lecture E3","hw":"HW_E3"},{"d":"2026-10-22","p":0,"k":"due","t":"Due: HW E2","hw":"HW_E2"},{"d":"2026-10-26","p":0,"k":"lect","t":"Lecture E4","hw":"HW_E4"},{"d":"2026-10-26","p":0,"k":"due","t":"Due: HW E3","hw":"HW_E3"},{"d":"2026-10-27","p":0,"k":"lect","t":"Lecture E5","hw":"HW_E5"},{"d":"2026-10-27","p":0,"k":"due","t":"Due: HW E4","hw":"HW_E4"},{"d":"2026-10-29","p":0,"k":"lect","t":"Lecture E6","hw":"HW_E6"},{"d":"2026-10-29","p":0,"k":"due","t":"Due: HW E5","hw":"HW_E5"},{"d":"2026-11-02","p":0,"k":"lab","t":"Lab 4","hw":"Lab_4"},{"d":"2026-11-02","p":0,"k":"due","t":"Due: HW E6","hw":"HW_E6"},{"d":"2026-11-04","p":0,"k":"exam","t":"Exam 3 · Multiple Choice","hw":null},{"d":"2026-11-04","p":0,"k":"due","t":"Due: Lab 4","hw":"Lab_4"},{"d":"2026-11-05","p":1,"k":"exam","t":"Exam 3 · Free Response","hw":null},{"d":"2026-11-06","p":2,"k":"exam","t":"Exam 3 · Free Response","hw":null},{"d":"2026-11-10","p":0,"k":"lect","t":"Lecture F1","hw":"HW_F1"},{"d":"2026-11-12","p":0,"k":"lect","t":"Lecture F2","hw":"HW_F2"},{"d":"2026-11-12","p":0,"k":"due","t":"Due: HW F1","hw":"HW_F1"},{"d":"2026-11-13","p":0,"k":"lect","t":"Lecture F3","hw":"HW_F3"},{"d":"2026-11-13","p":0,"k":"due","t":"Due: HW F2","hw":"HW_F2"},{"d":"2026-11-17","p":0,"k":"lect","t":"Lecture F4","hw":"HW_F4"},{"d":"2026-11-17","p":0,"k":"due","t":"Due: HW F3","hw":"HW_F3"},{"d":"2026-11-18","p":1,"k":"lect","t":"Lecture F5","hw":"HW_F5"},{"d":"2026-11-18","p":1,"k":"due","t":"Due: HW F4","hw":"HW_F4"},{"d":"2026-11-19","p":2,"k":"lect","t":"Lecture F5","hw":"HW_F5"},{"d":"2026-11-19","p":2,"k":"due","t":"Due: HW F4","hw":"HW_F4"},{"d":"2026-11-20","p":0,"k":"lab","t":"Lab 5","hw":"Lab_5"},{"d":"2026-11-20","p":0,"k":"due","t":"Due: HW F5","hw":"HW_F5"},{"d":"2026-11-30","p":1,"k":"lect","t":"Lecture G1","hw":"HW_G1"},{"d":"2026-11-30","p":1,"k":"due","t":"Due: Lab 5","hw":"Lab_5"},{"d":"2026-12-01","p":2,"k":"lect","t":"Lecture G1","hw":"HW_G1"},{"d":"2026-12-01","p":2,"k":"due","t":"Due: Lab 5","hw":"Lab_5"},{"d":"2026-12-02","p":0,"k":"lect","t":"Lecture G2","hw":"HW_G2"},{"d":"2026-12-02","p":0,"k":"due","t":"Due: HW G1","hw":"HW_G1"},{"d":"2026-12-04","p":0,"k":"lect","t":"Lecture G3","hw":"HW_G3"},{"d":"2026-12-04","p":0,"k":"due","t":"Due: HW G2","hw":"HW_G2"},{"d":"2026-12-07","p":0,"k":"lect","t":"Lecture G4","hw":"HW_G4"},{"d":"2026-12-07","p":0,"k":"due","t":"Due: HW G3","hw":"HW_G3"},{"d":"2026-12-09","p":0,"k":"lect","t":"Lecture G5","hw":"HW_G5"},{"d":"2026-12-09","p":0,"k":"due","t":"Due: HW G4","hw":"HW_G4"},{"d":"2026-12-11","p":0,"k":"lab","t":"Lab 6","hw":"Lab_6"},{"d":"2026-12-11","p":0,"k":"due","t":"Due: HW G5","hw":"HW_G5"},{"d":"2026-12-15","p":0,"k":"exam","t":"Fall Final Exam","hw":null},{"d":"2026-12-15","p":0,"k":"due","t":"Due: Lab 6","hw":"Lab_6"}];
+   k: lect | lab | exam | due | info | hol | lit | rev
+   f: optional Canvas file key (overrides the default link)                */
+const EVENTS = [{"d":"2026-08-17","p":0,"k":"info","t":"First day · A0: intro, syllabus, math skills","hw":null,"f":"Lecture_A0"},{"d":"2026-08-18","p":0,"k":"lect","t":"Lecture A1","hw":"HW_A1"},{"d":"2026-08-20","p":0,"k":"lect","t":"Lecture A2","hw":"HW_A2"},{"d":"2026-08-20","p":0,"k":"due","t":"Due: HW A1","hw":"HW_A1"},{"d":"2026-08-24","p":0,"k":"lect","t":"Lecture A3","hw":"HW_A3"},{"d":"2026-08-24","p":0,"k":"due","t":"Due: HW A2","hw":"HW_A2"},{"d":"2026-08-25","p":0,"k":"lect","t":"Lecture A4","hw":"HW_A4"},{"d":"2026-08-25","p":0,"k":"due","t":"Due: HW A3","hw":"HW_A3"},{"d":"2026-08-26","p":1,"k":"lect","t":"Lecture A5","hw":"HW_A5"},{"d":"2026-08-26","p":1,"k":"due","t":"Due: HW A4","hw":"HW_A4"},{"d":"2026-08-27","p":2,"k":"lect","t":"Lecture A5","hw":"HW_A5"},{"d":"2026-08-27","p":2,"k":"due","t":"Due: HW A4","hw":"HW_A4"},{"d":"2026-08-28","p":0,"k":"lab","t":"Lab 1","hw":"Lab_1"},{"d":"2026-08-28","p":0,"k":"due","t":"Due: HW A5","hw":"HW_A5"},{"d":"2026-08-31","p":1,"k":"lect","t":"Lecture B1","hw":"HW_B1"},{"d":"2026-08-31","p":1,"k":"due","t":"Due: Lab 1","hw":"Lab_1"},{"d":"2026-09-01","p":2,"k":"lect","t":"Lecture B1","hw":"HW_B1"},{"d":"2026-09-01","p":2,"k":"due","t":"Due: Lab 1","hw":"Lab_1"},{"d":"2026-09-02","p":0,"k":"lect","t":"Lecture B2","hw":"HW_B2"},{"d":"2026-09-02","p":0,"k":"due","t":"Due: HW B1","hw":"HW_B1"},{"d":"2026-09-08","p":0,"k":"lect","t":"Lecture C1","hw":"HW_C1"},{"d":"2026-09-08","p":0,"k":"due","t":"Due: HW B2","hw":"HW_B2"},{"d":"2026-09-09","p":0,"k":"lect","t":"Lecture C2","hw":"HW_C2"},{"d":"2026-09-09","p":0,"k":"due","t":"Due: HW C1","hw":"HW_C1"},{"d":"2026-09-11","p":0,"k":"lect","t":"Lecture C3","hw":"HW_C3"},{"d":"2026-09-11","p":0,"k":"due","t":"Due: HW C2","hw":"HW_C2"},{"d":"2026-09-14","p":0,"k":"lab","t":"Lab 2","hw":"Lab_2"},{"d":"2026-09-14","p":0,"k":"due","t":"Due: HW C3","hw":"HW_C3"},{"d":"2026-09-16","p":0,"k":"exam","t":"Exam 1 · Multiple Choice","hw":null},{"d":"2026-09-16","p":0,"k":"due","t":"Due: Lab 2","hw":"Lab_2"},{"d":"2026-09-17","p":0,"k":"exam","t":"Exam 1 · Free Response","hw":null},{"d":"2026-09-21","p":0,"k":"lect","t":"Lecture D1","hw":"HW_D1"},{"d":"2026-09-22","p":1,"k":"lect","t":"Lecture D2","hw":"HW_D2"},{"d":"2026-09-22","p":1,"k":"due","t":"Due: HW D1","hw":"HW_D1"},{"d":"2026-09-23","p":2,"k":"lect","t":"Lecture D2","hw":"HW_D2"},{"d":"2026-09-23","p":2,"k":"due","t":"Due: HW D1","hw":"HW_D1"},{"d":"2026-09-24","p":0,"k":"lect","t":"Lecture D3","hw":"HW_D3"},{"d":"2026-09-24","p":0,"k":"due","t":"Due: HW D2","hw":"HW_D2"},{"d":"2026-09-28","p":0,"k":"lect","t":"Lecture D4","hw":"HW_D4"},{"d":"2026-09-28","p":0,"k":"due","t":"Due: HW D3","hw":"HW_D3"},{"d":"2026-09-29","p":1,"k":"lect","t":"Lecture D5","hw":"HW_D5"},{"d":"2026-09-29","p":1,"k":"due","t":"Due: HW D4","hw":"HW_D4"},{"d":"2026-09-30","p":2,"k":"lect","t":"Lecture D5","hw":"HW_D5"},{"d":"2026-09-30","p":2,"k":"due","t":"Due: HW D4","hw":"HW_D4"},{"d":"2026-10-01","p":0,"k":"lect","t":"Lecture D6","hw":"HW_D6"},{"d":"2026-10-01","p":0,"k":"due","t":"Due: HW D5","hw":"HW_D5"},{"d":"2026-10-05","p":0,"k":"lab","t":"Lab 3","hw":"Lab_3"},{"d":"2026-10-05","p":0,"k":"due","t":"Due: HW D6","hw":"HW_D6"},{"d":"2026-10-06","p":1,"k":"lect","t":"Lecture D7","hw":"HW_D7"},{"d":"2026-10-06","p":1,"k":"due","t":"Due: Lab 3","hw":"Lab_3"},{"d":"2026-10-07","p":2,"k":"lect","t":"Lecture D7","hw":"HW_D7"},{"d":"2026-10-07","p":2,"k":"due","t":"Due: Lab 3","hw":"Lab_3"},{"d":"2026-10-08","p":0,"k":"lect","t":"Lecture D8","hw":"HW_D8"},{"d":"2026-10-08","p":0,"k":"due","t":"Due: HW D7","hw":"HW_D7"},{"d":"2026-10-09","p":1,"k":"lect","t":"Lecture D9","hw":"HW_D9"},{"d":"2026-10-09","p":1,"k":"due","t":"Due: HW D8","hw":"HW_D8"},{"d":"2026-10-13","p":2,"k":"lect","t":"Lecture D9","hw":"HW_D9"},{"d":"2026-10-13","p":2,"k":"due","t":"Due: HW D8","hw":"HW_D8"},{"d":"2026-10-14","p":0,"k":"exam","t":"Exam 2 · Multiple Choice","hw":null},{"d":"2026-10-14","p":0,"k":"due","t":"Due: HW D9","hw":"HW_D9"},{"d":"2026-10-16","p":0,"k":"exam","t":"Exam 2 · Free Response","hw":null},{"d":"2026-10-19","p":0,"k":"lect","t":"Lecture E1","hw":"HW_E1"},{"d":"2026-10-21","p":0,"k":"lect","t":"Lecture E2","hw":"HW_E2"},{"d":"2026-10-21","p":0,"k":"due","t":"Due: HW E1","hw":"HW_E1"},{"d":"2026-10-22","p":0,"k":"lect","t":"Lecture E3","hw":"HW_E3"},{"d":"2026-10-22","p":0,"k":"due","t":"Due: HW E2","hw":"HW_E2"},{"d":"2026-10-26","p":0,"k":"lect","t":"Lecture E4","hw":"HW_E4"},{"d":"2026-10-26","p":0,"k":"due","t":"Due: HW E3","hw":"HW_E3"},{"d":"2026-10-27","p":0,"k":"lect","t":"Lecture E5","hw":"HW_E5"},{"d":"2026-10-27","p":0,"k":"due","t":"Due: HW E4","hw":"HW_E4"},{"d":"2026-10-29","p":0,"k":"lect","t":"Lecture E6","hw":"HW_E6"},{"d":"2026-10-29","p":0,"k":"due","t":"Due: HW E5","hw":"HW_E5"},{"d":"2026-11-02","p":0,"k":"lab","t":"Lab 4","hw":"Lab_4"},{"d":"2026-11-02","p":0,"k":"due","t":"Due: HW E6","hw":"HW_E6"},{"d":"2026-11-04","p":0,"k":"exam","t":"Exam 3 · Multiple Choice","hw":null},{"d":"2026-11-04","p":0,"k":"due","t":"Due: Lab 4","hw":"Lab_4"},{"d":"2026-11-05","p":1,"k":"exam","t":"Exam 3 · Free Response","hw":null},{"d":"2026-11-06","p":2,"k":"exam","t":"Exam 3 · Free Response","hw":null},{"d":"2026-11-10","p":0,"k":"lect","t":"Lecture F1","hw":"HW_F1"},{"d":"2026-11-12","p":0,"k":"lect","t":"Lecture F2","hw":"HW_F2"},{"d":"2026-11-12","p":0,"k":"due","t":"Due: HW F1","hw":"HW_F1"},{"d":"2026-11-13","p":0,"k":"lect","t":"Lecture F3","hw":"HW_F3"},{"d":"2026-11-13","p":0,"k":"due","t":"Due: HW F2","hw":"HW_F2"},{"d":"2026-11-17","p":0,"k":"lect","t":"Lecture F4","hw":"HW_F4"},{"d":"2026-11-17","p":0,"k":"due","t":"Due: HW F3","hw":"HW_F3"},{"d":"2026-11-18","p":1,"k":"lect","t":"Lecture F5","hw":"HW_F5"},{"d":"2026-11-18","p":1,"k":"due","t":"Due: HW F4","hw":"HW_F4"},{"d":"2026-11-19","p":2,"k":"lect","t":"Lecture F5","hw":"HW_F5"},{"d":"2026-11-19","p":2,"k":"due","t":"Due: HW F4","hw":"HW_F4"},{"d":"2026-11-20","p":0,"k":"lab","t":"Lab 5","hw":"Lab_5"},{"d":"2026-11-20","p":0,"k":"due","t":"Due: HW F5","hw":"HW_F5"},{"d":"2026-11-30","p":1,"k":"lect","t":"Lecture G1","hw":"HW_G1"},{"d":"2026-11-30","p":1,"k":"due","t":"Due: Lab 5","hw":"Lab_5"},{"d":"2026-12-01","p":2,"k":"lect","t":"Lecture G1","hw":"HW_G1"},{"d":"2026-12-01","p":2,"k":"due","t":"Due: Lab 5","hw":"Lab_5"},{"d":"2026-12-02","p":0,"k":"lect","t":"Lecture G2","hw":"HW_G2"},{"d":"2026-12-02","p":0,"k":"due","t":"Due: HW G1","hw":"HW_G1"},{"d":"2026-12-04","p":0,"k":"lect","t":"Lecture G3","hw":"HW_G3"},{"d":"2026-12-04","p":0,"k":"due","t":"Due: HW G2","hw":"HW_G2"},{"d":"2026-12-07","p":0,"k":"lect","t":"Lecture G4","hw":"HW_G4"},{"d":"2026-12-07","p":0,"k":"due","t":"Due: HW G3","hw":"HW_G3"},{"d":"2026-12-09","p":0,"k":"lect","t":"Lecture G5","hw":"HW_G5"},{"d":"2026-12-09","p":0,"k":"due","t":"Due: HW G4","hw":"HW_G4"},{"d":"2026-12-11","p":0,"k":"lab","t":"Lab 6","hw":"Lab_6"},{"d":"2026-12-11","p":0,"k":"due","t":"Due: HW G5","hw":"HW_G5"},{"d":"2026-12-15","p":0,"k":"exam","t":"Fall Final Exam","hw":null},{"d":"2026-12-15","p":0,"k":"due","t":"Due: Lab 6","hw":"Lab_6"}];
 /* Merge holidays into the master list, then index everything by date so a
    day's events can be looked up in one step: byDate['2026-09-16'] -> [...] */
 const ALL = EVENTS.concat(HOLIDAYS);
@@ -207,7 +297,7 @@ const DAY = 864e5;                            // milliseconds in one day (86,400
 const fmt = (dt, opt) => dt.toLocaleDateString('en-US', opt);
 /* Build 'YYYY-MM-DD' from a Date in LOCAL time.  (Not .toISOString() --
    that converts to UTC first and can shift the date across midnight.)    */
-  const iso = dt => `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}-${String(dt.getDate()).padStart(2,'0')}`;
+const iso = dt => `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}-${String(dt.getDate()).padStart(2,'0')}`;
 /* Add n calendar days.  setDate() renormalizes through DST changes,
    unlike adding n*24h of milliseconds (Nov 1 is a 25-hour day in LA). */
 function addDays(dt, n){ const x = new Date(dt); x.setDate(x.getDate() + n); return x; }
@@ -232,8 +322,8 @@ const urlWeek = parseInt(new URLSearchParams(location.search).get('week'), 10);
 if (!isNaN(urlWeek) && urlWeek >= 1 && urlWeek <= N_WEEKS) current = urlWeek - 1;
 /* ==== "coming up next week" banner ======================================
    Scans the week AFTER the one being displayed and pulls out anything a
-   student should see coming: exams, holidays, labs.  Duplicate texts are
-   collapsed (Thanksgiving appears 5 times in the data, once in the list). */
+   student should see coming: exams, holidays, labs, liturgy.  Duplicate
+   texts are collapsed (Thanksgiving: 5 entries in the data, 1 in list).  */
 function lookaheadHtml(weekIdx){
   const next = weekIdx + 1;
   if (next >= N_WEEKS)
@@ -243,7 +333,7 @@ function lookaheadHtml(weekIdx){
   for (let d = 0; d < 5; d++){
     const dt = addDays(start, d);
     for (const e of (byDate[iso(dt)] || [])){
-      if (e.k !== 'exam' && e.k !== 'hol' && e.k !== 'lab' && e.k!=='lit') continue;
+      if (e.k !== 'exam' && e.k !== 'hol' && e.k !== 'lab' && e.k !== 'lit') continue;
       const key = e.t;                              // collapse repeats
       if (seen.has(key)) continue;
       seen.add(key);
@@ -278,8 +368,9 @@ function render(){
     for (const e of evs){
       const per = e.p ? `<span class="per">P${e.p}</span>` : '';
       const cls = `ev k-${e.k}`;
-      html += e.hw
-        ? `<a class="${cls}" href="${hwUrl(e.hw)}" target="_top">${e.t}${per}</a>`
+      const href = eventHref(e);
+      html += href
+        ? `<a class="${cls}" href="${href}" target="_top">${e.t}${per}</a>`
         : `<span class="${cls}">${e.t}${per}</span>`;
     }
     html += '</div>';
