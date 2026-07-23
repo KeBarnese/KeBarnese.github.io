@@ -207,6 +207,7 @@ const DAY = 864e5;                            // milliseconds in one day (86,400
 const fmt = (dt, opt) => dt.toLocaleDateString('en-US', opt);
 /* Build 'YYYY-MM-DD' from a Date in LOCAL time.  (Not .toISOString() --
    that converts to UTC first and can shift the date across midnight.)    */
+  const iso = dt => `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}-${String(dt.getDate()).padStart(2,'0')}`;
 /* Add n calendar days.  setDate() renormalizes through DST changes,
    unlike adding n*24h of milliseconds (Nov 1 is a 25-hour day in LA). */
 function addDays(dt, n){ const x = new Date(dt); x.setDate(x.getDate() + n); return x; }
