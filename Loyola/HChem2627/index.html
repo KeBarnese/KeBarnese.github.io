@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Honors Chemistry — Weekly Schedule</title>
+<style>
+  :root{
+    --ink:#1a2530; --muted:#5b6b7a; --line:#dde4ea; --bg:#f6f8fa; --card:#ffffff;
+    --lect:#1f5fa8; --lect-bg:#e8f0fa;
+    --lab:#1e7a45;  --lab-bg:#e6f4ec;
+    --exam:#a8322a; --exam-bg:#faeae8;
+    --due:#8a6100;  --due-bg:#fdf3d8;
+    --quiz:#9a4d10; --quiz-bg:#fbe9d6;
+    --info:#4a5560; --info-bg:#eef1f4;
+    --hol:#6b3fa0;  --hol-bg:#f0eaf8;
+    --rev:#0b6b72;  --rev-bg:#e0f2f4;
+    --today:#1f5fa8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       color:var(--ink);background:var(--bg);padding:14px}
+  .wrap{max-width:1080px;margin:0 auto}
+  header{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;margin-bottom:10px}
+  h1{font-size:1.15rem;margin:0}
+  .sub{color:var(--muted);font-size:.85rem}
+  nav{display:flex;align-items:center;gap:8px;margin:10px 0 12px;flex-wrap:wrap}
+  .btn{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:6px 12px;
+       font-size:.9rem;cursor:pointer;color:var(--ink)}
+  .btn:hover{background:#eef2f6}
+  .btn[disabled]{opacity:.35;cursor:default}
+  select{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:6px 8px;font-size:.9rem}
+  .weektitle{font-weight:600;font-size:1rem;margin-left:auto}
+  .lookahead{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--exam);
+             border-radius:10px;padding:10px 14px;margin-bottom:12px;font-size:.87rem}
+  .lookahead b{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+               display:block;margin-bottom:4px}
+  .lookahead ul{margin:0;padding-left:18px}
+  .lookahead li{margin:2px 0}
+  .lookahead .quiet{color:var(--muted);font-style:italic}
+  .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .day{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 10px;min-height:96px}
+  .day.today{border:2px solid var(--today);box-shadow:0 1px 6px rgba(31,95,168,.18)}
+  .dayhead{font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:7px;
+           display:flex;justify-content:space-between;align-items:baseline}
+  .day.today .dayhead .dname{color:var(--today)}
+  .todaytag{font-size:.65rem;font-weight:700;color:var(--today);letter-spacing:.05em}
+  .ev{display:block;font-size:.82rem;line-height:1.3;border-radius:7px;padding:5px 7px;margin-bottom:5px;
+      text-decoration:none;border:1px solid transparent}
+  a.ev:hover{filter:brightness(.96);text-decoration:underline}
+  .ev .per{font-size:.65rem;font-weight:700;padding:1px 4px;border-radius:4px;margin-left:4px;
+           background:rgba(0,0,0,.08)}
+  .ev .sub{display:inline-block;font-size:.68rem;margin-left:6px;text-decoration:underline;opacity:.85}
+  .k-lect{background:var(--lect-bg);color:var(--lect)}
+  .k-lab{background:var(--lab-bg);color:var(--lab)}
+  .k-exam{background:var(--exam-bg);color:var(--exam);font-weight:600}
+  .k-due{background:var(--due-bg);color:var(--due)}
+  .k-quiz{background:var(--quiz-bg);color:var(--quiz)}
+  .k-info{background:var(--info-bg);color:var(--info)}
+  .k-hol{background:var(--hol-bg);color:var(--hol);font-weight:600}
+  .k-lit{background:#f3eefa;color:#5a3d8a;font-weight:600}
+  .k-rev{background:var(--rev-bg);color:var(--rev)}
+  .empty{color:var(--muted);font-size:.8rem;font-style:italic}
+  .noweek{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px;
+          text-align:center;color:var(--muted);font-style:italic}
+  .weeklinks{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+  .weeklinks b{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+               display:block;margin-bottom:6px}
+  .weeklinks a{display:inline-block;font-size:.8rem;text-decoration:none;color:var(--lect);
+               border:1px solid var(--line);border-radius:6px;padding:3px 8px;margin:2px 3px 2px 0;cursor:pointer}
+  .weeklinks a:hover{background:var(--lect-bg)}
+  .weeklinks a.cur{background:var(--lect);color:#fff;border-color:var(--lect);pointer-events:none}
+  .legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;font-size:.75rem;color:var(--muted)}
+  .legend span{display:inline-flex;align-items:center;gap:5px}
+  .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+  footer{margin-top:12px;font-size:.72rem;color:var(--muted)}
+  .banner{background:#fff8e1;border:1px solid #e7d9a6;color:#6b5a1e;border-radius:8px;
+          padding:6px 10px;font-size:.75rem;margin-bottom:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Honors Chemistry</h1>
+    <span class="sub">2026&ndash;27 &middot; Loyola High School &middot; Dr.&nbsp;Barnese &middot; Periods 5&nbsp;/&nbsp;6&nbsp;/&nbsp;7</span>
+  </header>
+  <div class="banner">Draft dates &mdash; the official 26&ndash;27 rotation isn&rsquo;t published yet. Days will be corrected once it is.</div>
+  <nav>
+    <button class="btn" id="prev">&larr; Prev</button>
+    <button class="btn" id="todayBtn">This Week</button>
+    <button class="btn" id="next">Next &rarr;</button>
+    <select id="weekSel"></select>
+    <span class="weektitle" id="weekTitle"></span>
+  </nav>
+  <div class="lookahead" id="lookahead"></div>
+  <div id="content"></div>
+  <div class="weeklinks" id="weeklinks"></div>
+  <div class="legend">
+    <span><span class="dot" style="background:var(--lect-bg);border:1px solid var(--lect)"></span>Lecture / topic (no link yet)</span>
+    <span><span class="dot" style="background:var(--lab-bg);border:1px solid var(--lab)"></span>Lab</span>
+    <span><span class="dot" style="background:var(--due-bg);border:1px solid var(--due)"></span>Homework due (opens Canvas)</span>
+    <span><span class="dot" style="background:var(--quiz-bg);border:1px solid var(--quiz)"></span>Quiz</span>
+    <span><span class="dot" style="background:var(--exam-bg);border:1px solid var(--exam)"></span>Exam</span>
+    <span><span class="dot" style="background:var(--rev-bg);border:1px solid var(--rev)"></span>Exam review PDF</span>
+    <span><span class="dot" style="background:var(--hol-bg);border:1px solid var(--hol)"></span>No school</span>
+    <span><span class="dot" style="background:#f3eefa;border:1px solid #5a3d8a"></span>Liturgy — mass attire</span>
+  </div>
+  <footer>P5/P6/P7 tags mark days that differ between sections; untagged items apply to all three.
+    Lecture pills show the day's topic (links coming later). Each homework pill sits on its due date and opens the Canvas assignment, with a small &ldquo;practice&rdquo; link to the practice version. Spring schedule posted in January.</footer>
+</div>
+<script>
+'use strict';
+/* ==== Canvas links ======================================================
+   Fill these three maps from canvas_get_ids.py (course 5799). Until then,
+   every link falls back to the course-level assignments / quizzes / files
+   list — nothing breaks, links just aren't pin-point yet.
+     ASSIGNMENT_IDS -> /assignments/:id   (graded HW & graded quizzes)
+     QUIZ_IDS       -> /quizzes/:id       (classic / practice quizzes)
+     FILE_IDS       -> /files/:id         (review PDFs / study guides)      */
+const CANVAS = 'https://loyolahs.instructure.com/courses/6624';
+const ASSIGNMENT_IDS = {
+  'A266413': 266413,
+  'A266414': 266414,
+  'A266415': 266415,
+  'A266416': 266416,
+  'A266417': 266417,
+  'A266418': 266418,
+  'A266596': 266596,
+  'A266622': 266622,
+  'A266609': 266609,
+  'A266419': 266419,
+  'A266420': 266420,
+  'A266586': 266586,
+  'A266421': 266421,
+  'A266422': 266422,
+  'A266423': 266423,
+  'A266599': 266599,
+  'A266477': 266477,
+  'A266478': 266478,
+  'A266627': 266627,
+  'A266610': 266610,
+  'A266480': 266480,
+  'A266479': 266479,
+  'A266587': 266587,
+  'A266481': 266481,
+  'A266483': 266483,
+  'A266628': 266628,
+  'A266554': 266554,
+  'A266491': 266491,
+  'A266492': 266492,
+  'A266588': 266588,
+  'A266493': 266493,
+  'A266494': 266494,
+  'A266495': 266495,
+  'A266496': 266496,
+  'A266600': 266600,
+  'A266497': 266497,
+  'A266498': 266498,
+  'A266500': 266500,
+  'A266501': 266501,
+  'A266502': 266502,
+  'A266504': 266504,
+  'A266503': 266503,
+  'A266505': 266505,
+  'A266601': 266601,
+  'A266612': 266612,
+  'A266645': 266645,
+  'A266510': 266510,
+  'A266509': 266509,
+  'A266511': 266511,
+  'A266512': 266512,
+  'A266629': 266629,
+  'A266513': 266513,
+  'A266514': 266514,
+  'A266515': 266515,
+  'A266516': 266516,
+  'A266517': 266517,
+  'A266590': 266590,
+  'A266630': 266630,
+  'A266518': 266518,
+  'A266519': 266519,
+  'A266520': 266520,
+  'A266602': 266602,
+  'A266613': 266613,
+  'A266591': 266591,
+  'A266521': 266521,
+  'A266522': 266522,
+  'A266523': 266523,
+  'A266524': 266524,
+  'A266525': 266525,
+  'A266526': 266526,
+  'A266527': 266527,
+  'A266528': 266528,
+  'A266529': 266529,
+  'A266631': 266631,
+  'A266530': 266530,
+  'A266531': 266531,
+  'A266603': 266603,
+  'A266592': 266592,
+  'A266632': 266632,
+  'A266614': 266614,
+  'A266559': 266559,
+  'A266564': 266564,
+  'A266639': 266639,
+};
+const QUIZ_IDS = {
+  // 'Quiz_1': 000000, 'PLQuiz_1': 000000, 'HW_1p1_practice': 000000, ...
+};
+const FILE_IDS = {
+  // 'Exam_1_Review': 000000, 'Exam_2_Review': 000000, 'Fall_Final_Review': 000000, ...
+};
+
+/* Resolve an assignment/quiz key to a URL. Checks assignments first, then
+   classic quizzes, then falls back to the course assignments list.         */
+function resolve(key){
+  if (key && ASSIGNMENT_IDS[key] != null) return `${CANVAS}/assignments/${ASSIGNMENT_IDS[key]}`;
+  if (key && QUIZ_IDS[key]       != null) return `${CANVAS}/quizzes/${QUIZ_IDS[key]}`;
+  return `${CANVAS}/assignments`;
+}
+function fileUrl(key){
+  return (key && FILE_IDS[key] != null) ? `${CANVAS}/files/${FILE_IDS[key]}` : `${CANVAS}/files`;
+}
+/* Where should an event's click go?
+   - e.f set        -> that file (review PDFs)
+   - lect / exam    -> no link (label only)
+   - quiz/lab/due   -> its Canvas assignment or quiz                        */
+function eventHref(e){
+  if (e.f) return fileUrl(e.f);
+  if (e.k === 'exam') return null;      // exams are not links
+  if (e.hw) return resolve(e.hw);       // lessons, quizzes, labs, homework, reviews
+  return null;
+}
+/* ==== hand-maintained: no-school, liturgy, exam-review PDFs =============
+   (Veterans Day intentionally omitted — this course meets that day.)       */
+const EXTRAS = [
+  {d:'2026-09-07', p:0, k:'hol', t:'Labor Day — no school',      hw:null},
+  {d:'2026-10-12', p:0, k:'hol', t:'No school (holiday)',        hw:null},
+  {d:'2026-11-23', p:0, k:'hol', t:'Thanksgiving Break',         hw:null},
+  {d:'2026-11-24', p:0, k:'hol', t:'Thanksgiving Break',         hw:null},
+  {d:'2026-11-25', p:0, k:'hol', t:'Thanksgiving Break',         hw:null},
+  {d:'2026-11-26', p:0, k:'hol', t:'Thanksgiving Break',         hw:null},
+  {d:'2026-11-27', p:0, k:'hol', t:'Thanksgiving Break',         hw:null},
+  {d:'2026-09-01', p:0, k:'lit', t:'Liturgy',                    hw:null},
+  {d:'2026-11-05', p:0, k:'lit', t:'Liturgy',                    hw:null},
+  {d:'2026-12-08', p:0, k:'lit', t:'Liturgy',                    hw:null},
+  {d:'2026-10-15', p:0, k:'rev', t:'Exam 2 Review', hw:'A266559'},
+  {d:'2026-11-11', p:0, k:'rev', t:'Exam 3 Review', hw:'A266564'},
+  {d:'2026-12-15', p:0, k:'rev', t:'Fall Final Review', hw:'A266639'}
+];
+/* ==== schedule data (generated by build_events.py from the .xlsx) ========
+   p: 0 = all three sections; else an array of the periods it applies to,
+      e.g. [5,6] or [7].  k: lect|lab|exam|quiz|due|rev|info|hol|lit         */
+const EVENTS = [
+  {"d":"2026-08-18","p":0,"k":"info","t":"First day of class","hw":null},
+  {"d":"2026-08-19","p":[5,6],"k":"lect","t":"1.1, Material Classification","hw":null},
+  {"d":"2026-08-20","p":[7],"k":"lect","t":"1.1, Material Classification","hw":null},
+  {"d":"2026-08-21","p":0,"k":"lect","t":"1.4 to 1.5 units and sig figs","hw":null},
+  {"d":"2026-08-21","p":0,"k":"due","t":"HW: 1.1, Material Classification","hw":"A266413","hw2":"A266414"},
+  {"d":"2026-08-24","p":[5,6],"k":"lect","t":"1.5, operations with sig figs","hw":null},
+  {"d":"2026-08-24","p":[5,6],"k":"due","t":"HW: 1.4 to 1.5 units and sig figs","hw":"A266415","hw2":"A266416"},
+  {"d":"2026-08-25","p":[7],"k":"lect","t":"1.5, operations with sig figs","hw":null},
+  {"d":"2026-08-25","p":[7],"k":"due","t":"HW: 1.4 to 1.5 units and sig figs","hw":"A266415","hw2":"A266416"},
+  {"d":"2026-08-26","p":0,"k":"lab","t":"Lab 1","hw":"A266596"},
+  {"d":"2026-08-26","p":0,"k":"due","t":"HW: 1.5, operations with sig figs","hw":"A266417","hw2":"A266418"},
+  {"d":"2026-08-27","p":[5,6],"k":"lect","t":"1.6, Dimensional analysis part 1","hw":null},
+  {"d":"2026-08-27","p":[5,6],"k":"quiz","t":"Quiz #1 on sections 1.1 - 1.5","hw":"A266622"},
+  {"d":"2026-08-27","p":[5,6],"k":"quiz","t":"Post-Lab Quiz #1","hw":"A266609"},
+  {"d":"2026-08-28","p":[7],"k":"lect","t":"1.6, Dimensional analysis part 1","hw":null},
+  {"d":"2026-08-28","p":[7],"k":"quiz","t":"Quiz #1 on sections 1.1 - 1.5","hw":"A266622"},
+  {"d":"2026-08-28","p":[7],"k":"quiz","t":"Post-Lab Quiz #1","hw":"A266609"},
+  {"d":"2026-08-31","p":0,"k":"lect","t":"1.6, Dimensional analysis part 2","hw":null},
+  {"d":"2026-08-31","p":0,"k":"due","t":"HW: 1.6, Dimensional analysis part 1","hw":"A266419","hw2":"A266420"},
+  {"d":"2026-09-01","p":[5],"k":"lect","t":"1.6, Dimensional analysis part 3","hw":null},
+  {"d":"2026-09-01","p":[5],"k":"due","t":"HW: 1.6, Dimensional analysis part 2","hw":"A266421","hw2":"A266422"},
+  {"d":"2026-09-02","p":[6,7],"k":"lect","t":"1.6, Dimensional analysis part 3","hw":null},
+  {"d":"2026-09-02","p":[6,7],"k":"due","t":"HW: 1.6, Dimensional analysis part 2","hw":"A266421","hw2":"A266422"},
+  {"d":"2026-09-03","p":0,"k":"lab","t":"Lab 2","hw":"A266599"},
+  {"d":"2026-09-03","p":0,"k":"due","t":"HW: 1.6, Dimensional analysis part 3","hw":"A266423","hw2":"A266420"},
+  {"d":"2026-09-08","p":[5],"k":"lect","t":"2.2-2.5, atomic structure part 2","hw":null},
+  {"d":"2026-09-08","p":[5],"k":"quiz","t":"Quiz #2 Dimensional analysis","hw":"A266627"},
+  {"d":"2026-09-08","p":[5],"k":"quiz","t":"Post Lab Quiz #2","hw":"A266610"},
+  {"d":"2026-09-09","p":[6,7],"k":"lect","t":"2.2-2.5, atomic structure part 2","hw":null},
+  {"d":"2026-09-09","p":[6,7],"k":"quiz","t":"Quiz #2 Dimensional analysis","hw":"A266627"},
+  {"d":"2026-09-09","p":[6,7],"k":"quiz","t":"Post Lab Quiz #2","hw":"A266610"},
+  {"d":"2026-09-10","p":0,"k":"lect","t":"2.2-2.5, atomic weight part 3","hw":null},
+  {"d":"2026-09-10","p":0,"k":"due","t":"HW: 2.2-2.5, atomic structure part 2","hw":"A266477","hw2":"A266478"},
+  {"d":"2026-09-14","p":0,"k":"lect","t":"2.6, Nomenclature part 1","hw":null},
+  {"d":"2026-09-14","p":0,"k":"due","t":"HW: 2.2-2.5, atomic weight part 3","hw":"A266480","hw2":"A266479"},
+  {"d":"2026-09-15","p":0,"k":"lect","t":"2.6, Nomenclature part 3","hw":null},
+  {"d":"2026-09-15","p":0,"k":"quiz","t":"Quiz #3 inorganic nomenclature","hw":"A266628"},
+  {"d":"2026-09-15","p":0,"k":"due","t":"HW: 2.6, Nomenclature part 1","hw":"A266481"},
+  {"d":"2026-09-17","p":0,"k":"exam","t":"Exam 1 part 1","hw":null},
+  {"d":"2026-09-17","p":0,"k":"due","t":"HW: 2.6, Nomenclature part 3","hw":"A266483"},
+  {"d":"2026-09-17","p":0,"k":"rev","t":"Exam 1 Review","hw":"A266554"},
+  {"d":"2026-09-18","p":[5,6],"k":"lect","t":"3.1 Balancing Equations","hw":null},
+  {"d":"2026-09-18","p":[5,6],"k":"exam","t":"Exam 1 part 2","hw":null},
+  {"d":"2026-09-18","p":[5,6],"k":"due","t":"Lab 1 due","hw":"A266596"},
+  {"d":"2026-09-18","p":[5,6],"k":"due","t":"Chapter HW 1 part 1 due","hw":"A266586"},
+  {"d":"2026-09-18","p":[5,6],"k":"due","t":"Lab 2 due","hw":"A266599"},
+  {"d":"2026-09-18","p":[5,6],"k":"due","t":"Chapter HW 1 part 2 due","hw":"A266587"},
+  {"d":"2026-09-18","p":[5,6],"k":"due","t":"Chapter HW 2 due","hw":"A266588"},
+  {"d":"2026-09-21","p":[7],"k":"lect","t":"3.1 Balancing Equations","hw":null},
+  {"d":"2026-09-21","p":[7],"k":"exam","t":"Exam 1 part 2","hw":null},
+  {"d":"2026-09-21","p":[7],"k":"due","t":"Lab 1 due","hw":"A266596"},
+  {"d":"2026-09-21","p":[7],"k":"due","t":"Chapter HW 1 part 1 due","hw":"A266586"},
+  {"d":"2026-09-21","p":[7],"k":"due","t":"Lab 2 due","hw":"A266599"},
+  {"d":"2026-09-21","p":[7],"k":"due","t":"Chapter HW 1 part 2 due","hw":"A266587"},
+  {"d":"2026-09-21","p":[7],"k":"due","t":"Chapter HW 2 due","hw":"A266588"},
+  {"d":"2026-09-22","p":0,"k":"lect","t":"3.2 Types of Reactions","hw":null},
+  {"d":"2026-09-22","p":0,"k":"due","t":"HW: 3.1 Balancing Equations","hw":"A266491","hw2":"A266492"},
+  {"d":"2026-09-23","p":[5],"k":"lect","t":"3.3","hw":null},
+  {"d":"2026-09-23","p":[5],"k":"due","t":"HW: 3.2 Types of Reactions","hw":"A266493","hw2":"A266494"},
+  {"d":"2026-09-25","p":0,"k":"lab","t":"Lab 3","hw":"A266600"},
+  {"d":"2026-09-25","p":[6,7],"k":"due","t":"HW: 3.2 Types of Reactions","hw":"A266493","hw2":"A266494"},
+  {"d":"2026-09-25","p":[5],"k":"due","t":"HW: 3.3","hw":"A266495","hw2":"A266496"},
+  {"d":"2026-09-28","p":[6,7],"k":"lect","t":"3.3","hw":null},
+  {"d":"2026-09-29","p":0,"k":"lect","t":"3.4","hw":null},
+  {"d":"2026-09-29","p":[6,7],"k":"due","t":"HW: 3.3","hw":"A266495","hw2":"A266496"},
+  {"d":"2026-09-30","p":[5],"k":"lect","t":"3.5 Part 1 and Part 2","hw":null},
+  {"d":"2026-09-30","p":[5],"k":"due","t":"HW: 3.4","hw":"A266497"},
+  {"d":"2026-10-01","p":[6,7],"k":"lect","t":"3.5 Part 1 and Part 2","hw":null},
+  {"d":"2026-10-01","p":[6,7],"k":"due","t":"HW: 3.4","hw":"A266497"},
+  {"d":"2026-10-02","p":0,"k":"lect","t":"3.6, stoichiometry","hw":null},
+  {"d":"2026-10-02","p":0,"k":"due","t":"HW: 3.5 Part 1 and Part 2","hw":"A266498","hw2":"A266500"},
+  {"d":"2026-10-05","p":[5],"k":"lect","t":"3.7, part 1","hw":null},
+  {"d":"2026-10-05","p":[5],"k":"due","t":"HW: 3.6, stoichiometry","hw":"A266501","hw2":"A266502"},
+  {"d":"2026-10-06","p":[6,7],"k":"lect","t":"3.7, part 1","hw":null},
+  {"d":"2026-10-06","p":[6,7],"k":"due","t":"HW: 3.6, stoichiometry","hw":"A266501","hw2":"A266502"},
+  {"d":"2026-10-07","p":[5,6],"k":"lect","t":"3.7, part 2","hw":null},
+  {"d":"2026-10-07","p":[5,6],"k":"due","t":"HW: 3.7, part 1","hw":"A266504","hw2":"A266503"},
+  {"d":"2026-10-08","p":[7],"k":"lect","t":"3.7, part 2","hw":null},
+  {"d":"2026-10-08","p":[7],"k":"due","t":"HW: 3.7, part 1","hw":"A266504","hw2":"A266503"},
+  {"d":"2026-10-09","p":0,"k":"lab","t":"Lab 4","hw":"A266601"},
+  {"d":"2026-10-09","p":0,"k":"due","t":"HW: 3.7, part 2","hw":"A266505","hw2":"A266503"},
+  {"d":"2026-10-13","p":[5],"k":"quiz","t":"Post-Lab Quiz #4","hw":"A266612"},
+  {"d":"2026-10-13","p":[5],"k":"quiz","t":"quiz #4 (3.1 - 3.5)","hw":"A266645"},
+  {"d":"2026-10-14","p":[6,7],"k":"quiz","t":"Post-Lab Quiz #4","hw":"A266612"},
+  {"d":"2026-10-14","p":[6,7],"k":"quiz","t":"quiz #4 (3.1 - 3.5)","hw":"A266645"},
+  {"d":"2026-10-15","p":0,"k":"exam","t":"Chapter 3 exam #2 part 1","hw":null},
+  {"d":"2026-10-19","p":0,"k":"lect","t":"4.2, part 1","hw":null},
+  {"d":"2026-10-19","p":0,"k":"exam","t":"Chapter 3 exam #2 part 2","hw":null},
+  {"d":"2026-10-19","p":0,"k":"due","t":"Lab 3 due","hw":"A266600"},
+  {"d":"2026-10-19","p":0,"k":"due","t":"Lab 4 due","hw":"A266601"},
+  {"d":"2026-10-20","p":0,"k":"lect","t":"4.2 part 2, double displacement reactions","hw":null},
+  {"d":"2026-10-20","p":0,"k":"due","t":"HW: 4.2, part 1","hw":"A266510"},
+  {"d":"2026-10-22","p":0,"k":"lect","t":"4.3","hw":null},
+  {"d":"2026-10-22","p":0,"k":"quiz","t":"Quiz #5","hw":"A266629"},
+  {"d":"2026-10-22","p":0,"k":"due","t":"HW: 4.2 part 2, double displacement reactions","hw":"A266509"},
+  {"d":"2026-10-23","p":[5,6],"k":"lect","t":"4.5 and 4.6","hw":null},
+  {"d":"2026-10-23","p":[5,6],"k":"due","t":"HW: 4.3","hw":"A266511","hw2":"A266512"},
+  {"d":"2026-10-26","p":[7],"k":"lect","t":"4.5 and 4.6","hw":null},
+  {"d":"2026-10-26","p":[7],"k":"due","t":"HW: 4.3","hw":"A266511","hw2":"A266512"},
+  {"d":"2026-10-27","p":0,"k":"lect","t":"5.1 to 5.3","hw":null},
+  {"d":"2026-10-27","p":0,"k":"due","t":"HW: 4.5 and 4.6","hw":"A266513","hw2":"A266514"},
+  {"d":"2026-10-28","p":[5,6],"k":"lect","t":"5.4","hw":null},
+  {"d":"2026-10-28","p":[5,6],"k":"quiz","t":"Quiz #6","hw":"A266630"},
+  {"d":"2026-10-28","p":[5,6],"k":"due","t":"HW: 5.1 to 5.3","hw":"A266515","hw2":"A266516"},
+  {"d":"2026-10-29","p":[7],"k":"lect","t":"5.4","hw":null},
+  {"d":"2026-10-29","p":[7],"k":"quiz","t":"Quiz #6","hw":"A266630"},
+  {"d":"2026-10-29","p":[7],"k":"due","t":"HW: 5.1 to 5.3","hw":"A266515","hw2":"A266516"},
+  {"d":"2026-11-02","p":0,"k":"lect","t":"5.5","hw":null},
+  {"d":"2026-11-02","p":0,"k":"due","t":"HW: 5.4","hw":"A266517"},
+  {"d":"2026-11-03","p":0,"k":"lect","t":"5.6","hw":null},
+  {"d":"2026-11-03","p":0,"k":"due","t":"HW: 5.5","hw":"A266518"},
+  {"d":"2026-11-04","p":[7],"k":"lect","t":"5.7 *rotated","hw":null},
+  {"d":"2026-11-04","p":[7],"k":"due","t":"HW: 5.6","hw":"A266519"},
+  {"d":"2026-11-05","p":[5,6],"k":"lect","t":"5.7 *rotated","hw":null},
+  {"d":"2026-11-05","p":[5,6],"k":"due","t":"HW: 5.6","hw":"A266519"},
+  {"d":"2026-11-06","p":[5],"k":"lab","t":"Lab 5","hw":"A266602"},
+  {"d":"2026-11-06","p":[5],"k":"due","t":"HW: 5.7 *rotated","hw":"A266520"},
+  {"d":"2026-11-10","p":[6,7],"k":"lab","t":"Lab 5","hw":"A266602"},
+  {"d":"2026-11-10","p":[6,7],"k":"due","t":"HW: 5.7 *rotated","hw":"A266520"},
+  {"d":"2026-11-11","p":0,"k":"exam","t":"Exam #3 part 1","hw":null},
+  {"d":"2026-11-12","p":[5],"k":"exam","t":"Exam #3 part 2","hw":null},
+  {"d":"2026-11-12","p":[5],"k":"quiz","t":"Post-Lab Quiz #5","hw":"A266613"},
+  {"d":"2026-11-12","p":[5],"k":"due","t":"Chapter HW 4 due","hw":"A266590"},
+  {"d":"2026-11-12","p":[5],"k":"due","t":"Lab 5 due","hw":"A266602"},
+  {"d":"2026-11-12","p":[5],"k":"due","t":"Chapter HW 5 due","hw":"A266591"},
+  {"d":"2026-11-13","p":[6,7],"k":"exam","t":"Exam #3 part 2","hw":null},
+  {"d":"2026-11-13","p":[6,7],"k":"quiz","t":"Post-Lab Quiz #5","hw":"A266613"},
+  {"d":"2026-11-13","p":[6,7],"k":"due","t":"Chapter HW 4 due","hw":"A266590"},
+  {"d":"2026-11-13","p":[6,7],"k":"due","t":"Lab 5 due","hw":"A266602"},
+  {"d":"2026-11-13","p":[6,7],"k":"due","t":"Chapter HW 5 due","hw":"A266591"},
+  {"d":"2026-11-16","p":0,"k":"lect","t":"6.1 - 6.4","hw":null},
+  {"d":"2026-11-18","p":0,"k":"lect","t":"6.5","hw":null},
+  {"d":"2026-11-18","p":0,"k":"due","t":"HW: 6.1 - 6.4","hw":"A266521","hw2":"A266522"},
+  {"d":"2026-11-19","p":[5,6],"k":"lect","t":"6.6 - 6.9 Electron configurations","hw":null},
+  {"d":"2026-11-19","p":[5,6],"k":"due","t":"HW: 6.5","hw":"A266523","hw2":"A266524"},
+  {"d":"2026-11-20","p":[7],"k":"lect","t":"6.6 - 6.9 Electron configurations","hw":null},
+  {"d":"2026-11-20","p":[7],"k":"due","t":"HW: 6.5","hw":"A266523","hw2":"A266524"},
+  {"d":"2026-12-01","p":[5],"k":"lect","t":"7.2-7.4","hw":null},
+  {"d":"2026-12-02","p":[6,7],"k":"lect","t":"7.2-7.4","hw":null},
+  {"d":"2026-12-03","p":0,"k":"lect","t":"8.1, 8.3, 8.4, 8.5","hw":null},
+  {"d":"2026-12-03","p":0,"k":"due","t":"HW: 7.2-7.4","hw":"A266525","hw2":"A266526"},
+  {"d":"2026-12-07","p":0,"k":"lect","t":"8.2, 8.6-8.8","hw":null},
+  {"d":"2026-12-07","p":0,"k":"quiz","t":"Quiz #7 - Chapter 6","hw":"A266631"},
+  {"d":"2026-12-07","p":0,"k":"due","t":"HW: 8.1, 8.3, 8.4, 8.5","hw":"A266527"},
+  {"d":"2026-12-08","p":[5,6],"k":"lect","t":"8.4 - 8.7 Electronegativity, bond polarity, formal charge","hw":null},
+  {"d":"2026-12-08","p":[5,6],"k":"due","t":"HW: 8.2, 8.6-8.8","hw":"A266528","hw2":"A266529"},
+  {"d":"2026-12-09","p":[7],"k":"lect","t":"8.4 - 8.7 Electronegativity, bond polarity, formal charge","hw":null},
+  {"d":"2026-12-09","p":[7],"k":"due","t":"HW: 8.2, 8.6-8.8","hw":"A266528","hw2":"A266529"},
+  {"d":"2026-12-10","p":0,"k":"lect","t":"9.1 - 9.2","hw":null},
+  {"d":"2026-12-14","p":0,"k":"lab","t":"Lab 6","hw":"A266603"},
+  {"d":"2026-12-14","p":0,"k":"due","t":"HW: 9.1 - 9.2","hw":"A266530","hw2":"A266531"},
+  {"d":"2026-12-15","p":0,"k":"quiz","t":"Quiz #8, Chapter 8-9","hw":"A266632"},
+  {"d":"2026-12-15","p":0,"k":"quiz","t":"Post-Lab Quiz #6","hw":"A266614"},
+  {"d":"2026-12-15","p":0,"k":"due","t":"Lab 6 due","hw":"A266603"},
+  {"d":"2026-12-15","p":0,"k":"due","t":"Chapter HW 6-9 due","hw":"A266592"}
+];;;;
+/* Merge everything, index by date. */
+const ALL = EVENTS.concat(EXTRAS);
+const byDate = {};
+for (const e of ALL) (byDate[e.d] ||= []).push(e);
+/* ==== week machinery ==================================================== */
+const FIRST_MONDAY = new Date(2026, 7, 17);   // Mon Aug 17 2026 (month is 0-based: 7 = August)
+const N_WEEKS = 18;                           // fall, through week of Dec 14
+const DAY = 864e5;
+const fmt = (dt, opt) => dt.toLocaleDateString('en-US', opt);
+const iso = dt => `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}-${String(dt.getDate()).padStart(2,'0')}`;
+function addDays(dt, n){ const x = new Date(dt); x.setDate(x.getDate() + n); return x; }
+function weekStart(i){ return addDays(FIRST_MONDAY, i*7); }
+function weekOf(dt){
+  const monday = new Date(dt);
+  monday.setHours(0,0,0,0);
+  monday.setDate(monday.getDate() - ((monday.getDay()+6)%7));
+  return Math.round((monday - FIRST_MONDAY)/(7*DAY));
+}
+function clamp(i){ return Math.max(0, Math.min(N_WEEKS-1, i)); }
+/* period badge(s): p===0 -> none; else one per section number */
+function perBadges(p){
+  if (!p || p === 0) return '';
+  return (Array.isArray(p) ? p : [p]).map(n => `<span class="per">P${n}</span>`).join('');
+}
+function perText(p){
+  if (!p || p === 0) return '';
+  return ' (' + (Array.isArray(p) ? p : [p]).map(n => 'P'+n).join(',') + ')';
+}
+/* ==== which week to show on load ======================================== */
+let current = clamp(weekOf(new Date()));
+const urlWeek = parseInt(new URLSearchParams(location.search).get('week'), 10);
+if (!isNaN(urlWeek) && urlWeek >= 1 && urlWeek <= N_WEEKS) current = urlWeek - 1;
+/* ==== "coming up next week" banner ====================================== */
+function lookaheadHtml(weekIdx){
+  const next = weekIdx + 1;
+  if (next >= N_WEEKS)
+    return '<b>Coming up</b><span class="quiet">End of fall semester — see you in January.</span>';
+  const start = weekStart(next);
+  const items = [], seen = new Set();
+  for (let d = 0; d < 5; d++){
+    const dt = addDays(start, d);
+    for (const e of (byDate[iso(dt)] || [])){
+      if (e.k !== 'exam' && e.k !== 'hol' && e.k !== 'lab' && e.k !== 'lit') continue;
+      if (seen.has(e.t)) continue;
+      seen.add(e.t);
+      items.push(`<li>${fmt(dt,{weekday:'short', month:'numeric', day:'numeric'})} — ${e.t}${perText(e.p)}</li>`);
+    }
+  }
+  const head = `<b>Coming up next week (${fmt(start,{month:'short',day:'numeric'})})</b>`;
+  return items.length
+    ? head + '<ul>' + items.join('') + '</ul>'
+    : head + '<span class="quiet">No exams, labs, or holidays — regular classes.</span>';
+}
+/* ==== main render ======================================================= */
+function pill(e){
+  const badges = perBadges(e.p);
+  const cls = `ev k-${e.k}`;
+  const href = eventHref(e);
+  if (e.hw2){                                   // homework due + practice sub-link
+    return `<div class="${cls}"><a href="${href}" target="_top" style="color:inherit;text-decoration:none">${e.t}${badges}</a>`
+         + `<a class="sub" href="${resolve(e.hw2)}" target="_top">practice</a></div>`;
+  }
+  return href
+    ? `<a class="${cls}" href="${href}" target="_top">${e.t}${badges}</a>`
+    : `<span class="${cls}">${e.t}${badges}</span>`;
+}
+function render(){
+  const start = weekStart(current), todayIso = iso(new Date());
+  document.getElementById('weekTitle').textContent =
+    `Week ${current+1} · ${fmt(start,{month:'long',day:'numeric'})}`;
+  document.getElementById('weekSel').value = current;
+  document.getElementById('prev').disabled = current === 0;
+  document.getElementById('next').disabled = current === N_WEEKS-1;
+  document.getElementById('lookahead').innerHTML = lookaheadHtml(current);
+  let anyEvent = false, html = '<div class="grid">';
+  for (let d = 0; d < 5; d++){
+    const dt = addDays(start, d), key = iso(dt);
+    const evs = byDate[key] || [];
+    if (evs.length) anyEvent = true;
+    const isToday = key === todayIso;
+    html += `<div class="day${isToday?' today':''}">
+      <div class="dayhead"><span class="dname">${fmt(dt,{weekday:'short'})} ${fmt(dt,{month:'numeric',day:'numeric'})}</span>
+      ${isToday?'<span class="todaytag">TODAY</span>':''}</div>`;
+    if (!evs.length) html += '<div class="empty">—</div>';
+    for (const e of evs) html += pill(e);
+    html += '</div>';
+  }
+  html += '</div>';
+  if (!anyEvent) html = '<div class="noweek">No classes this week.</div>';
+  document.getElementById('content').innerHTML = html;
+  let links = '<b>Jump to any week</b>';
+  for (let i = 0; i < N_WEEKS; i++){
+    const label = `Wk ${i+1} · ${fmt(weekStart(i),{month:'numeric',day:'numeric'})}`;
+    links += (i === current)
+      ? `<a class="cur">${label}</a>`
+      : `<a href="?week=${i+1}" data-week="${i}">${label}</a>`;
+  }
+  document.getElementById('weeklinks').innerHTML = links;
+}
+/* ==== nav wiring ======================================================== */
+const sel = document.getElementById('weekSel');
+for (let i = 0; i < N_WEEKS; i++){
+  const o = document.createElement('option');
+  o.value = i;
+  o.textContent = `Week ${i+1} — ${fmt(weekStart(i),{month:'short',day:'numeric'})}`;
+  sel.appendChild(o);
+}
+sel.onchange = () => { current = +sel.value; render(); };
+document.getElementById('prev').onclick  = () => { current = clamp(current-1); render(); };
+document.getElementById('next').onclick  = () => { current = clamp(current+1); render(); };
+document.getElementById('todayBtn').onclick = () => { current = clamp(weekOf(new Date())); render(); };
+document.getElementById('weeklinks').onclick = (ev) => {
+  const a = ev.target.closest('a[data-week]');
+  if (!a) return;
+  ev.preventDefault();
+  current = +a.dataset.week;
+  render();
+};
+render();
+</script>
+</body>
+</html>
