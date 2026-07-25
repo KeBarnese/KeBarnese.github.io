@@ -16,6 +16,15 @@ Pull real due dates from Canvas instead of editing by hand:
   python3 canvas_pull_due.py       -> rewrites due_dates.json
   python3 build_page.py
 
+Lecture pills (blue) link to the Canvas lecture pages:
+  build_page.py joins notes/map.json (lecture -> spreadsheet row) with
+  lecture_pages.json (lecture -> Canvas page slug, written by
+  build_lecture_pages.py in the lecture_pages bundle). Re-copy
+  lecture_pages.json here whenever you rebuild the pages, then:
+  python3 build_page.py
+  If lecture_pages.json is missing the pills just go back to being plain
+  labels — nothing breaks.
+
 Set due dates + publish in Canvas (SIS stays OFF):
   export CANVAS_TOKEN=...
   python3 canvas_due_publish.py            # preview

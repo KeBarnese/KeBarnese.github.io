@@ -28,6 +28,8 @@ OUT         = "../index.html"   # written to the course root (run this from buil
 FALL_CUTOFF = datetime.date(2026, 12, 20)
 BLANK_ROW_DATE = {50: datetime.date(2026, 12, 15)}
 LINK_DAILY  = True   # link the blue daily-homework pill to its Canvas assignment (+practice)
+NOTES_MAP   = "notes/map.json"        # lecture id -> spreadsheet row (built with the notes)
+PAGES       = "lecture_pages.json"    # lecture id -> Canvas page (from build_lecture_pages.py)
 # extra fall exam-review assignments placed by hand (matched by title below)
 REVIEW_TITLES = {"1": "Exam 1 Review - Build On",
                  "2": "Exam 2 Review - Build On",
@@ -139,6 +141,23 @@ def emit_due(aid, text, practice_aid=None):
         if pkey: ev["hw2"] = pkey
         events.append(ev)
 
+# ---- lecture pages ---------------------------------------------------------
+# Joined on the spreadsheet ROW, not the title: notes/map.json records the row
+# each lecture came from, so a retitled lecture still lands on the right day.
+# Both files optional — without them the lecture pills stay unlinked as before.
+LEC_ROW, PAGE_URLS = {}, {}
+if os.path.exists(NOTES_MAP) and os.path.exists(PAGES):
+    _pg = json.load(open(PAGES))
+    for _l in json.load(open(NOTES_MAP)):
+        if _l["id"] in _pg:
+            LEC_ROW[_l["row"]] = _l["id"]
+            PAGE_URLS[_l["id"]] = _pg[_l["id"]]["page_url"]
+    _miss = [l["id"] for l in json.load(open(NOTES_MAP)) if l["id"] not in _pg]
+    if _miss:
+        print(f"NOTE: no Canvas page yet for {', '.join(_miss)} — those pills stay unlinked")
+else:
+    print(f"NOTE: {PAGES} not found — lecture pills will stay unlinked")
+
 for r in range(2, ws.max_row + 1):
     p = {5: pdate(ws.cell(r,2).value), 6: pdate(ws.cell(r,3).value), 7: pdate(ws.cell(r,4).value)}
     if all(v is None for v in p.values()):
@@ -189,7 +208,10 @@ for r in range(2, ws.max_row + 1):
             lect_done = True
             aid = m_daily(ln)            # matched only to link the HW due pill; the lesson pill itself is unlinked
             paid = m_practice(ln)
-            buckets.append(("lect", {"t": clean(ln), "hw": None}))        # lecture: NO link (future: notes + video)
+            lect = {"t": clean(ln), "hw": None}
+            if LEC_ROW.get(r):
+                lect["pg"] = LEC_ROW[r]      # -> Canvas lecture page (notes + video)
+            buckets.append(("lect", lect))
             emit_due(aid, "HW: " + clean(ln), paid)                        # daily homework -> due-day pill + practice sublink
             if not aid: unmatched.append((r, "DAILY: " + ln))
 
@@ -217,13 +239,17 @@ aids_js = "const ASSIGNMENT_IDS = {\n" + "".join(f"  '{k}': {v},\n" for k, v in 
 rev_keys = {rn: f"A{m_review(rn)}" for rn in ("2", "3", "F")}
 
 tpl = pathlib.Path(TPL).read_text()
-tpl = tpl.replace("__COURSE__", COURSE_ID).replace("__AIDS__", aids_js).replace("__EVENTS__", events_js)
+pages_js = "const PAGE_URLS = {\n" + "".join(
+    f"  '{k}': '{v}',\n" for k, v in sorted(PAGE_URLS.items())) + "};"
+tpl = tpl.replace("__COURSE__", COURSE_ID).replace("__AIDS__", aids_js) \
+         .replace("__PAGES__", pages_js).replace("__EVENTS__", events_js)
 # point the hand-placed EXTRAS reviews at the matched keys
 tpl = tpl.replace("'Exam_2_Review_Build_On'", f"'{rev_keys['2']}'")
 tpl = tpl.replace("'Exam_3_Chapter_4_review_Build_On'", f"'{rev_keys['3']}'")
 tpl = tpl.replace("'Semester_1_Final_Review'", f"'{rev_keys['F']}'")
 pathlib.Path(OUT).write_text(tpl)
 
-print(f"course {COURSE_ID}: {len(events)} events, {len(AID)} assignment ids matched")
+print(f"course {COURSE_ID}: {len(events)} events, {len(AID)} assignment ids matched, "
+      f"{len(PAGE_URLS)} lecture pages linked")
 print(f"UNMATCHED ({len(unmatched)}):")
 for r, t in unmatched: print(f"  row {r}: {t}")

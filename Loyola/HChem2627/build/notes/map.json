@@ -1,0 +1,224 @@
+[
+ {
+  "id": "L01",
+  "row": 3,
+  "title": "1.1 Matter and Its Classification",
+  "file": "L01-1-1-Matter-and-Its-Classification"
+ },
+ {
+  "id": "L02",
+  "row": 4,
+  "title": "1.3--1.5 Properties of Matter, Units and Measurement",
+  "file": "L02-1-3-1-5-Properties-of-Matter-Units-and-Measurement"
+ },
+ {
+  "id": "L03",
+  "row": 5,
+  "title": "1.6 Significant Figures and Scientific Notation",
+  "file": "L03-1-6-Significant-Figures-and-Scientific-Notation"
+ },
+ {
+  "id": "L04",
+  "row": 7,
+  "title": "1.7 Dimensional Analysis, Part 1",
+  "file": "L04-1-7-Dimensional-Analysis-Part-1"
+ },
+ {
+  "id": "L05",
+  "row": 8,
+  "title": "1.7 Dimensional Analysis, Part 2",
+  "file": "L05-1-7-Dimensional-Analysis-Part-2"
+ },
+ {
+  "id": "L06",
+  "row": 9,
+  "title": "1.7 Dimensional Analysis, Part 3",
+  "file": "L06-1-7-Dimensional-Analysis-Part-3"
+ },
+ {
+  "id": "L07",
+  "row": 11,
+  "title": "2.1--2.3 Atomic Structure",
+  "file": "L07-2-1-2-3-Atomic-Structure"
+ },
+ {
+  "id": "L08",
+  "row": 12,
+  "title": "2.3--2.5 Isotopes, Atomic Weight and the Periodic Table",
+  "file": "L08-2-3-2-5-Isotopes-Atomic-Weight-and-the-Periodic-Tabl"
+ },
+ {
+  "id": "L09",
+  "row": 13,
+  "title": "2.6--2.8 Molecules, Ions and Nomenclature, Part 1",
+  "file": "L09-2-6-2-8-Molecules-Ions-and-Nomenclature-Part-1"
+ },
+ {
+  "id": "L10",
+  "row": 14,
+  "title": "2.8 Nomenclature, Part 2",
+  "file": "L10-2-8-Nomenclature-Part-2"
+ },
+ {
+  "id": "L11",
+  "row": 16,
+  "title": "3.1 Chemical Equations and Balancing",
+  "file": "L11-3-1-Chemical-Equations-and-Balancing"
+ },
+ {
+  "id": "L12",
+  "row": 17,
+  "title": "3.2 Types of Reactions",
+  "file": "L12-3-2-Types-of-Reactions"
+ },
+ {
+  "id": "L13",
+  "row": 18,
+  "title": "3.3 Formula Weights and Percent Composition",
+  "file": "L13-3-3-Formula-Weights-and-Percent-Composition"
+ },
+ {
+  "id": "L14",
+  "row": 20,
+  "title": "3.4 Avogadro's Number and the Mole",
+  "file": "L14-3-4-Avogadro-s-Number-and-the-Mole"
+ },
+ {
+  "id": "L15",
+  "row": 21,
+  "title": "3.5 Empirical and Molecular Formulas",
+  "file": "L15-3-5-Empirical-and-Molecular-Formulas"
+ },
+ {
+  "id": "L16",
+  "row": 22,
+  "title": "3.6 Stoichiometry",
+  "file": "L16-3-6-Stoichiometry"
+ },
+ {
+  "id": "L17",
+  "row": 23,
+  "title": "3.7 Limiting Reactant, Part 1",
+  "file": "L17-3-7-Limiting-Reactant-Part-1"
+ },
+ {
+  "id": "L18",
+  "row": 24,
+  "title": "3.7 Percent Yield, Part 2",
+  "file": "L18-3-7-Percent-Yield-Part-2"
+ },
+ {
+  "id": "L19",
+  "row": 28,
+  "title": "4.1--4.2 Solutions, Electrolytes and Precipitation",
+  "file": "L19-4-1-4-2-Solutions-Electrolytes-and-Precipitation"
+ },
+ {
+  "id": "L20",
+  "row": 29,
+  "title": "4.2 Double Displacement and Net Ionic Equations, Part 2",
+  "file": "L20-4-2-Double-Displacement-and-Net-Ionic-Equations-Part"
+ },
+ {
+  "id": "L21",
+  "row": 30,
+  "title": "4.3 Acids, Bases and Neutralization",
+  "file": "L21-4-3-Acids-Bases-and-Neutralization"
+ },
+ {
+  "id": "L22",
+  "row": 31,
+  "title": "4.5--4.6 Concentration, Dilution and Solution Stoichiometry",
+  "file": "L22-4-5-4-6-Concentration-Dilution-and-Solution-Stoichio"
+ },
+ {
+  "id": "L23",
+  "row": 32,
+  "title": "5.1--5.2 Energy and the First Law of Thermodynamics",
+  "file": "L23-5-1-5-2-Energy-and-the-First-Law-of-Thermodynamics"
+ },
+ {
+  "id": "L24",
+  "row": 33,
+  "title": "5.3--5.4 Enthalpy",
+  "file": "L24-5-3-5-4-Enthalpy"
+ },
+ {
+  "id": "L25",
+  "row": 34,
+  "title": "5.5 Calorimetry",
+  "file": "L25-5-5-Calorimetry"
+ },
+ {
+  "id": "L26",
+  "row": 35,
+  "title": "5.6 Hess's Law",
+  "file": "L26-5-6-Hess-s-Law"
+ },
+ {
+  "id": "L27",
+  "row": 36,
+  "title": "5.7 Enthalpies of Formation",
+  "file": "L27-5-7-Enthalpies-of-Formation"
+ },
+ {
+  "id": "L28",
+  "row": 40,
+  "title": "6.1--6.4 Light, Quantization and Wave-Particle Duality",
+  "file": "L28-6-1-6-4-Light-Quantization-and-Wave-Particle-Duality"
+ },
+ {
+  "id": "L29",
+  "row": 41,
+  "title": "6.5 The Bohr Atom and Atomic Orbitals",
+  "file": "L29-6-5-The-Bohr-Atom-and-Atomic-Orbitals"
+ },
+ {
+  "id": "L30",
+  "row": 42,
+  "title": "6.6--6.9 Electron Configurations",
+  "file": "L30-6-6-6-9-Electron-Configurations"
+ },
+ {
+  "id": "L31",
+  "row": 44,
+  "title": "7.2--7.4 Periodic Trends",
+  "file": "L31-7-2-7-4-Periodic-Trends"
+ },
+ {
+  "id": "L32",
+  "row": 45,
+  "title": "8.1--8.3 Lewis Structures and Covalent Bonding",
+  "file": "L32-8-1-8-3-Lewis-Structures-and-Covalent-Bonding"
+ },
+ {
+  "id": "L33",
+  "row": 46,
+  "title": "8.6 Resonance",
+  "file": "L33-8-6-Resonance"
+ },
+ {
+  "id": "L34",
+  "row": 47,
+  "title": "8.4--8.5 Electronegativity and Bond Polarity",
+  "file": "L34-8-4-8-5-Electronegativity-and-Bond-Polarity"
+ },
+ {
+  "id": "L35",
+  "row": 46,
+  "title": "8.7 Exceptions to the Octet Rule",
+  "file": "L35-8-7-Exceptions-to-the-Octet-Rule"
+ },
+ {
+  "id": "L36",
+  "row": 48,
+  "title": "9.1--9.2 Molecular Shapes and VSEPR",
+  "file": "L36-9-1-9-2-Molecular-Shapes-and-VSEPR"
+ },
+ {
+  "id": "L37",
+  "row": 48,
+  "title": "9.3 Molecular Polarity",
+  "file": "L37-9-3-Molecular-Polarity"
+ }
+]

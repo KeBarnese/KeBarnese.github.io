@@ -97,7 +97,7 @@
   <div id="content"></div>
   <div class="weeklinks" id="weeklinks"></div>
   <div class="legend">
-    <span><span class="dot" style="background:var(--lect-bg);border:1px solid var(--lect)"></span>Lecture / topic (no link yet)</span>
+    <span><span class="dot" style="background:var(--lect-bg);border:1px solid var(--lect)"></span>Lecture — notes &amp; video</span>
     <span><span class="dot" style="background:var(--lab-bg);border:1px solid var(--lab)"></span>Lab</span>
     <span><span class="dot" style="background:var(--due-bg);border:1px solid var(--due)"></span>Homework due (opens Canvas)</span>
     <span><span class="dot" style="background:var(--quiz-bg);border:1px solid var(--quiz)"></span>Quiz</span>
@@ -107,7 +107,7 @@
     <span><span class="dot" style="background:#f3eefa;border:1px solid #5a3d8a"></span>Liturgy — mass attire</span>
   </div>
   <footer>P5/P6/P7 tags mark days that differ between sections; untagged items apply to all three.
-    Lecture pills show the day's topic (links coming later). Each homework pill sits on its due date and opens the Canvas assignment, with a small &ldquo;practice&rdquo; link to the practice version. Spring schedule posted in January.</footer>
+    Lecture pills open that day's page: the class notes as a PDF and the video for the lesson. Each homework pill sits on its due date and opens the Canvas assignment, with a small &ldquo;practice&rdquo; link to the practice version. Spring schedule posted in January.</footer>
 </div>
 <script>
 'use strict';
@@ -120,6 +120,8 @@
      FILE_IDS       -> /files/:id         (review PDFs / study guides)      */
 const CANVAS = 'https://loyolahs.instructure.com/courses/__COURSE__';
 __AIDS__
+/* lecture id -> Canvas page slug (notes PDF + embedded video) */
+__PAGES__
 const QUIZ_IDS = {
   // 'Quiz_1': 000000, 'PLQuiz_1': 000000, 'HW_1p1_practice': 000000, ...
 };
@@ -139,10 +141,12 @@ function fileUrl(key){
 }
 /* Where should an event's click go?
    - e.f set        -> that file (review PDFs)
-   - lect / exam    -> no link (label only)
+   - e.pg set       -> that lecture's Canvas page (notes + video)
+   - exam           -> no link (label only)
    - quiz/lab/due   -> its Canvas assignment or quiz                        */
 function eventHref(e){
   if (e.f) return fileUrl(e.f);
+  if (e.pg && PAGE_URLS[e.pg]) return `${CANVAS}/pages/${PAGE_URLS[e.pg]}`;
   if (e.k === 'exam') return null;      // exams are not links
   if (e.hw) return resolve(e.hw);       // lessons, quizzes, labs, homework, reviews
   return null;
