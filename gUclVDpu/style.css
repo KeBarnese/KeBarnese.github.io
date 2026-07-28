@@ -55,6 +55,27 @@ header.site p{opacity:.85;margin-top:10px;font-size:1.02rem}
   margin-left:10px;white-space:nowrap;vertical-align:middle;line-height:1.7}
 .maplink:hover{background:#eef3f5}
 .maplink .pin{opacity:.85}
+.row .v a.rel{color:var(--c);text-decoration:none;border-bottom:1px solid rgba(0,0,0,.12)}
+.row .v a.rel:hover{border-bottom-color:var(--c)}
+
+/* records / documents */
+.records{margin:26px 0 6px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 22px 16px}
+.records h3{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+  margin:16px 0 6px}
+.reccat{padding:8px 0 4px;border-top:1px solid var(--line)}
+.reccat:first-of-type{border-top:none}
+.reccat h4{font-size:.9rem;color:var(--c);margin-bottom:4px}
+.reccat ul{margin:0 0 4px 18px}
+.reccat li{font-size:.94rem;padding:2px 0}
+.reccat li a{color:var(--ink)}
+.reccat li a:hover{color:var(--c)}
+
+/* alphabetical people list */
+.plist{list-style:none;margin:26px 0;column-width:320px;column-gap:34px}
+.plist li{break-inside:avoid;padding:7px 0;border-bottom:1px solid var(--line)}
+.plist li a{font-weight:600;text-decoration:none;color:var(--ink)}
+.plist li a:hover{color:#0b6b5e}
+.plist .pmeta{display:block;color:var(--muted);font-size:.82rem;margin-top:1px}
 
 .older{background:#fbf6 ea;background:#faf6ea;border:1px dashed #d9c9a0;border-radius:12px;
   padding:14px 18px;margin:22px 0;font-size:.92rem;color:#6a5a34}
