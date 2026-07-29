@@ -69,6 +69,8 @@ header.site p{opacity:.85;margin-top:10px;font-size:1.02rem}
 .reccat li{font-size:.94rem;padding:2px 0}
 .reccat li a{color:var(--ink)}
 .reccat li a:hover{color:var(--c)}
+.reccat li a.xln{color:var(--muted);font-size:.86em;font-style:italic;margin-left:4px}
+.reccat li a.xln:hover{color:var(--c)}
 
 /* alphabetical people list */
 .plist{list-style:none;margin:26px 0;column-width:320px;column-gap:34px}
