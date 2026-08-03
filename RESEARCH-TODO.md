@@ -42,6 +42,34 @@ and removes the risk of paying for the wrong file.
       employer, organizations, relatives here and abroad, and whether she had
       ever applied for citizenship. Add the photo to her page if it survives.
 
+### Write up Agostino "Gus" Macaluso — obituary found
+
+*Chicago Tribune*, Mon 10 Aug 1970, p. 72. File staged at
+`records/vital/macaluso-agostino-obituary-1970.pdf`. Not yet on any page.
+
+Identification is airtight: "dear brother of **Mamie [Peter] Dolce** and **Rose
+Muffoletto**" reproduces the sibling set from Giuseppa's 1956 notice exactly.
+
+- Died c. 8–9 Aug 1970 (notice ran the 10th, funeral the 12th), of **Cicero, Illinois**
+- Husband of **Dorothy, née Maranto**
+- Children: **Santina** (m. Joseph Sapeanza), **Ella**, **Lidia** (m. Salvadore
+  Culotta), **Josephine** (m. Nunzio Cancilla), **Concetta** (m. James Cerami)
+- Seven grandchildren, one great-grandchild
+- Ed Prignano Funeral Home, 1815 W. North Ave., Melrose Park → Mass at
+  **St. Attracta**, interment **Queen of Heaven** (Hillside, IL — the cemetery
+  adjoining Mount Carmel, where his mother was buried in 1956)
+
+- [ ] Build Agostino a page, or at minimum expand the Children row on the
+      Macaluso page — he was previously untraced past the 1910 arrival.
+- [ ] **Five daughters, no sons named.** The Macaluso surname appears to end in
+      this line. Worth confirming before stating it.
+- [ ] Chase the Maranto marriage — Dorothy's family is an entirely new branch.
+- [ ] The five married surnames (Sapeanza, Culotta, Cancilla, Cerami) give
+      searchable handles on living-memory descendants if you ever want them.
+- [ ] Note for the file: Agostino was at **Lascari** in 1925 per his father's
+      *Duilio* manifest, so he returned to Sicily at some point and came back.
+      When, and on what ship, is unknown.
+
 ### Add Alessandro's 1916 naturalization denial
 
 Naturalization index card (INS Form 1-IP, card M-242) — **not yet on the site**:
@@ -114,6 +142,126 @@ the 1949 Certificate of Arrival at Hammond already on the page — she was still
 trying at 75.
 
 - [ ] Verify the Cable Act reasoning before publishing it as fact.
+
+---
+
+## Muffoletto / Pante — Ella
+
+**Page built.** All three records are now listed on `p/ella-muffoletto.html`:
+
+- `records/vital/muffoletto-ella-birth-1929.jpg`
+- `records/vital/pante-phillip-shoe-repair-directory-gary.jpg`
+- `records/census/pante-ella-phillip-census-1950-gary.jpg`
+
+Find A Grave details (b. 15 Feb 1929 Gary; d. 2023 Texas; Calumet Park Cemetery,
+Merrillville) **already match the page** — nothing to change there.
+
+### ⚠ Correction needed: Alexander did NOT die in infancy
+
+Two birth certificates, read together, settle this. Both give running counts of
+Rose's children:
+
+| Date | Born (incl. present) | Living | Dead |
+|---|---|---|---|
+| **15 Feb 1929** (Ella) | 4 | 3 | 1 |
+| **1 Dec 1933** (JoAnn) | 5 | 3 | 2 |
+
+Five births total — Tina (1921), Giuseppe (1925), Alexander (1926), Ella (1929),
+JoAnn (1933) — with no missing child. In Dec 1933 the three living are Tina,
+Ella and JoAnn; the two dead are Giuseppe and Alexander.
+
+But in **Feb 1929 only one was dead**. Giuseppe died in 1928, so he is that one.
+Which means **Alexander was alive in February 1929 and died sometime between
+then and December 1933** — aged roughly three to seven, not in infancy.
+
+- [x] Corrected on Ella's, JoAnn's, Tina's, Rose's and Salvatore's pages —
+      now reads "1926 – between 1929 and 1933," with the reasoning in a note.
+- [ ] Look for his death record in Lake County, Indiana, 1929–1933. A child that
+      age should have a certificate, and possibly a burial at Calumet Park.
+
+### Facts on the certificate not yet on the page
+
+Indiana State Board of Health, Lake Co., Calumet Twp., Gary — Local No. 318,
+State Registered No. 6535; filed Feb 1929.
+
+- Family home at birth: **474 Jackson St., Gary**
+- Born **1:30 p.m.**, attending physician **J. B. Burgham, M.D.**, Gary
+- **Sam Muffoletto, 41, shoemaker**, b. Italy — consistent with the 1887 birth
+  record already on the site
+- **Rose Macaluso, 27, housewife**, b. Italy — consistent with age 8 in May 1910
+
+### Phillip Pante
+
+- [ ] Gary city directory: **Philip Pante (Ella M), shoe repairer, 611 W. 5th
+      Ave.**, living at the same address — shop below, home above. Worth a line
+      on her page: Ella married a shoemaker, as her father was.
+- [ ] Same directory page lists **Pante Alf J (Mary), h361 Tyler** — probably
+      Phillip's father or brother. Untraced.
+- [ ] **They were neighbours on the same street.** The Muffolettos were at
+      **543 W. 5th** by 1933; Phillip's shop and home were at **611 W. 5th**.
+      Two shoe-repair families a block apart — which is very likely how Ella and
+      Phillip met, though the certificates only prove the addresses.
+- [ ] 1950 census, Gary (ED 96-19, sheet 2, lines 24–25): Phillip **25, born
+      Indiana**, working; Ella **21**, keeping house; **no children yet**, so
+      the family began after April 1950. Sample-line answers give both her
+      parents as Italy-born.
+- [ ] Marriage: 10 Nov 1948, Lake Co. (Crown Point) — **FHL film 002416456,
+      p. 78** if you ever want the original image.
+- [ ] The page still says "Children with Phillip Pante Sr. (names not yet
+      recorded here)." Still open.
+
+## Muffoletto / Napoli — JoAnn
+
+**Page built** at `p/joann-muffoletto.html`, linked from people.html and from
+Ella's, Tina's, Rose's and Salvatore's pages. Records on it:
+
+- `records/vital/muffoletto-joann-birth-1933.jpg`
+- `records/graves/napoli-joann-peter-headstone.jpg`
+
+### From the birth certificate
+
+Indiana State Board of Health, Lake Co., Calumet Twp., Gary — Local No. 1501-347,
+Registered No. **47764**, filed 18 Dec 1933.
+
+- **Jo Ann Muffoletto**, b. **1 Dec 1933, 5:00 a.m.**, at **543 W. 5th St., Gary**
+- **Premature** — the box is ticked
+- Attending physician **Edward J. Gaebe, M.D.**, 749 Broadway, Gary
+- Father **Sam Muffoletto, 48, shoe repairer**; mother **Rose Macaluso, 32,
+  housekeeper, own home**
+
+Note the family had moved from **474 Jackson St.** (1929) to **543 W. 5th St.**
+(1933).
+
+- [x] Noted on the pages. Open question: Sam's age is inconsistent: 41 in Feb 1929 but 48 in Dec 1933 — seven years
+      apart across a gap of under five. The 1887 birth record already on the
+      site makes him 46 in Dec 1933, so this certificate overstates by two.
+      Informant error, but worth a note rather than silently picking one.
+
+### From the grave marker
+
+Davis Memorial Park, Las Vegas, Clark Co., Nevada. Shared marker:
+
+- **JoAnn Marie Napoli**, 1 Dec 1933 – **18 Apr 2019**, "Forever in our hearts"
+- **Peter Anthony Napoli**, 14 May 1963 – 29 Apr 2017, "Beloved son, brother, father"
+
+- [ ] **Death-date conflict.** The marker reads **18 April 2019**; the Find A
+      Grave index says **16 April 2019**. Two days apart. The stone is usually
+      the better source but not always — a death certificate would settle it.
+- [ ] **Peter is almost certainly JoAnn's son** (she was 29 in 1963, and he is
+      buried with her). "Beloved son, brother, father" means he had at least one
+      sibling and at least one child — more descendants to trace.
+- [ ] Husband **John Napoli** — per family knowledge, not yet documented. Look
+      for a Lake County, Indiana marriage in the early 1950s, then follow the
+      family to Nevada.
+- [x] Page built. Occupation, marriage and children rows are still open.
+
+### Long shot worth noting
+
+Gus Macaluso named a daughter **Ella**; his sister Rose named a daughter **Ella**
+four years earlier. Two first cousins with the same uncommon name usually means
+a shared elder being remembered — which could point at Alessandro's or
+Giuseppa's mother, and the `Parents ?` row on the Macaluso page. Pure
+speculation until a Collesano baptismal record says otherwise.
 
 ---
 
