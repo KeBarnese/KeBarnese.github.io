@@ -1,1 +1,8 @@
+# macOS
 .DS_Store
+
+# Office lock files (created while a doc is open, deleted on close)
+~$*
+
+# Working drafts — the site publishes PDFs and images, not Word docs
+*.docx
