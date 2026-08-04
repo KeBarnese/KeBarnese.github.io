@@ -4,6 +4,26 @@ Open threads for the family-history site (`gUclVDpu/`). Newest additions at the
 top of each section. `?` on a person page means the fact is still missing —
 items here should map back to those.
 
+## Site policy — living people
+
+Agreed rule for the whole site, not just one branch: **living people get a name
+and a relationship, and nothing else.** No birth dates, addresses, occupations,
+employers, spouses or children. The repository is public regardless of what the
+page footer says.
+
+Applied so far:
+
+- **Jerald Kellie Bell** (b. 1925, believed living) — named in the Siblings rows
+  on Jack's and his brothers' pages, **no page and no link**. His dates,
+  marriages, children and addresses are recorded in this file only.
+- **Dina Barnese**, Sal's daughter — name only. Her state and her work are
+  deliberately not on the site.
+- The same test applies to Arthur's children Angie, Ernie and Diana; to Erina
+  and Eileen; to Joseph A. Bell Jr.; and to Thomas's and Albert's descendants.
+
+- [ ] If Kellie is asked and is happy to have a page, that changes his case and
+      only his.
+
 ---
 
 ## Macaluso / Luisi
@@ -802,7 +822,11 @@ does not mention her.** The page currently runs straight from Barbara's death in
 between them.
 
 - [ ] Read that file and add Laura to Henry's Married row. Three marriages, not
-      two.
+      two. **The likely sequence is Barbara (d. Jun 1917) &rarr; Laura (divorced
+      1920) &rarr; Valeria (m. Sep 1923)** — a short second marriage filling the
+      six-year gap the page currently passes over in silence. Leave it framed as
+      an open question until the divorce file is read; nothing yet fixes when
+      that marriage began.
 - [ ] **This bears directly on Joseph.** "Half-brother" to Thomas only means a
       different mother — it does not prove Valeria. Joseph has no birth year, and
       a son born to Laura c. 1918–20 would fit the record exactly as well. Until
@@ -1216,3 +1240,27 @@ Item 7 reads **"Mrs. Ramona Sanchez, 1625 Kurtz St., San Diego, Calif."**
 - [ ] Minor: the 1940 AR-2 records **brown** eyes and 5 ft 6½; this card says
       **hazel** and 5 ft 7. Same weight, 185 lb, on both. Not worth resolving,
       worth noting.
+
+---
+
+## Barnese — Sal
+
+Page filled. Records staged at `records/vital/barnese-sal-fitzhugh-marriage-index-1966.jpg`,
+`records/vital/barnese-sal-knotts-berry-farm-1974.pdf`,
+`records/vital/barnese-sal-jerry-sun-show-1976.pdf`,
+`records/graves/barnese-sal-portrait.jpg`.
+
+- **b. 14 May 1946, Saginaw**; **d. 21 Oct 1991, Los Angeles**, aged 45
+- SSN 560-64-5218, **issued in California in 1961** — he signed the card
+  *Sal Barnese*, and the agency flagged that the signature differed from the
+  name on file
+- m1. **Carol L. Fitzhugh**, 22 Oct 1966, California — he 20, she 17
+- m2. **Evelyn Diane Jones** of Nevada, 25 Mar 1977, Clark County
+- **Musician — drums and trumpet.** Knott's Berry Farm 1974, the Jerry Sun Show
+  at Santa Maria 1976
+
+- [ ] Grave marker still unknown.
+- [ ] Address records for him run past 1991 and are not his.
+- [ ] **Dina's details are deliberately not recorded here.** Under the policy at
+      the top of this file, living people get a name and a relationship only.
+      That applies to this file too, not just the published pages.
