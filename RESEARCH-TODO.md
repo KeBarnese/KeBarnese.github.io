@@ -699,3 +699,436 @@ Died aged 60; no obituary located.
       rebuild. Commit the generators, or record where they live.
 - [ ] Root `README.md` describes the repo as chemistry teaching materials only
       and doesn't mention the family-history site at all.
+
+---
+
+## Bell — Jack's siblings
+
+Six sons of **Henry W. Bell** (1882–1966). Source of record is **Thomas E. Bell
+Sr.'s obituary**, *Flint Journal*, 4 Dec 1979, p. 27 — which is
+`records/vital/bell-thomas-obituary-1979.jpg`, **currently linked on no page at
+all**, even though Henry's page cites it as its authority for the family
+structure.
+
+### The roster — read from Jack's side
+
+**Jack's two HALF-brothers**, sons of Henry's first wife **Barbara A. (Barrett)
+Bell**, who married Henry c. 1906 and died 21 Jun 1917. They shared a father with
+Jack, not a mother:
+
+| | Known |
+|---|---|
+| **Thomas E. Sr.** | b. **14 Sep 1909, Morganfield, Ky.**; d. **1 Dec 1979, Crystal River, Florida**, aged 70. Of 3104 S. Center Rd., Flint; buried Evergreen Cemetery, Grand Blanc |
+| **Willis Henry** | b. **26 Dec 1912, Evansville, Ind.**; d. **8 Feb 1981, Flint Osteopathic Hospital**, aged 68, of 6260 Woodsdale Dr., Grand Blanc. Buried **Evergreen Cemetery, Grand Blanc** — with Thomas |
+
+**Jack's three FULL brothers** — Valeria Hunter's sons (m. 23 Sep 1923), same
+mother and father as Jack. (They are the "four half-brothers" of Thomas's
+obituary only because that notice is written from Thomas's side.)
+
+| | Known |
+|---|---|
+| **James Gilbert** | b. **27 Jul 1924, Evansville** — see below |
+| **Jerald Kellie** | b. **21 Dec 1925, Marrs Twp., Posey Co., Ind.**; of Seattle from 1946 |
+| **Joseph Albert** | b. **2 Dec 1935, Evansville** |
+| **Jack William "Duke"** | b. 28 Feb 1928; d. 15 Jul 1989. Of **Dana Point, California** in Dec 1979 |
+
+Note that **Thomas and Willis were Jack's half-brothers**, and should be labelled
+that way on Jack's page and theirs. His own page currently says only "brother
+Kelly (of Seattle) and others."
+
+### James Gilbert Bell — fully documented
+
+`records/vital/bell-james-gilbert-birth-1924.jpg`,
+`records/vital/bell-james-gilbert-death-cert-2006.jpg`,
+`records/military/bell-james-gilbert-draft-front.jpg` and `-back.jpg`
+
+- **b. 27 Jul 1924, 8:30 a.m., at 910 N. Lafayette St., Evansville** — the same
+  house where Barbara had died seven years earlier. Local no. 992, state reg.
+  no. 40051, filed 31 Jul 1924. Attending physician Joseph H. Willis, M.D.
+- Father **Henry W. Bell, 42, machinist**, b. Union Co., Ky.; mother **Valeria M.
+  Hunter, 23**, housewife, b. Union Co., Ky.
+- Draft registration **15 Dec 1942**, Local Board 1, Vanderburgh Co.: 5 ft 10½,
+  150 lb, blue eyes, brown hair, ruddy; living at RR4 Box 627 with his father;
+  working for **Bailey Bridge and Iron Co.** Signed *James Gilbert Bell*
+- **U.S. Navy, 21 Apr 1943 – 22 Feb 1946.** SSN 313-14-1663
+- **d. 11 Feb 2006, 2:11 a.m., at home**, 2531 Oak Drive, Clayton, Hendricks Co.,
+  Indiana, aged 81. Cremated at Central Indiana Crematory, Indianapolis
+- Wife **Clarice Jane Godby**. Career: **contract analyst, U.S. Postal Service**;
+  twelve years of school and one of college
+- Cause: subdural hematomas, following a cerebral vascular accident and end-stage
+  dementia
+
+### ⭐ The birth certificate constrains Joseph/Albert
+
+James's 1924 certificate records **"number of children born to this mother
+including present birth: 1."** So as of July 1924, **Valeria had borne only one
+child.**
+
+- [ ] Therefore Joseph/Albert was either born to Valeria **after** July 1924, or
+      he was not Valeria's at all — which puts **Laura** (divorced 1920) back in
+      play, or even Barbara. He cannot be an early Valeria child.
+- [ ] Combined with James being the eldest of Valeria's, the birth order of
+      Gerald K. and Joseph/Albert is completely open.
+
+### ⚠ Two names on James's death certificate that don't match the site
+
+The 2006 certificate, with his wife Clarice as informant, gives:
+
+- **Father: "William Henry Bell"** — everywhere else he is *Henry W. Bell*
+- **Mother: "Valeria McCluria"** — everywhere else she is *Valeria M. Hunter*
+
+Clarice was reporting on in-laws dead since 1966 and 1979, so these are
+second-hand. But both may be recoverable rather than simply wrong:
+
+- [ ] **Henry's middle name may have been William.** *Henry W.* → *William Henry*
+      is a straight transposition, and William runs hard through this family:
+      Jack **William** Bell, Kevin **William** Bell, and Valeria's own father
+      **William Henry** Hunter. *[Likely, but note Clarice could equally have
+      borrowed the name from the other grandfather.]*
+- [ ] **"McCluria" may be Valeria's real middle name, not a surname.** She is
+      always *Valeria M.* A mother's maiden surname used as a middle name is
+      common in that time and place — which would suggest **Ida Hunter's maiden
+      name was McCluria or McClure**. That would be a new fact on the Hunter
+      line, where Ida's origins are currently blank. *[Guessing — but cheap to
+      test against a Union County, Ky. marriage record for William Henry Hunter
+      and Ida.]*
+
+
+### ⚠ There was a third wife: Laura
+
+`records/vital/bell-henry-laura-divorce-1920.jpg` — **unused, and Henry's page
+does not mention her.** The page currently runs straight from Barbara's death in
+1917 to the Valeria marriage in 1923. A divorce from a **Laura** in 1920 sits
+between them.
+
+- [ ] Read that file and add Laura to Henry's Married row. Three marriages, not
+      two.
+- [ ] **This bears directly on Joseph.** "Half-brother" to Thomas only means a
+      different mother — it does not prove Valeria. Joseph has no birth year, and
+      a son born to Laura c. 1918–20 would fit the record exactly as well. Until
+      Joseph is dated, his mother is genuinely open.
+
+### ⭐ Thomas E. Bell Sr. was Sheriff of Genesee County
+
+The most publicly prominent person on the site so far, and none of it is
+recorded anywhere:
+
+- **Genesee County Sheriff, 1960–1972** — twelve years, covering Flint
+- Past president, **Michigan Sheriffs Association**; member, National Sheriffs
+  Association
+- **First full-time Mt. Morris Township Supervisor**; member of the Genesee
+  County Board of Supervisors
+- Former chairman, **Genesee County Democratic Committee**
+- Retired from **Buick Motor Division Skilled Trades**; **UAW Local 599**
+- Freemason and Shriner: Flint Lodge 23 F&AM, Washington Chapter No. 15 R.A.M.,
+  Genesee Valley Commandery No. 15 KT, Elf Khurafeh Temple AAONMS. Founder of the
+  Beecher Men's Club; charter member and past president of the Beecher Lions Club
+- Wife **Marian**; children **Barbara Gail** (m. Otis Reed) and **Thomas E. Jr.**
+  (m. Dorothy Dreuth); seven grandchildren, three great-grandchildren
+
+- [ ] Build him a page. A twelve-year elected sheriff generates newspaper
+      coverage by the yard — election results, budget fights, cases. This is the
+      richest untapped seam on the site.
+
+### Willis Henry Bell — solved, and he was a sheriff's deputy too
+
+`records/military/bell-willis-draft-front.jpg` and `-back.jpg`,
+`records/military/bell-willis-va-headstone-application-1981.jpg`,
+`records/graves/bell-willis-headstone.jpg`,
+`records/vital/bell-willis-obituary-1981.pdf`
+
+- **b. 26 Dec 1912, Evansville, Indiana**; **d. 8 Feb 1981, Flint**, aged 68
+- Indiana birth record names his parents **Henry W Bell** and **Barbara
+  Barnett** — note *Barnett*, where Barbara's own death certificate gives her
+  father as *Joe **Barrett***. One more spelling to resolve
+- Draft registration **16 Oct 1940**, Local Board 3, Flint: 6 ft, 169 lb, blue
+  eyes, brown hair, working at the J. D. Blowney Service Station, 1402 N.
+  Saginaw St. **The person who would always know his address was his brother
+  Thomas Edward Bell — at the same address, 515 W. Flint Park Blvd.** The two of
+  them went to Flint together
+- **U.S. Army 17 Jan 1941 – 2 Aug 1951** — over ten years, WWII and Korea
+- **Retired from the Genesee County Sheriff's Department**, and a member of the
+  National Sheriffs Association and the Fraternal Order of Police — so he served
+  in the same department his brother Thomas ran as Sheriff from 1960
+- VFW Post 3087; American Legion Post 342
+- Wife **Reubena Kietzman**, of Astor, Florida by 1981; step-son Ralph Wells
+  (West Virginia), step-daughter Alice Miller (Florida). No biological children
+  are named
+
+- [ ] **Rank conflict.** His obituary says he "retired as a Master Sargent from
+      the US Army"; the VA headstone application his widow filed says **Spec 4**,
+      and the marker reads SP4. The Specialist grades were not created until
+      **1955**, four years after his 1951 discharge — so SP4 on the stone is
+      anachronistic. *[Likely — verify the 1955 date, but the discrepancy is
+      real either way.]*
+
+### ✅ SOLVED — the six sons, from a brother's own account
+
+**Source: an unpublished memoir written by Jerald Kellie Bell, last revised
+November 2009.** Kevin has asked that it **not be reproduced or published** —
+facts extracted from it may be used, its text may not. Nothing is quoted here or
+anywhere on the site.
+
+| | Mother | Born |
+|---|---|---|
+| **Thomas Edward** | Barbara | 14 Sep 1909 |
+| **Willis Henry** | Barbara | 26 Dec 1912 |
+| **James Gilbert** | Valeria | 27 Jul 1924 |
+| **Jerald Kellie** | Valeria | **21 Dec 1925**, on a watermelon farm in Marrs Twp., Posey Co., Ind. |
+| **Jack William** | Valeria | 28 Feb 1928 |
+| **Joseph Albert** | Valeria | **2 Dec 1935**, Evansville |
+
+- **"Joseph" and "Albert" were the same man: Joseph Albert Bell.** Thomas's
+  obituary used the first name, Willis's the second; the family called him
+  Albert. Born 2 Dec 1935, so unambiguously Valeria's — the Laura hypothesis is
+  dead for him.
+- The memoir states plainly that Thomas and Willis were sons of Henry's first
+  wife, who had died years before — confirming the two-mother split from the
+  inside.
+- As of about 2007, only Kellie and Albert were still living.
+
+- [x] ~~Joseph or Albert?~~ — resolved.
+
+### ⭐ Henry's and Valeria's exact dates, from their son
+
+- **Henry William Bell**, b. **22 Jun 1882**, Kentucky
+- **Valeria Hunter**, b. **24 Feb 1901**, Kentucky — nearly twenty years younger
+
+- [ ] **His middle name was William.** This confirms the inference drawn from
+      James's 2006 death certificate ("William Henry Bell"). The site shows only
+      *Henry W.* — change it, and note that Jack **William** and Kevin **William**
+      carry it forward.
+- [ ] Henry's page gives his birth as "~1882" and his headstone reads 1881.
+      **22 Jun 1882** should now be preferred, with the stone flagged as wrong —
+      the same one-year stone error already noted for Barbara.
+- [ ] Valeria's page gives "~1901" and her death as "1979 · ?". Fill in
+      **24 Feb 1901**; her death date is still open.
+- [ ] Henry was the **youngest child** in his own family, and both his parents
+      had died before 1925. Useful against the James W. Bell / Mary E. Bell page.
+
+### ⭐ Henry's working life, Depression years
+
+Beyond the bricklayer (1910) and machinist (1924) already recorded: the family
+farmed in Kentucky and Indiana, **lost the farm** around 1929, and moved into
+Evansville. Henry worked for the **Servel Company** making gas-fired
+refrigerators, was laid off as the Depression deepened, and then worked for the
+**WPA**. In 1936 they bought a small farm north of Evansville from their former
+landlord.
+
+Addresses filling the 1925–44 gap on his page:
+
+| Years | Address |
+|---|---|
+| 1925–29 | Marrs Township, Posey County, Indiana |
+| 1929–32 | 312 E. Tennessee St., Evansville |
+| 1932–36 | 314 E. Tennessee St., Evansville |
+| 1936–44 | Buchanan Rd., north of Evansville |
+
+- [ ] Note the move: James was born at 910 N. Lafayette in Jul 1924, Kellie in
+      Posey County in Dec 1925. They left Evansville for the farm in between.
+
+### ⭐⭐ The Hunter eight — Valeria's siblings, all named
+
+Valeria's page says only "one of 8 children." All eight are now identifiable,
+in birth order:
+
+| | Spouse | Note |
+|---|---|---|
+| **Valeria** (eldest) | Henry William Bell | b. 24 Feb 1901 |
+| **Lola** | Aubrey Buchman | farmed near Waverly, Ky. |
+| **Willie** (f.) | Norris Powell | farmer |
+| **Jim Tom** | Catherine Jenkins | truck driver |
+| **Austin** | Maggie | farmed near his parents; his father died in his house |
+| **Flo Ella** | never married | had a son known in the family as "Son" |
+| **Goldie** | Robert Jenkins | |
+| **Della** (youngest) | a Jenkins, forename not recalled | |
+
+- [ ] **William Henry Hunter died shortly after August 1964**, bed-ridden at his
+      son Austin's house. That dates a death currently unrecorded.
+- [ ] The Hunter farm was at **Hitesville, Kentucky** — roughly 60 acres, corn,
+      hay and tobacco. About 1931 they bought the **general store** at Hitesville
+      and moved into the attached house.
+- [ ] Three Jenkins marriages among the eight (Jim Tom, Goldie, Della) suggests
+      one closely tied local family. Worth a look at Union County, Ky. records.
+
+### Joseph Albert Bell Sr. — fully documented
+
+`records/vital/bell-joseph-albert-birth-1935.jpg`,
+`records/vital/bell-joseph-albert-death-cert-2012.jpg`,
+`records/vital/bell-joseph-albert-rita-marriage-1965.pdf`,
+`records/military/bell-joseph-albert-ss-registration.jpg`
+
+- **b. 2 Dec 1935, 1:00 a.m., at 314 E. Tennessee St., Evansville** — the exact
+  shotgun house Kellie's memoir places the family in from 1932 to 1936. Local no.
+  1539, reg. no. 52036, filed 3 Dec 1935; physician James S. Baker, M.D.
+- Father **Henry W. Bell, 54, machinist**; mother **Valeria Hunter, 34,
+  housekeeper**, both b. Kentucky
+- Selective Service registration, no. **12 80 35 426**, from **1021 N. Fourth
+  Ave.** — the address Henry would die at in 1966. Occupation given as
+  **student, sophomore at Reitz**; single; never rejected for service
+- **He never served.** His 2012 death certificate answers "Ever in U.S. Armed
+  Forces" with **No** — the only one of the six brothers who did not
+- m. **Rita Faye Bell, née Whitten**, licence listed at Owensboro, Kentucky,
+  July 1965; he was 29, both of Evansville. She was already surnamed Bell from an
+  earlier marriage, which is why the clipping reads *Bell / Bell*. Evansville
+  couples routinely crossed the river to marry in Kentucky
+- Recorded as **Joseph A. Bell Sr.** — so there is a **Jr.** still untraced
+- Occupation **truck driver**, in manufacturing; high school graduate
+- **d. 26 Oct 2012, 2:44 a.m., at home**, 5308 North St Joseph Ave., Evansville,
+  aged 76; cremated at Evansville Crematory. Cause: intracranial hemorrhage over
+  17 days, from hypertension of 30 years, with endstage renal disease
+
+### ⭐⭐ The birth certificate closes the Laura question completely
+
+Joseph Albert's 1935 certificate records him as **"number in order of birth: 4"**
+and states **4 children born to this mother, 4 now living**.
+
+Valeria's four sons were **James (1924), Jerald Kellie (1925), Jack (1928) and
+Joseph Albert (1935)** — all four alive in December 1935, and no others.
+
+- [x] **Laura bore Henry no surviving children.** Every one of the six sons is now
+      accounted for: two to Barbara, four to Valeria. Laura remains a real third
+      marriage to add to Henry's page, but she adds no children to the tree.
+
+### ⭐ "MacClure" is now confirmed, not a guess
+
+Two death certificates, filed six years apart by two different widows, both
+attach the same unusual name to Valeria:
+
+- **James's, 2006** (informant Clarice): mother given as *Valeria **McCluria***
+- **Joseph Albert's, 2012** (informant Rita): mother's maiden name *HUNTER*, with
+  a filed amendment reading **"23b: MACCLURE"**
+
+- [ ] Valeria was almost certainly **Valeria MacClure Hunter** — a mother's
+      maiden surname carried as a middle name, which would make **Ida Hunter née
+      MacClure / McClure**. Two independent informants is well past coincidence.
+      Test against a Union County, Ky. marriage for William Henry Hunter.
+      *[Upgraded from Guessing to Likely.]*
+
+### ⭐ All six brothers now have dates — one gap left
+
+| | Born | Died |
+|---|---|---|
+| Thomas Edward | 14 Sep 1909 | 1 Dec 1979 |
+| Willis Henry | 26 Dec 1912 | 8 Feb 1981 |
+| James Gilbert | 27 Jul 1924 | 11 Feb 2006 |
+| **Jerald Kellie** | 21 Dec 1925 | **still unknown** — writing in Nov 2009 |
+| Jack William | 28 Feb 1928 | 15 Jul 1989 |
+| Joseph Albert | 2 Dec 1935 | 26 Oct 2012 |
+
+- [ ] **Kellie may still be living.** Born 21 Dec 1925, he would be **100** as of
+      August 2026, turning 101 in December. Family understanding is that he is
+      alive. Treat him as living until a record says otherwise — and note that
+      absence from a death index proves nothing either way.
+
+### ⚠⚠ If Kellie is living, two things follow
+
+**1. He is the most valuable and most perishable source in the entire project.**
+A centenarian who already writes his life down, who remembers Evansville in the
+Depression, and who is the only person alive who knew Henry and Valeria as
+parents. No archive competes with that. Questions only he can answer:
+
+- [ ] **Laura.** Henry divorced a Laura in 1920, five years before Kellie was
+      born. He may have heard her spoken of even if he never met her.
+- [ ] **Ida Hunter's maiden name.** Two death certificates point at *MacClure*.
+      Kellie spent childhood summers on the Hunter farm at Hitesville and knew
+      his grandmother. One question settles it.
+- [ ] **Henry's own family.** His memoir says he never knew his father's parents
+      or siblings, but he may have heard names — and Henry's page has a nearly
+      blank Siblings row.
+- [ ] **Joseph A. Bell Jr.** and any of Albert's family.
+- [ ] **Photographs.** There are almost none on the Bell side of the site.
+- [ ] Barbara, Thomas and Willis — he knew both half-brothers as teenagers.
+
+**2. Living-person privacy on a public repository.** This site's HTML sits in a
+public GitHub repo, whatever the footer says. Before anything about a living
+person goes up:
+
+- [ ] Ask him. He wrote the memoir to be left behind, so he may well be glad of a
+      page — but that is his call, not an assumption.
+- [ ] If a page is built, keep it to what he has chosen to share. No current
+      address, no full birth date if he'd rather not, nothing about living
+      children or grandchildren without their say.
+- [ ] The same test applies to Erina and Eileen, to Joseph A. Bell Jr., and to
+      Albert's and Thomas's descendants — all potentially living.
+- [ ] Find **Joseph A. Bell Jr.**
+
+### Jerald Kellie Bell — first records
+
+`records/vital/bell-jerald-oconnor-marriage-1951.jpg`
+
+- **b. 21 Dec 1925**, Marrs Township, Posey County, Indiana
+- **Army/Army Air Forces from 1944**: inducted Ft. Benjamin Harrison, basic at
+  Keesler Field, then South Plains AAB (Lubbock), college training at the
+  **University of Cincinnati**, then Perrin, Randolph and Brooks Fields in Texas;
+  separated at Scott Field, Illinois, in 1945
+- First marriage 1945, Evansville; divorced 1946
+- **Moved to Seattle in August 1946** and stayed
+- Stationed at **Fairfield-Suisun AFB** (renamed **Travis** in 1951), California,
+  1949–51
+- m. **Fay M. O'Connor**, **13 Aug 1951**, King County, Washington — at 1226 24th
+  N., Seattle, before Justice of the Peace William Hoar; witnesses (illegible)
+  K. Stagg and Andrew E. Dennis; certificate Series A 176127, filed 27 Aug 1951.
+  The certificate gives his residence as **Travis, California**
+- Tokyo 1951–54 (New Kaijo Building, then Johnson Air Base, then Palace Heights
+  NCO family quarters); discharged via Larson AFB, Moses Lake, Wash., 1954
+- Daughters **Erina** (b. 1954–55, Port Orchard, Wash.) and **Eileen**
+  (b. **3 Apr 1956**, Seattle)
+- Divorced 1962; married **Jo Ann** in 1968, Seattle
+
+- [ ] **Date conflict:** the memoir puts the second marriage in September 1951;
+      the certificate says **13 August 1951**. Prefer the certificate.
+- [ ] He spells himself **Jerald**, and signs the 1951 certificate *Jerald K.
+      Bell*. Both obituaries say *Gerald K.* / *Kelly*. Use Jerald.
+- [ ] Find his death date. He was alive and writing in November 2009.
+
+### ⚠ Note before committing
+
+`RESEARCH-TODO.md` is tracked in a **public GitHub repository**. The memoir
+itself is not in the repo and must not be added; only extracted facts appear
+above, in paraphrase. If even that is more than intended, this section should be
+moved out of the repo before pushing.
+
+### ⚠ ~~Joseph or Albert? The two obituaries disagree~~ (resolved above)
+
+The Evansville/Indiana brother is named differently in each source:
+
+| Source | The four brothers |
+|---|---|
+| Thomas's obituary, Dec 1979 | James G. (Indianapolis), Jack (Dana Point), Gerald K. (Seattle), **Joseph** (Evansville) |
+| Willis's obituary, Feb 1981 | Gilbert (Indiana), Kelly (Washington), Jack (California), **Albert** (Indiana) |
+
+Same four positions, same four states — but *Joseph* in one and *Albert* in the
+other.
+
+- [ ] Either he was **Joseph Albert** (or Albert Joseph) and each paper took a
+      different half, or one of them is simply wrong. This family's records
+      disagree on names constantly — Gerald K./Kellie/Kelly, James G./Gilbert,
+      Willis/William, and now Joseph/Albert.
+- [ ] Note that Willis's obituary does **not** distinguish half-brothers, where
+      Thomas's did. Only Thomas's supports the two-mother split.
+
+### ⚠ Thomas's death date is given two ways
+
+His own obituary (*Flint Journal*, 4 Dec 1979) says he died **Saturday, 1
+December 1979**. Willis's 1981 obituary says "preceded in death by brother,
+Sheriff Tom Bell, **December 19, 1979**."
+
+- [ ] The 1979 notice, printed three days after the fact, is much the stronger
+      source; *19* looks like a transposition of *1*. Confirm from a death
+      record before publishing either.
+
+### Other Bell to-dos
+
+- [ ] **Jack was at Dana Point, California in Dec 1979.** His own page says he
+      died in 1989 in the "Los Angeles area (likely Hawthorne — to confirm)."
+      Dana Point is Orange County. Adjust or reconcile.
+- [x] **Willis, not William.** Settled three ways: he signed his 1940 draft card
+      **Willis Henry Bell** in his own hand; the Indiana birth record reads
+      *Willis Henry Bell*; and the headstone reads *Willis H. Bell*. Thomas's
+      1979 obituary was wrong.
+- [ ] The **1930 census of Henry's household** is already on the site. Read it
+      properly: it should list every son at home with an age, which would date
+      Joseph and settle the Laura question in one go.
+- [ ] No birth or death dates at all for **Gerald K.** or **Joseph**; no death
+      date for **William/Willis** or **James G.**
