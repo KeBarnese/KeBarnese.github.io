@@ -1132,3 +1132,87 @@ Sheriff Tom Bell, **December 19, 1979**."
       Joseph and settle the Laura question in one go.
 - [ ] No birth or death dates at all for **Gerald K.** or **Joseph**; no death
       date for **William/Willis** or **James G.**
+
+---
+
+## Sanchez — Roman's 1942 draft registration
+
+`records/military/sanchez-roman-wwii-draft-1942-front.jpg` and `-back.jpg`
+
+The **fourth registration** — the "old man's registration" — taken **26 Apr 1942**
+at Local Board 103, **Daly City**, registrar Mary K. Lyle. Serial U 633.
+
+- **302 Maple Ave., South San Francisco**, San Mateo Co. — a new address. The
+  page has him at 308 2nd Lane in Sept 1940, so he moved within South San
+  Francisco between then and April 1942
+- **b. 5 Jun 1892, Spain**; age 49; no telephone
+- 5 ft 7, 185 lb, **hazel** eyes, brown hair, light complexion
+
+### ⚠ He was a chef, not a painter — the Occupation row needs rewriting
+
+The card gives his occupation as **CHEF**, with place of employment entered as
+**302 Maple Ave.** — the same address he lived at, so a boarding house or small
+restaurant rather than a job he travelled to.
+
+His page currently says he was "a painter for the rest of his working life" and
+that **"the trade never changed."** It did. By 1942 he had left painting.
+
+- [ ] Rewrite the Occupation row and the corresponding line in the story.
+- [ ] **302 Maple Ave. is a new address, and he both lived and worked there.**
+      Add it to the Residences row between 308 2nd Lane (Sept 1940) and his death
+      — he moved within South San Francisco sometime in that eighteen-month gap.
+- [ ] **A South San Francisco city directory for 1941–43 would name the business
+      at 302 Maple.** A chef whose place of employment is his own address means a
+      boarding house, café or rooming house with a kitchen — the directory would
+      say which, and possibly who ran it. Maple Avenue sits in the old downtown
+      grid off Grand, which had exactly that kind of housing for the Bethlehem
+      Steel and packinghouse workforce. *[The neighbourhood characterisation is
+      inference; the directory is the way to check it.]*
+- [x] ~~Photograph 302 Maple~~ — **the address no longer exists.** The lowest
+      number now on that stretch is 310, and the building there dates from about
+      2000. The 1942 structure is gone and the lot numbering has been
+      consolidated. Annotate the Residences row the same way Ramona's page
+      already handles 1120 Akard St., where the standing house postdates her
+      tenancy.
+
+Ways to recover what stood there, best first:
+
+- [ ] **The 1950 census.** Enumerated by address, so the sheet covering that
+      block of Maple Ave. shows 302 and everyone in it. If it lists a cluster of
+      unrelated lodgers, that settles the boarding-house reading outright. And
+      **Roman has no 1950 census on the site at all** — a real gap in its own
+      right, since he died in Santa Clara County in 1959 and nothing places him
+      between April 1942 and that death.
+- [ ] **South San Francisco city directory, 1941–43** — would name the business
+      and often the proprietor.
+- [ ] **Sanborn fire insurance maps.** They give building footprints with street
+      numbers, and mark boarding houses and restaurants distinctly. Coverage for
+      South San Francisco should exist; check the Library of Congress digitised
+      collection. *[Likely available — verify.]*
+- [ ] **Historical aerial photography**, e.g. UC Santa Barbara's collection,
+      would show the block before redevelopment.
+- [ ] **South San Francisco Public Library local history room** — the fastest
+      route if the online sources come up short.
+- [ ] **Worth noticing, not asserting:** Ramona was running **Ramona's Kitchen**
+      by 1947, with newspaper ads in 1947, 1950 and 1953 already in
+      `records/vital/`. Roman was cooking for a living in 1942. They had been
+      apart since about 1933, so this is a parallel rather than a partnership —
+      but both of them ended up in food, and the site currently notes neither.
+
+### ⚠ He named Ramona as his contact — in 1942, in San Diego
+
+Item 7 reads **"Mrs. Ramona Sanchez, 1625 Kurtz St., San Diego, Calif."**
+
+- Nine years after they separated, and after two non-support proceedings, she was
+  still the person he named as always knowing where he was
+- On his **1940** alien registration he had entered no wife and ticked
+  **widowed**, though she was living. Two years later he calls her *Mrs. Ramona
+  Sanchez*. The page already flags the 1940 checkbox as odd; this sharpens it
+- **1625 Kurtz St., San Diego** — a new address for Ramona, who the page last
+  places in Pomona in 1933. Her son John's own 1942 draft card independently puts
+  her in San Diego, so the two agree
+
+- [ ] Add the San Diego address to Ramona's page and date her move.
+- [ ] Minor: the 1940 AR-2 records **brown** eyes and 5 ft 6½; this card says
+      **hazel** and 5 ft 7. Same weight, 185 lb, on both. Not worth resolving,
+      worth noting.
