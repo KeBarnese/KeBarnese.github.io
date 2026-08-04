@@ -1264,3 +1264,175 @@ Page filled. Records staged at `records/vital/barnese-sal-fitzhugh-marriage-inde
 - [ ] **Dina's details are deliberately not recorded here.** Under the policy at
       the top of this file, living people get a name and a relationship only.
       That applies to this file too, not just the published pages.
+
+---
+
+## Bell — finding James W. Bell in 1850
+
+His page has `Parents ?` and `Siblings ?`, so his 1850 household is the goal.
+What already anchors him:
+
+- 1860 census: **Morganfield, Union County**, aged 32, with first wife Susan C.
+  and four children, eldest William H. b. c. 1852
+- 1864 Oath of Allegiance at Rock Island: residence **Morganfield**, aged 37
+- 1870 census: Union County farmer; died there 1898
+
+Those put his birth at c. 1827–28 and place him in **Union County by 1852 at the
+latest**, married and starting a family.
+
+### Two 1850 candidates examined — neither holds
+
+**Franklin County, Kentucky, 20 Aug 1850, household 294** — James F. Bell, 40,
+farmer. **No James W. Bell in it.** The head has the right forename but is b.
+c. 1810; the son of the right age is **John W. Bell, 21**. Franklin County is
+central Kentucky, roughly 150 miles from Union County. Rejected.
+
+**Ralls County, Missouri, 21 Sep 1850, household 377** — W. T. Bell, 46, wife
+Laura, with **James W., 20, schoolteacher, born Kentucky**. Name and birth state
+fit; the age is two to three years out. But the family had been in Missouri since
+about 1834 — every child from 16 down is Missouri-born — and our James was in
+Union County, Kentucky with a wife and a child by 1852. Possible only with an
+unexplained return. Not pursued.
+
+*(The wife here is named Laura. Unrelated to Henry's 1920 divorce, seventy years
+and a state away.)*
+
+### Also ruled out — the Jan 1882 Covington marriage
+
+Kenton County marriage record, **4 Jan 1882 at Covington**: *James W. Bell*, 55,
+of **Campbell County**, second marriage, occupation **magistrate**, born
+**Nicholas County**, father born Virginia, mother born Ohio — to **Margaret
+Doughty**, 43, of Covington, second marriage.
+
+The age fits ours almost exactly (55 in Jan 1882 &rarr; b. c. 1826&ndash;27) and
+it is a second marriage, which is why it looks promising. It is not him:
+
+- **The bride is wrong.** Our James's second wife was **Mary E.**, b. c. 1850.
+  Margaret Doughty was 43, so b. c. 1839.
+- **The date is impossible.** **Henry was born 22 June 1882** to Mary E. — five
+  months after this wedding. James was already married to her.
+- Campbell County and Covington are northern Kentucky, ~250 miles from Union
+  County; Nicholas County is north-eastern. Ours is a Union County farmer, not a
+  magistrate.
+
+- [ ] **But note the record format.** This register gives *birthplace of father*
+      and *birthplace of mother* for both parties. A **Union County marriage
+      record for James and Mary E., c. 1880&ndash;81**, would carry the same
+      fields — and would name his parents' origins outright. That may be a faster
+      route to the `Parents ?` row than the 1850 census.
+
+- [ ] **Search the 1850 census of Union County, Kentucky** for Bell households
+      containing a James aged about 22. That is where his parents should be.
+- [ ] Check who lived on **adjacent lines** in the 1860 and 1870 Union County
+      censuses — both are already cited on his page. Fathers and brothers
+      commonly farmed next door.
+- [ ] A **Union County marriage bond for James Bell and Susan, c. 1850&ndash;52**
+      would likely name a parent or a surety who was kin.
+
+---
+
+## Bell — the Ancestry tree (26949607), assessed
+
+Two person-exports read: **James William Bell 1827&ndash;1898** and **Mary
+Elizabeth Hill 1849&ndash;1921**. Useful, but **not clean** &mdash; take the
+corroborated parts and verify the rest.
+
+### Confirmed independently, now on the pages
+
+- **Parents: William Bell (c.1805&ndash;1832) & Elizabeth Ann Hosman
+  (c.1800&ndash;1859).** The tree agrees with the 1827 Union County bond and
+  minister's return already staged here. Two routes, one answer &mdash; the
+  `Parents ?` row is closed.
+- **Susan Cassie Day (1835&ndash;1863)** matches the 1851 bond naming Susan C.
+  Day, daughter of Horatio Day.
+- **Henry born 7 June 1881, not 1882.** His own 1966 obituary gives his age at
+  death on 3 June 1966 as **84**. Born 7 Jun 1881 he was 84, four days short of
+  85; born Jun 1882 he would have been 83. His headstone's 1881 was right and
+  **Kellie's memoir is a year out.** Corrected on Henry's page.
+- **Mary Hill d. 16 May 1921, Evansville** &mdash; inside the 1920&ndash;30
+  window already estimated here.
+
+### ⭐ Hitesville closes a circle
+
+Mary E. (Hill) Bell's recorded residence is **Hitesville, Union County** &mdash;
+the same village where the **Hunter** family farmed and, from about 1931, kept
+the general store. Henry's mother and Valeria's parents lived in the same tiny
+place. That is very likely how a man who had moved to Evansville came to marry a
+girl from back home.
+
+### ⚠ Where the tree is unreliable
+
+- **Three marriage events to one wife**: 6 Nov 1851 (twice) and 4 Nov 1857. The
+  tree has simply attached both readings of the same ambiguous licence rather
+  than resolving it. **Our 1851 reading still stands** on better grounds: the
+  register is headed *1851* and the clerk certified it in **February 1856**.
+- **Duplicate children.** Sylvester Whitley (1856) *and* Sylvester G (1857);
+  William H., Sidney and Sylvester G all dated 1857. Almost certainly one or two
+  boys recorded three times.
+- **Mary Elizabeth Bell, b. c. 1849, is listed as Susan's daughter** &mdash;
+  born before any marriage, when Susan would have been fourteen. Impossible as
+  stated.
+- **Joshway Bell, b. 1866**, is listed as Mary Hill's, born a year before the
+  Dec 1867 wedding. Possible, but needs explaining rather than asserting.
+
+- [ ] Everything tree-sourced is flagged as such in the page notes. Pull the
+      underlying records &mdash; Kentucky birth and death records, the 1850,
+      1860, 1870 and 1880 censuses, the 1898 probate &mdash; before removing
+      those flags.
+
+### James's other children — Henry had many siblings
+
+By **Susan Day**: Charles Richard (1854&ndash;1924), Sylvester Whitley
+(1856&ndash;1926), William H., Sidney, James Robert (1860&ndash;1906), John M.
+(1863&ndash;1900).
+By **Mary Hill**: Joshway (1866), Lillie (1869), Leonard B. (1870), Florence G.
+(1872), **Joseph Kelly (1873&ndash;1953)**, Susan (1874), Claude B. (1876),
+Clarence (1877), George M. (1880&ndash;1957), and **Henry William (1881)**.
+
+- [ ] **Henry was the youngest of ten by Mary and the youngest of the whole
+      family** &mdash; exactly as Kellie's memoir said.
+- [ ] **Joseph Kelly Bell.** Henry named a son **Jerald Kellie**. Kellie's memoir
+      says he never knew his father's brothers &mdash; but the name came down
+      anyway. Worth a line once verified.
+- [ ] Susan Day died about 1863, while James was at war or in Union prison. Their
+      son John M. was born the same year.
+
+---
+
+## Hunter — the Adair County William Henry Hunter is NOT ours
+
+A second researched tree offers **William Henry Hunter, 11 Jan 1878 &ndash;
+4 Jul 1957**, of Floyd then Adair County, with a first wife **Mary Paul**
+(1880&ndash;1954) and a second, **Ida B** (22 Dec 1891 &ndash; Apr 1981), of
+Louisville. **Rejected.** Only the name and the 1878 birth year match, and both
+are common.
+
+| | Ours | The Adair County man |
+|---|---|---|
+| Died | **1966** | 4 Jul 1957 |
+| Ida born | c. 1876 | **22 Dec 1891** |
+| Ida died | **1966** | Apr 1981, Louisville |
+| Home | **Union County** &mdash; Hitesville, Waverly, Morganfield, Caseyville | Floyd &rarr; Adair &rarr; Louisville |
+| Children | **8**, eldest Valeria (1901); Lola, Willie, Jim Tom, Austin, Flo Ella, Goldie, Della | 10 by Mary Paul; no Valeria |
+
+Three things settle it independently:
+
+- **The shared headstone.** Our William and Ida lie under one marker, **both
+  dated 1966**. The Adair man died in 1957 and his Ida in 1981, twenty-four years
+  apart, in different counties. They cannot be on a joint stone.
+- **Ida's age.** Ours bore Valeria in **1901**. An Ida born in 1891 would have
+  been nine.
+- **An eyewitness.** Kellie's memoir records visiting the grandparents in
+  **August 1964**, the grandfather bed-ridden and dying shortly after. Not 1957.
+
+Note also that the Adair Ida bore **no children at all** to that William &mdash;
+she was a late-life second wife in Louisville, married by the mid-1930s. So
+nothing here supports the idea that **our** Ida was a second wife. Ours was
+about 25 and William about 23 when Valeria was born: an ordinary first marriage.
+
+- [ ] **Union County marriage record, William Henry Hunter and Ida, c. 1900.**
+      Kentucky county marriage records of that era give **birthplace of father
+      and birthplace of mother for both parties** &mdash; the same field set that
+      opened up the Bells. This is the single best route to the two blank
+      `Parents ?` rows on the Hunter pages.
+- [ ] Locate their shared 1966 marker. Both pages give the stone but no cemetery.
