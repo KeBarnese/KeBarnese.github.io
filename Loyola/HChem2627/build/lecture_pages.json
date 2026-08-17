@@ -1,261 +1,688 @@
 {
  "L01": {
+  "type": "lecture",
+  "title": "1.1 Matter and Its Classification",
   "page_url": "l01-1-dot-1-matter-and-its-classification",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l01-1-dot-1-matter-and-its-classification",
   "file_id": 3011253,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-08-19",
+   "6": "2026-08-19",
+   "7": "2026-08-20"
+  }
  },
  "L02": {
+  "type": "lecture",
+  "title": "1.3--1.5 Properties of Matter, Units and Measurement",
   "page_url": "l02-1-dot-3-1-dot-5-properties-of-matter-units-and-measurement",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l02-1-dot-3-1-dot-5-properties-of-matter-units-and-measurement",
   "file_id": 3011254,
   "videos": 2,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-08-21",
+   "6": "2026-08-21",
+   "7": "2026-08-21"
+  }
  },
  "L03": {
+  "type": "lecture",
+  "title": "1.6 Significant Figures and Scientific Notation",
   "page_url": "l03-1-dot-6-significant-figures-and-scientific-notation",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l03-1-dot-6-significant-figures-and-scientific-notation",
   "file_id": 3011255,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-08-24",
+   "6": "2026-08-24",
+   "7": "2026-08-25"
+  }
  },
  "L04": {
+  "type": "lecture",
+  "title": "1.7 Dimensional Analysis, Part 1",
   "page_url": "l04-1-dot-7-dimensional-analysis-part-1",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l04-1-dot-7-dimensional-analysis-part-1",
   "file_id": 3011256,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-08-27",
+   "6": "2026-08-27",
+   "7": "2026-08-28"
+  }
  },
  "L05": {
+  "type": "lecture",
+  "title": "1.7 Dimensional Analysis, Part 2",
   "page_url": "l05-1-dot-7-dimensional-analysis-part-2",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l05-1-dot-7-dimensional-analysis-part-2",
   "file_id": 3011257,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-08-31",
+   "6": "2026-08-31",
+   "7": "2026-08-31"
+  }
  },
  "L06": {
+  "type": "lecture",
+  "title": "1.7 Dimensional Analysis, Part 3",
   "page_url": "l06-1-dot-7-dimensional-analysis-part-3",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l06-1-dot-7-dimensional-analysis-part-3",
   "file_id": 3011258,
   "videos": 0,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-09-01",
+   "6": "2026-09-02",
+   "7": "2026-09-02"
+  }
  },
  "L07": {
+  "type": "lecture",
+  "title": "2.1--2.3 Atomic Structure",
   "page_url": "l07-2-dot-1-2-dot-3-atomic-structure",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l07-2-dot-1-2-dot-3-atomic-structure",
   "file_id": 3011259,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-09-08",
+   "6": "2026-09-09",
+   "7": "2026-09-09"
+  }
  },
  "L08": {
+  "type": "lecture",
+  "title": "2.3--2.5 Isotopes, Atomic Weight and the Periodic Table",
   "page_url": "l08-2-dot-3-2-dot-5-isotopes-atomic-weight-and-the-periodic-table",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l08-2-dot-3-2-dot-5-isotopes-atomic-weight-and-the-periodic-table",
   "file_id": 3011260,
   "videos": 3,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-09-10",
+   "6": "2026-09-10",
+   "7": "2026-09-10"
+  }
  },
  "L09": {
+  "type": "lecture",
+  "title": "2.6--2.8 Molecules, Ions and Nomenclature, Part 1",
   "page_url": "l09-2-dot-6-2-dot-8-molecules-ions-and-nomenclature-part-1",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l09-2-dot-6-2-dot-8-molecules-ions-and-nomenclature-part-1",
   "file_id": 3011261,
   "videos": 3,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-09-14",
+   "6": "2026-09-14",
+   "7": "2026-09-14"
+  }
  },
  "L10": {
+  "type": "lecture",
+  "title": "2.8 Nomenclature, Part 2",
   "page_url": "l10-2-dot-8-nomenclature-part-2",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l10-2-dot-8-nomenclature-part-2",
   "file_id": 3011262,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-09-15",
+   "6": "2026-09-15",
+   "7": "2026-09-15"
+  }
  },
  "L11": {
+  "type": "lecture",
+  "title": "3.1 Chemical Equations and Balancing",
   "page_url": "l11-3-dot-1-chemical-equations-and-balancing",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l11-3-dot-1-chemical-equations-and-balancing",
   "file_id": 3011263,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-09-18",
+   "6": "2026-09-18",
+   "7": "2026-09-21"
+  }
  },
  "L12": {
+  "type": "lecture",
+  "title": "3.2 Types of Reactions",
   "page_url": "l12-3-dot-2-types-of-reactions",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l12-3-dot-2-types-of-reactions",
   "file_id": 3011264,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-09-23",
+   "6": "2026-09-25",
+   "7": "2026-09-25"
+  }
  },
  "L13": {
+  "type": "lecture",
+  "title": "3.3 Formula Weights and Percent Composition",
   "page_url": "l13-3-dot-3-formula-weights-and-percent-composition",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l13-3-dot-3-formula-weights-and-percent-composition",
   "file_id": 3011265,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-09-25",
+   "6": "2026-09-28",
+   "7": "2026-09-28"
+  }
  },
  "L14": {
+  "type": "lecture",
+  "title": "3.4 Avogadro's Number and the Mole",
   "page_url": "l14-3-dot-4-avogadros-number-and-the-mole",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l14-3-dot-4-avogadros-number-and-the-mole",
   "file_id": 3011266,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-09-29",
+   "6": "2026-09-29",
+   "7": "2026-09-29"
+  }
  },
  "L15": {
+  "type": "lecture",
+  "title": "3.5 Empirical and Molecular Formulas",
   "page_url": "l15-3-dot-5-empirical-and-molecular-formulas",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l15-3-dot-5-empirical-and-molecular-formulas",
   "file_id": 3011267,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-09-30",
+   "6": "2026-10-01",
+   "7": "2026-10-01"
+  }
  },
  "L16": {
+  "type": "lecture",
+  "title": "3.6 Stoichiometry",
   "page_url": "l16-3-dot-6-stoichiometry",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l16-3-dot-6-stoichiometry",
   "file_id": 3011268,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-10-02",
+   "6": "2026-10-02",
+   "7": "2026-10-02"
+  }
  },
  "L17": {
+  "type": "lecture",
+  "title": "3.7 Limiting Reactant, Part 1",
   "page_url": "l17-3-dot-7-limiting-reactant-part-1",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l17-3-dot-7-limiting-reactant-part-1",
   "file_id": 3011269,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-10-05",
+   "6": "2026-10-06",
+   "7": "2026-10-06"
+  }
  },
  "L18": {
+  "type": "lecture",
+  "title": "3.7 Percent Yield, Part 2",
   "page_url": "l18-3-dot-7-percent-yield-part-2",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l18-3-dot-7-percent-yield-part-2",
   "file_id": 3011270,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-10-07",
+   "6": "2026-10-07",
+   "7": "2026-10-08"
+  }
  },
  "L19": {
+  "type": "lecture",
+  "title": "4.1--4.2 Solutions, Electrolytes and Precipitation",
   "page_url": "l19-4-dot-1-4-dot-2-solutions-electrolytes-and-precipitation",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l19-4-dot-1-4-dot-2-solutions-electrolytes-and-precipitation",
   "file_id": 3011271,
   "videos": 2,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-10-19",
+   "6": "2026-10-19",
+   "7": "2026-10-19"
+  }
  },
  "L20": {
+  "type": "lecture",
+  "title": "4.2 Double Displacement and Net Ionic Equations, Part 2",
   "page_url": "l20-4-dot-2-double-displacement-and-net-ionic-equations-part-2",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l20-4-dot-2-double-displacement-and-net-ionic-equations-part-2",
   "file_id": 3011272,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-10-20",
+   "6": "2026-10-20",
+   "7": "2026-10-20"
+  }
  },
  "L21": {
+  "type": "lecture",
+  "title": "4.3 Acids, Bases and Neutralization",
   "page_url": "l21-4-dot-3-acids-bases-and-neutralization",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l21-4-dot-3-acids-bases-and-neutralization",
   "file_id": 3011273,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-10-22",
+   "6": "2026-10-22",
+   "7": "2026-10-22"
+  }
  },
  "L22": {
+  "type": "lecture",
+  "title": "4.5--4.6 Concentration, Dilution and Solution Stoichiometry",
   "page_url": "l22-4-dot-5-4-dot-6-concentration-dilution-and-solution-stoichiometry",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l22-4-dot-5-4-dot-6-concentration-dilution-and-solution-stoichiometry",
   "file_id": 3011274,
   "videos": 2,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-10-23",
+   "6": "2026-10-23",
+   "7": "2026-10-26"
+  }
  },
  "L23": {
+  "type": "lecture",
+  "title": "5.1--5.2 Energy and the First Law of Thermodynamics",
   "page_url": "l23-5-dot-1-5-dot-2-energy-and-the-first-law-of-thermodynamics",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l23-5-dot-1-5-dot-2-energy-and-the-first-law-of-thermodynamics",
   "file_id": 3011275,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-10-27",
+   "6": "2026-10-27",
+   "7": "2026-10-27"
+  }
  },
  "L24": {
+  "type": "lecture",
+  "title": "5.3--5.4 Enthalpy",
   "page_url": "l24-5-dot-3-5-dot-4-enthalpy",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l24-5-dot-3-5-dot-4-enthalpy",
   "file_id": 3011276,
   "videos": 2,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-10-28",
+   "6": "2026-10-28",
+   "7": "2026-10-29"
+  }
  },
  "L25": {
+  "type": "lecture",
+  "title": "5.5 Calorimetry",
   "page_url": "l25-5-dot-5-calorimetry",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l25-5-dot-5-calorimetry",
   "file_id": 3011277,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-11-02",
+   "6": "2026-11-02",
+   "7": "2026-11-02"
+  }
  },
  "L26": {
+  "type": "lecture",
+  "title": "5.6 Hess's Law",
   "page_url": "l26-5-dot-6-hesss-law",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l26-5-dot-6-hesss-law",
   "file_id": 3011278,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-11-03",
+   "6": "2026-11-03",
+   "7": "2026-11-03"
+  }
  },
  "L27": {
+  "type": "lecture",
+  "title": "5.7 Enthalpies of Formation",
   "page_url": "l27-5-dot-7-enthalpies-of-formation",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l27-5-dot-7-enthalpies-of-formation",
   "file_id": 3011279,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-11-05",
+   "6": "2026-11-05",
+   "7": "2026-11-04"
+  }
  },
  "L28": {
+  "type": "lecture",
+  "title": "6.1--6.4 Light, Quantization and Wave-Particle Duality",
   "page_url": "l28-6-dot-1-6-dot-4-light-quantization-and-wave-particle-duality",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l28-6-dot-1-6-dot-4-light-quantization-and-wave-particle-duality",
   "file_id": 3011280,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-11-16",
+   "6": "2026-11-16",
+   "7": "2026-11-16"
+  }
  },
  "L29": {
+  "type": "lecture",
+  "title": "6.5 The Bohr Atom and Atomic Orbitals",
   "page_url": "l29-6-dot-5-the-bohr-atom-and-atomic-orbitals",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l29-6-dot-5-the-bohr-atom-and-atomic-orbitals",
   "file_id": 3011281,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-11-18",
+   "6": "2026-11-18",
+   "7": "2026-11-18"
+  }
  },
  "L30": {
+  "type": "lecture",
+  "title": "6.6--6.9 Electron Configurations",
   "page_url": "l30-6-dot-6-6-dot-9-electron-configurations",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l30-6-dot-6-6-dot-9-electron-configurations",
   "file_id": 3011282,
   "videos": 0,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-11-19",
+   "6": "2026-11-19",
+   "7": "2026-11-20"
+  }
  },
  "L31": {
+  "type": "lecture",
+  "title": "7.2--7.4 Periodic Trends",
   "page_url": "l31-7-dot-2-7-dot-4-periodic-trends",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l31-7-dot-2-7-dot-4-periodic-trends",
   "file_id": 3011283,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-12-01",
+   "6": "2026-12-02",
+   "7": "2026-12-02"
+  }
  },
  "L32": {
+  "type": "lecture",
+  "title": "8.1--8.3 Lewis Structures and Covalent Bonding",
   "page_url": "l32-8-dot-1-8-dot-3-lewis-structures-and-covalent-bonding",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l32-8-dot-1-8-dot-3-lewis-structures-and-covalent-bonding",
   "file_id": 3011284,
   "videos": 2,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-12-03",
+   "6": "2026-12-03",
+   "7": "2026-12-03"
+  }
  },
  "L33": {
+  "type": "lecture",
+  "title": "8.6 Resonance",
   "page_url": "l33-8-dot-6-resonance",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l33-8-dot-6-resonance",
   "file_id": 3011285,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-12-07",
+   "6": "2026-12-07",
+   "7": "2026-12-07"
+  }
  },
  "L34": {
+  "type": "lecture",
+  "title": "8.4--8.5 Electronegativity and Bond Polarity",
   "page_url": "l34-8-dot-4-8-dot-5-electronegativity-and-bond-polarity",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l34-8-dot-4-8-dot-5-electronegativity-and-bond-polarity",
   "file_id": 3011286,
   "videos": 2,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-12-08",
+   "6": "2026-12-08",
+   "7": "2026-12-09"
+  }
  },
  "L35": {
+  "type": "lecture",
+  "title": "8.7 Exceptions to the Octet Rule",
   "page_url": "l35-8-dot-7-exceptions-to-the-octet-rule",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l35-8-dot-7-exceptions-to-the-octet-rule",
   "file_id": 3011287,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-12-07",
+   "6": "2026-12-07",
+   "7": "2026-12-07"
+  }
  },
  "L36": {
+  "type": "lecture",
+  "title": "9.1--9.2 Molecular Shapes and VSEPR",
   "page_url": "l36-9-dot-1-9-dot-2-molecular-shapes-and-vsepr",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l36-9-dot-1-9-dot-2-molecular-shapes-and-vsepr",
   "file_id": 3011288,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-12-10",
+   "6": "2026-12-10",
+   "7": "2026-12-10"
+  }
  },
  "L37": {
+  "type": "lecture",
+  "title": "9.3 Molecular Polarity",
   "page_url": "l37-9-dot-3-molecular-polarity",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l37-9-dot-3-molecular-polarity",
   "file_id": 3011289,
   "videos": 1,
-  "published": false
+  "published": false,
+  "dates": {
+   "5": "2026-12-10",
+   "6": "2026-12-10",
+   "7": "2026-12-10"
+  }
+ },
+ "LAB1": {
+  "type": "lab",
+  "title": "Lab 1",
+  "page_url": "lab-1",
+  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/lab-1",
+  "published": false,
+  "dates": {
+   "5": "2026-08-26",
+   "6": "2026-08-26",
+   "7": "2026-08-26"
+  }
+ },
+ "LAB2": {
+  "type": "lab",
+  "title": "Lab 2",
+  "page_url": "lab-2",
+  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/lab-2",
+  "published": false,
+  "dates": {
+   "5": "2026-09-03",
+   "6": "2026-09-03",
+   "7": "2026-09-03"
+  }
+ },
+ "LAB3": {
+  "type": "lab",
+  "title": "Lab 3",
+  "page_url": "lab-3",
+  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/lab-3",
+  "published": false,
+  "dates": {
+  "5": "2026-09-22",
+   "6": "2026-09-22",
+   "7": "2026-09-22"
+  }
+ },
+ "LAB4": {
+  "type": "lab",
+  "title": "Lab 4",
+  "page_url": "lab-4",
+  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/lab-4",
+  "published": false,
+  "dates": {
+   "5": "2026-10-09",
+   "6": "2026-10-09",
+   "7": "2026-10-09"
+  }
+ },
+ "LAB5": {
+  "type": "lab",
+  "title": "Lab 5",
+  "page_url": "lab-5",
+  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/lab-5",
+  "published": false,
+  "dates": {
+   "5": "2026-11-06",
+   "6": "2026-11-10",
+   "7": "2026-11-10"
+  }
+ },
+ "LAB6": {
+  "type": "lab",
+  "title": "Lab 6",
+  "page_url": "lab-6",
+  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/lab-6",
+  "published": false,
+  "dates": {
+   "5": "2026-12-14",
+   "6": "2026-12-14",
+   "7": "2026-12-14"
+  }
+ },
+ "EXAM1_DAY1": {
+  "type": "exam",
+  "title": "Exam 1 (Day 1)",
+  "page_url": "exam-1",
+  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/exam-1",
+  "published": false,
+  "dates": {
+   "5": "2026-09-17",
+   "6": "2026-09-17",
+   "7": "2026-09-17"
+  }
+ },
+ "EXAM1_DAY2": {
+  "type": "exam",
+  "title": "Exam 1 (Day 2)",
+  "page_url": "exam-1",
+  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/exam-1",
+  "published": false,
+  "dates": {
+   "5": "2026-09-18",
+   "6": "2026-09-18",
+   "7": "2026-09-21"
+  }
+ },
+ "EXAM2_DAY1": {
+  "type": "exam",
+  "title": "Exam 2 (Day 1)",
+  "page_url": "exam-2",
+  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/exam-2",
+  "published": false,
+  "dates": {
+   "5": "2026-10-15",
+   "6": "2026-10-15",
+   "7": "2026-10-15"
+  }
+ },
+ "EXAM2_DAY2": {
+  "type": "exam",
+  "title": "Exam 2 (Day 2)",
+  "page_url": "exam-2",
+  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/exam-2",
+  "published": false,
+  "dates": {
+   "5": "2026-10-19",
+   "6": "2026-10-19",
+   "7": "2026-10-19"
+  }
+ },
+ "EXAM3_DAY1": {
+  "type": "exam",
+  "title": "Exam 3 (Day 1)",
+  "page_url": "exam-3",
+  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/exam-3",
+  "published": false,
+  "dates": {
+   "5": "2026-11-11",
+   "6": "2026-11-11",
+   "7": "2026-11-11"
+  }
+ },
+ "EXAM3_DAY2": {
+  "type": "exam",
+  "title": "Exam 3 (Day 2)",
+  "page_url": "exam-3",
+  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/exam-3",
+  "published": false,
+  "dates": {
+   "5": "2026-11-12",
+   "6": "2026-11-13",
+   "7": "2026-11-13"
+  }
+ },
+ "FINAL_DAY1": {
+  "type": "exam",
+  "title": "Semester 1 Final Exam (Day 1)",
+  "page_url": "semester-1-final-exam",
+  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/semester-1-final-exam",
+  "published": false,
+  "dates": {
+   "5": null,
+   "6": null,
+   "7": null
+  }
+ },
+ "FINAL_DAY2": {
+  "type": "exam",
+  "title": "Semester 1 Final Exam (Day 2)",
+  "page_url": "semester-1-final-exam",
+  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/semester-1-final-exam",
+  "published": false,
+  "dates": {
+   "5": null,
+   "6": null,
+   "7": null
+  }
  }
 }

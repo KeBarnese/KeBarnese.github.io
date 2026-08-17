@@ -29,7 +29,8 @@ FALL_CUTOFF = datetime.date(2026, 12, 20)
 BLANK_ROW_DATE = {50: datetime.date(2026, 12, 15)}
 LINK_DAILY  = True   # link the blue daily-homework pill to its Canvas assignment (+practice)
 NOTES_MAP   = "notes/map.json"        # lecture id -> spreadsheet row (built with the notes)
-PAGES       = "lecture_pages.json"    # lecture id -> Canvas page (from build_lecture_pages.py)
+PAGES       = "lecture_pages.json"    # lecture/lab/exam id -> Canvas page + hand-editable dates
+                                       # (edit by hand, or with lecture_pages_cli.py)
 # extra fall exam-review assignments placed by hand (matched by title below)
 REVIEW_TITLES = {"1": "Exam 1 Review - Build On",
                  "2": "Exam 2 Review - Build On",
@@ -220,22 +221,59 @@ def emit_due(aid, text, practice_aid=None):
 
 
 
-# ---- lecture pages ---------------------------------------------------------
-# Joined on the spreadsheet ROW, not the title: notes/map.json records the row
-# each lecture came from, so a retitled lecture still lands on the right day.
-# Both files optional — without them the lecture pills stay unlinked as before.
-LEC_ROW, PAGE_URLS = {}, {}
-if os.path.exists(NOTES_MAP) and os.path.exists(PAGES):
+# ---- lecture / lab / exam pages --------------------------------------------
+# lecture_pages.json now carries THREE things per id: the Canvas page slug to
+# link to, and (optionally) a "dates" dict {"5":.., "6":.., "7":..} that lets
+# you move that lecture/lab/exam to a different day by hand-editing the json
+# -- no need to touch the schedule .xlsx. An id with no "dates" (or with a
+# period left null) simply falls back to the spreadsheet row's own date for
+# that period, so nothing breaks until you start moving things.
+#
+# Lecture ids are still joined on the spreadsheet ROW via notes/map.json (a
+# retitled lecture stays on the right day). Lab/exam ids are matched directly
+# off the schedule line's text ("Lab 4", "Exam 2 ... part 1", etc.) below.
+LEC_ROW, PAGE_URLS, PAGE_DATES = {}, {}, {}
+if os.path.exists(PAGES):
     _pg = json.load(open(PAGES))
-    for _l in json.load(open(NOTES_MAP)):
-        if _l["id"] in _pg:
-            LEC_ROW[_l["row"]] = _l["id"]
-            PAGE_URLS[_l["id"]] = _pg[_l["id"]]["page_url"]
-    _miss = [l["id"] for l in json.load(open(NOTES_MAP)) if l["id"] not in _pg]
-    if _miss:
-        print(f"NOTE: no Canvas page yet for {', '.join(_miss)} — those pills stay unlinked")
+    for _id, _entry in _pg.items():
+        if not isinstance(_entry, dict):
+            continue
+        if _entry.get("page_url"):
+            PAGE_URLS[_id] = _entry["page_url"]
+        if _entry.get("dates"):
+            PAGE_DATES[_id] = _entry["dates"]
+    if os.path.exists(NOTES_MAP):
+        _notes = json.load(open(NOTES_MAP))
+        for _l in _notes:
+            if _l["id"] in _pg:
+                LEC_ROW[_l["row"]] = _l["id"]
+        _miss = [l["id"] for l in _notes if l["id"] not in _pg]
+        if _miss:
+            print(f"NOTE: no Canvas page yet for {', '.join(_miss)} — those lecture pills stay unlinked")
+    else:
+        print(f"NOTE: {NOTES_MAP} not found — lecture pills stay unlinked (lab/exam pills unaffected)")
 else:
-    print(f"NOTE: {PAGES} not found — lecture pills will stay unlinked")
+    print(f"NOTE: {PAGES} not found — lecture/lab/exam pills will stay unlinked")
+
+def per_period_dates(pgid, p):
+    """p is the row's own {5:date,6:date,7:date}. If pgid has a "dates" entry
+    in lecture_pages.json, its (non-null) values override the row's dates,
+    period by period -- that's the hand-edit hook for moving a lecture/lab/exam."""
+    if not pgid or pgid not in PAGE_DATES:
+        return p
+    d = PAGE_DATES[pgid]
+    out = {}
+    for per in (5, 6, 7):
+        v = d.get(str(per))
+        out[per] = pdate(v) if v else p.get(per)
+    return out
+
+def to_groups(p):
+    g = {}
+    for per, dt in p.items():
+        if dt is not None:
+            g.setdefault(dt, []).append(per)
+    return g
 
 for r in range(2, ws.max_row + 1):
     p = {5: pdate(ws.cell(r,2).value), 6: pdate(ws.cell(r,3).value), 7: pdate(ws.cell(r,4).value)}
@@ -261,18 +299,31 @@ for r in range(2, ws.max_row + 1):
             n = re.search(r"exam\s*(\d+)", low); rn = n.group(1) if n else "1"
             aid = m_review(rn)
             if not aid: unmatched.append((r, ln))
-            buckets.append(("rev", {"t": f"Exam {rn} Review", "hw": key_for(aid)}))
+            buckets.append(("rev", {"t": f"Exam {rn} Review", "hw": key_for(aid)}, None))
         elif "exam" in low:
-            buckets.append(("exam", {"t": ln, "hw": None}))
+            # "Exam 2 ... part 1" / "Chapter 3 exam #2 part 2" -> EXAM2_DAY1 / EXAM2_DAY2
+            pgid = None
+            n_num = re.search(r"exam\s*#?\s*(\d+)", low)
+            n_day = re.search(r"part\s*(\d+)", low)
+            if n_num and n_day:
+                cand = f"EXAM{n_num.group(1)}_DAY{n_day.group(1)}"
+                if cand in PAGE_URLS: pgid = cand
+            ex = {"t": ln, "hw": None}
+            if pgid: ex["pg"] = pgid
+            buckets.append(("exam", ex, pgid))
         elif "quiz" in low:
             aid = m_quiz(ln, "post" in low)
             if not aid: unmatched.append((r, ln))
-            buckets.append(("quiz", {"t": ln, "hw": key_for(aid)}))
+            buckets.append(("quiz", {"t": ln, "hw": key_for(aid)}, None))
         elif low.startswith("lab") and "due" not in low:
             aid = m_lab(ln); n = re.search(r"(\d+)", ln)
+            labnum = n.group(1) if n else None
+            pgid = f"LAB{labnum}" if labnum and f"LAB{labnum}" in PAGE_URLS else None
             if not aid: unmatched.append((r, ln))
-            buckets.append(("lab", {"t": f"Lab {n.group(1) if n else ''}".strip(), "hw": key_for(aid)}))
-            emit_due(aid, f"Lab {n.group(1) if n else ''} due".strip())   # lab report due on its Canvas due date
+            lab = {"t": f"Lab {labnum or ''}".strip(), "hw": key_for(aid)}
+            if pgid: lab["pg"] = pgid
+            buckets.append(("lab", lab, pgid))
+            emit_due(aid, f"Lab {labnum or ''} due".strip())   # lab report due on its Canvas due date
         elif "due" in low:
             if low.startswith("lab"):
                 pass                                                       # lab due already emitted on the lab day
@@ -288,16 +339,24 @@ for r in range(2, ws.max_row + 1):
             aid = m_daily(ln)            # matched only to link the HW due pill; the lesson pill itself is unlinked
             paid = m_practice(ln)
             lect = {"t": clean(ln), "hw": None}
-            if LEC_ROW.get(r):
-                lect["pg"] = LEC_ROW[r]      # -> Canvas lecture page (notes + video)
-            buckets.append(("lect", lect))
+            pgid = LEC_ROW.get(r)
+            if pgid:
+                lect["pg"] = pgid      # -> Canvas lecture page (notes + video)
+            buckets.append(("lect", lect, pgid))
             emit_due(aid, "HW: " + clean(ln), paid)                        # daily homework -> due-day pill + practice sublink
             if not aid: unmatched.append((r, "DAILY: " + ln))
 
     order = {"lect":1,"exam":2,"quiz":3,"lab":4,"due":5,"rev":6}
-    for kind, ex in sorted(buckets, key=lambda b: order[b[0]]):
-        for d, pers in groups.items():
-            ev = {"d": iso(d), "p": pcode(pers), "k": kind}; ev.update(ex); ev.setdefault("hw", None)
+    for kind, ex, pgid in sorted(buckets, key=lambda b: order[b[0]]):
+        # lecture_pages.json dates (if set for this id) override the row's own
+        # per-period dates here -- this is what lets you "move" a lecture/lab/
+        # exam day just by editing the json.
+        bp = per_period_dates(pgid, p)
+        bgroups = to_groups(bp)
+        ballequal = len(bgroups) == 1
+        for d, pers in bgroups.items():
+            pc = 0 if ballequal else sorted(pers)
+            ev = {"d": iso(d), "p": pc, "k": kind}; ev.update(ex); ev.setdefault("hw", None)
             events.append(ev)
 
 # hand-placed fall reviews (Exam 2 / Exam 3 / Fall Final) -> assignment ids
@@ -329,6 +388,6 @@ tpl = tpl.replace("'Semester_1_Final_Review'", f"'{rev_keys['F']}'")
 pathlib.Path(OUT).write_text(tpl)
 
 print(f"course {COURSE_ID}: {len(events)} events, {len(AID)} assignment ids matched, "
-      f"{len(PAGE_URLS)} lecture pages linked")
+      f"{len(PAGE_URLS)} lecture/lab/exam pages linked")
 print(f"UNMATCHED ({len(unmatched)}):")
 for r, t in unmatched: print(f"  row {r}: {t}")
