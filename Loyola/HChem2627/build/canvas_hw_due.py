@@ -70,6 +70,12 @@ import urllib.request
 import urllib.parse
 import urllib.error
 
+try:                                   # same tz handling as canvas_pull_due.py
+    from zoneinfo import ZoneInfo
+    TZ = ZoneInfo("America/Los_Angeles")
+except Exception:                      # pragma: no cover
+    TZ = None
+
 BASE = "https://loyolahs.instructure.com"
 COURSE_ID = "6624"
 PER_PAGE = 100
@@ -118,19 +124,26 @@ def local(iso):
     if not iso:
         return None
     try:
-        dt = datetime.datetime.strptime(iso, "%Y-%m-%dT%H:%M:%SZ")
+        dt = datetime.datetime.fromisoformat(iso.replace("Z", "+00:00"))
     except ValueError:
         return iso
-    # Los Angeles: UTC-7 in DST, UTC-8 otherwise. Good enough for a report.
-    off = 7 if datetime.date(dt.year, 3, 15) <= dt.date() <= datetime.date(dt.year, 11, 1) else 8
-    return (dt - datetime.timedelta(hours=off)).strftime("%Y-%m-%d %H:%M")
+    if TZ:
+        dt = dt.astimezone(TZ)
+    return dt.strftime("%Y-%m-%d %H:%M")
 
 
 def stamp(d, hh, mm):
-    """Local date + time -> UTC ISO8601 string Canvas will accept."""
-    off = 7 if datetime.date(d.year, 3, 15) <= d <= datetime.date(d.year, 11, 1) else 8
-    dt = datetime.datetime(d.year, d.month, d.day, hh, mm) + datetime.timedelta(hours=off)
-    return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+    """Local date + time -> UTC ISO8601 string Canvas will accept.
+
+    Uses the real America/Los_Angeles zone rather than a hand-rolled
+    DST guess, so the week of the March transition is not off by an hour.
+    """
+    naive = datetime.datetime(d.year, d.month, d.day, hh, mm)
+    if TZ:
+        return (naive.replace(tzinfo=TZ)
+                .astimezone(datetime.timezone.utc)
+                .strftime("%Y-%m-%dT%H:%M:%SZ"))
+    return naive.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def show(v):
