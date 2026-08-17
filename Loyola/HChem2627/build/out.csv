@@ -1,0 +1,234 @@
+id,name,group,points,published,due_date,semester,notes
+266640,Semester 2 Final Exam,Exams,150.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266553,Exam 1 Raw Multiple Choice Score,Exams,23.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266552,Exam 1 Free Response,Exams,10.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266557,Exam 2 (chapter 3) MC,Exams,16.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266558,Exam 2 Free Response,Exams,15.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266551,Exam 1 (Chapters 1 & 2),Exams,100.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266563,Exam 3 (chapter 4&5) MC,Exams,20.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266562,Exam 3 (chapter 4&5) Free Response,Exams,20.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266637,Semester 1 Final Exam 2026,Exams,60.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266556,Exam 2 (Ch. 3),Exams,100.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266568,Exam 4 (Chapters 10 - 13),Exams,85.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266561,Exam 3 (ch. 4-5),Exams,100.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266573,Exam 5 (Chapter 14),Exams,45.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266638,Semester 1 Final Exam 2026,Exams,150.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266581,"Exam 7 (chapters 19, 20, 21)",Exams,85.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266641,"Semester 2 Final Exam, Curved",Exams,150.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266554,Exam 1 Review - Build On,Exams,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266555,Exam 1 Review - Not Build On,Exams,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266570,Exam 4 MC,Exams,22.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266569,Exam 4 FR,Exams,25.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266576,Exam 6 (Chapters 15 and 16),Exams,85.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266578,Exam 6 MC,Exams,23.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266577,Exam 6 FR,Exams,20.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266583,Exam 7 Free Response,Exams,25.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266584,Exam 7 Multiple Choice,Exams,25.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266595,Introduction,Daily Homework,5.0,True,2026-08-18,1,
+266413,"1.1, Material Classification, Daily Homework",Daily Homework,5.0,True,2026-08-21,1,
+266415,"1.4 to 1.5 units and sig figs, Daily Homework",Daily Homework,5.0,True,2026-08-25,1,
+266417,"1.5, operations with sig figs, Daily Homework",Daily Homework,5.0,True,2026-08-26,1,
+266419,"1.6, Dimensional analysis part 1, Daily Homework",Daily Homework,5.0,True,2026-08-31,1,
+266421,"1.6, Dimensional analysis part 2, Daily Homework",Daily Homework,5.0,True,2026-09-02,1,
+266423,"1.6, Dimensional analysis part 3, Daily Homework",Daily Homework,5.0,True,2026-09-03,1,
+266475,"02.1, atomic structure part 1, Daily Homework",Daily Homework,5.0,True,2026-09-10,1,
+266424,10.2 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266427,10.3 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266428,10.4 - 10.5 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266430,10.6 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266432,10.7 - 10.8 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266434,11.1 - 11.3 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266436,11.4 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266438,11.5 and 11.6 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266440,13.1 - 13.4 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266442,13.5 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266444,14.1 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266446,14.3 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266448,14.5 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266450,14.6 and 14.7 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266452,15.1 to 15.2 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266455,15.4 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266457,15.5 - 15.6 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266459,15.7 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266461,"16.1 - 16.2, Daily Homework",Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266463,"16.10 and 16.5, Daily Homework",Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266466,"16.4 Daily Homework, pH calculations",Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266467,"16.6 Daily Homework, Weak Acid",Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266470,"16.7 Daily Homework, Weak Bases and buffers",Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266472,19.4 to 19.6 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266474,19.7 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266484,"20.3 - 20.4, Daily Homework",Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266486,20.4 - 20.5 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266487,21 Daily Homework,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266490,"22, Daily Homework, Organic compounds",Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266547,"Daily Homework, 19.2 and 19.3",Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266546,Daily Homework 20.1 - 20.2,Daily Homework,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266477,"2.2-2.5, atomic structure part 2, Daily Homework",Daily Homework,5.0,True,2026-09-10,1,
+266480,"2.2-2.5, atomic weight part 3, Daily Homework",Daily Homework,5.0,True,2026-09-14,1,
+266481,"2.6, Nomenclature part 1. ",Daily Homework,5.0,True,2026-09-15,1,
+266482,"2.6, Nomenclature part 2. ",Daily Homework,5.0,True,2026-09-15,1,
+266483,"2.6, Nomenclature part 3. ",Daily Homework,5.0,True,2026-09-17,1,
+266491,"3.1 Balancing Equations, Daily Homework",Daily Homework,5.0,False,2026-09-22,1,unpublished
+266493,"3.2 Types of Reactions, Daily Homework",Daily Homework,5.0,False,2026-09-25,1,unpublished
+266495,3.3 Daily Homework,Daily Homework,5.0,False,2026-09-29,1,unpublished
+266497,3.4 Daily Homework,Daily Homework,5.0,False,2026-10-01,1,unpublished
+266498,"3.5 part 1, Daily Homework",Daily Homework,5.0,False,2026-10-02,1,unpublished
+266499,"3.5 part 2, Daily Homework",Daily Homework,5.0,False,2026-10-02,1,unpublished
+266501,3.6 Daily Homework,Daily Homework,5.0,False,2026-10-06,1,unpublished
+266504,"3.7 Daily Homework, part 1",Daily Homework,5.0,False,2026-10-08,1,unpublished
+266505,"3.7 Daily Homework, part 2",Daily Homework,5.0,True,2026-10-09,1,
+266506,4.1 and 4.3 Daily Homework,Daily Homework,5.0,False,2026-10-20,1,unpublished
+266510,"4.2, part 1, Daily Homework",Daily Homework,5.0,False,2026-10-20,1,unpublished
+266508,"4.2 part 2, double displacement Daily Homework",Daily Homework,5.0,False,2026-10-22,1,unpublished
+266511,4.3 Daily Homework,Daily Homework,5.0,False,2026-10-26,1,unpublished
+266513,4.5 and 4.6 Daily Homework,Daily Homework,5.0,True,2026-10-27,1,
+266515,5.1 to 5.3 Daily Homework,Daily Homework,5.0,False,2026-10-29,1,unpublished
+266517,5.4  Daily Homework,Daily Homework,5.0,False,2026-11-02,1,unpublished
+266518,5.5 Daily Homework,Daily Homework,5.0,False,2026-11-03,1,unpublished
+266519,5.6 Daily Homework,Daily Homework,5.0,False,2026-11-05,1,unpublished
+266520,5.7 Daily Homework,Daily Homework,5.0,False,2026-11-10,1,unpublished
+266521,6.1 - 6.4 Daily Homework,Daily Homework,5.0,False,2026-11-18,1,unpublished
+266523,6.5 Daily Homework,Daily Homework,5.0,False,2026-11-20,1,unpublished
+266525,7.2-7.4 Daily Homework,Daily Homework,5.0,False,2026-12-03,1,unpublished
+266527,"8.1, 8.3, 8.4, 8.5 Daily Homework",Daily Homework,5.0,False,2026-12-07,1,unpublished
+266528,"8.2, 8.6-8.8 Daily Homework",Daily Homework,5.0,False,2026-12-09,1,unpublished
+266530,9.1 - 9.2 Daily Homework,Daily Homework,5.0,False,2026-12-14,1,unpublished
+266533,9.3 Daily Homework,Daily Homework,5.0,True,2026-12-14,1,
+266607,Le Chatliers Worksheet,Daily Homework,5.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266621,Programming With SNAP! course,Daily Homework,5.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266543,Chapters 15.5 & 15.6: Solving Equilibrium Problems,Daily Homework,10.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266644,The Potion Master's pH Lab,Daily Homework,5.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266548,Electrochemistry Worksheet,Daily Homework,5.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266586,Chapter 1 Homework part 1,Chapter Homework,5.0,True,2026-09-21,1,
+266587,Chapter 1 Homework part 2,Chapter Homework,5.0,True,2026-09-21,1,
+266588,Chapter 2 Homework,Chapter Homework,10.0,True,2026-09-21,1,
+266589,Chapter 3 Homework,Chapter Homework,10.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266590,Chapter 4 Homework,Chapter Homework,10.0,True,2026-11-13,1,
+266591,Chapter 5 Homework,Chapter Homework,10.0,True,2026-11-13,1,
+266592,Chapter 6-9 Homework,Chapter Homework,10.0,True,2026-12-15,1,
+266535,Chapter 10 Homework,Chapter Homework,10.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266537,Chapter 11-12 Homework,Chapter Homework,10.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266538,Chapter 13 Homework,Chapter Homework,10.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266539,Chapter 14 Homework,Chapter Homework,10.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266540,Chapter 15 Homework,Chapter Homework,10.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266541,Chapter 16 Homework,Chapter Homework,10.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266542,"Chapter 19,20 Homework",Chapter Homework,10.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266633,SNAP! Entropy,Chapter Homework,20.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266634,SNAP! Equilibrium,Chapter Homework,20.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266414,"1.1, Material Classification, Daily Homework Practice",Practice Daily Homework,0.0,True,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals"
+266416,1.4 to 1.5 units and sig figs Daily Homework Practice,Practice Daily Homework,0.0,True,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals"
+266418,"1.5, operations with sig figs, Daily Homework Practice",Practice Daily Homework,0.0,True,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals"
+266420,"1.6, Dimensional analysis part 1, Daily Homework Practice",Practice Daily Homework,0.0,True,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals"
+266422,"1.6, Dimensional analysis part 2, Daily Homework Practice",Practice Daily Homework,0.0,True,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals"
+266425,10.2 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266426,10.3 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266429,10.4 - 10.5 Daily Homework Practice,Practice Daily Homework,0.0,True,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals"
+266431,10.6 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266433,10.7 - 10.8 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266435,11.1 - 11.3 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266437,11.4 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266439,11.5 and 11.6 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266441,13.1 - 13.4 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266443,13.5 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266445,14.1 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266447,14.3 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266449,14.5 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266451,14.6 and 14.7 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266453,15.1 to 15.2 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266454,15.3 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266456,15.4 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266458,15.5 - 15.6 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266460,15.7 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266462,16.1 - 16.2 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266464,16.10 and 16.5 Daily Homework Practice,Practice Daily Homework,0.0,True,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals"
+266465,"16.4, pH Calculations, Daily Homework Practice",Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266468,"16.6, Daily Homework, Weak Acids",Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266469,"16.7 Daily Homework, Weak Bases and buffers",Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266471,19.2 and 19.3 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266473,19.4 to 19.6 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266476,"2.1, atomic structure part 1, Daily Homework Practice",Practice Daily Homework,0.0,True,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals"
+266478,"2.2-2.5, atomic structure part 2, Daily Homework Practice",Practice Daily Homework,0.0,True,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals"
+266479,"2.2-2.5, atomic structure part 3, Daily Homework Practice",Practice Daily Homework,0.0,True,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals"
+266488,"21, nuclear reactions, Daily Homework Practice",Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266489,22 Organic compounds Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266492,3.1 Balancing Equations Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266494,3.2 Types of Reactions Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266496,3.3 to 3.4 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266500,3.5 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266502,"3.6, Stoichiometry, Daily Homework Practice",Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266503,3.7 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266507,4.1 and 4.3 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266509,"4.2 part 2, double displacement reactions",Practice Daily Homework,0.0,False,2026-10-22,1,0 points; unpublished
+266512,4.3 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266514,4.5 and 4.6 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266516,5.1 to 5.5 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266522,6.1 - 6.4 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266524,6.5 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266526,7.2-7.4 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266529,"8.2, 8.6-8.8, Daily Homework Practice",Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266531,9.1 - 9.2 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266532,9.1 - 9.3 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266585,Homework 19.7,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266593,"Homework, 8.1, 8.34, 8.4, 8.5",Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266608,Nomenclature Daily Homework Practice,Practice Daily Homework,0.0,True,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals"
+266485,20.3 - 20.4 Daily Homework Practice,Practice Daily Homework,0.0,True,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals"
+266620,20.1 - 20.2 Daily Homework Practice,Practice Daily Homework,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266643,Showed Dr. Barnese Snap! Entropy,Practice Daily Homework,0.0,True,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals"
+266619,Post-lab Quiz #11,Laboratory Activities,5.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266615,Post-Lab Quiz #7,Laboratory Activities,5.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266609,Post-Lab Quiz #1,Laboratory Activities,5.0,True,2026-08-28,1,
+266611,Post-Lab Quiz #3,Laboratory Activities,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266617,Post-Lab quiz #9,Laboratory Activities,5.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266618,Post-lab Quiz #10,Laboratory Activities,5.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266616,Post-Lab quiz #8,Laboratory Activities,5.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266612,Post-Lab Quiz #4,Laboratory Activities,5.0,False,2026-10-14,1,unpublished
+266613,Post-Lab Quiz #5,Laboratory Activities,5.0,False,2026-11-16,1,unpublished
+266614,Post-Lab Quiz #6,Laboratory Activities,5.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266610,Post-Lab Quiz #2,Laboratory Activities,5.0,True,2026-09-09,1,
+266596,Lab 1,Laboratory Activities,35.0,True,2026-09-21,1,
+266603,Lab 6,Laboratory Activities,35.0,True,2026-12-15,1,
+266604,Lab 7,Laboratory Activities,35.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266594,Ice Cream Lab,Laboratory Activities,5.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266601,Lab 4,Laboratory Activities,35.0,True,2026-10-19,1,
+266636,Safety Contract,Laboratory Activities,1.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266605,Lab 8,Laboratory Activities,35.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266606,Lab 9,Laboratory Activities,35.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266599,Lab 2,Laboratory Activities,35.0,True,2026-09-21,1,
+266602,Lab 5,Laboratory Activities,35.0,True,2026-11-13,1,
+266597,Lab 10,Laboratory Activities,35.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266600,Lab 3,Laboratory Activities,35.0,True,2026-10-19,1,
+266598,Lab 11,Laboratory Activities,35.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266550,Equilibrium Lab,Laboratory Activities,10.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266549,Entropy Lab,Laboratory Activities,10.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266623,Quiz #11 (Chapter 15),Quizzes,15.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266622,Quiz #1 1.1 - 1.5,Quizzes,10.0,True,2026-08-31,1,
+266627,Quiz #2 Dimensional Analysis,Quizzes,10.0,True,2026-09-10,1,
+266628,Quiz #3 inorganic nomenclature,Quizzes,15.0,True,2026-09-17,1,
+266645,quiz #4,Quizzes,15.0,False,2026-10-20,1,unpublished
+266629,"Quiz #5, ion review",Quizzes,15.0,False,2026-10-26,1,unpublished
+266630,Quiz #6 Chapter 4,Quizzes,15.0,False,2026-11-02,1,unpublished
+266631,Quiz #7 (ch. 6),Quizzes,15.0,False,2026-12-09,1,unpublished
+266632,"Quiz #8, Chapter 8-9 ",Quizzes,9.0,False,,,"NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266624,"Quiz #11, chapter 14",Quizzes,15.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266625,"Quiz #12, Chapter 16",Quizzes,15.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266626,Quiz #13 - chapter 19,Quizzes,15.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266534,Chapter 10 Quiz #9,Quizzes,15.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266635,SNAP! Quiz,Quizzes,5.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266536,Chapter 11 Quiz #10,Quizzes,15.0,True,,,"NO DUE DATE — could not assign a semester, excluded from totals"
+266559,Exam 2 Review - Build On,Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266560,Exam 2 Review - Not Build On,Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266564,"Exam 3, Chapter 4 review, Build On",Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266565,"Exam 3, Chapter 4 review, No Build On",Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266566,"Exam 3, Chapter 5 Review, Build On",Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266567,"Exam 3, Chapter 5 Review, No Build On",Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266544,Chapters 6 - 9 Review Material Build-On,Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266545,Chapters 6 - 9 Review Material Not Build-On,Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266574,Exam 5 (ch. 14) Review Build On,Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266575,Exam 5 (ch. 14) Review No Build On,Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266639,Semester 1 Final Review,Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266642,Semester 2 Final Review,Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266582,"Exam 7 (chapters 19, 20, 21) Review",Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266572,"Exam 4 Review, No Build On",Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266571,"Exam 4 Review, Build On",Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266579,Exam 6 Review,Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"
+266580,Exam 6 Review (Build On),Exam Review,0.0,False,,,"0 points; NO DUE DATE — could not assign a semester, excluded from totals; unpublished"

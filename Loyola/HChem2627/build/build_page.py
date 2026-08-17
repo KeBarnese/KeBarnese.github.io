@@ -55,27 +55,101 @@ def lead_section(s):
     m = re.match(r"\s*(\d+\.\d+)", s);  return m.group(1) if m else None
 
 # ---- matchers (accept original + renamed titles) ---------------------------
-def m_daily(raw):                       # "3.3 Classwork"  OR  "3.3 Daily Homework"
+# ---------------------------------------------------------------------------
+# PATCH for build_page.py — replace BOTH m_daily() and m_practice() with these.
+#
+# Supersedes m_practice_patch.py, which fixed only half the problem.
+#
+# ROOT CAUSE (same defect in both functions): the last-resort fallback matches
+# on the leading section number alone and ignores the part number --
+#
+#     find(lambda x, t: x.startswith(s) and (...) and "practice" not in x)
+#
+# so a schedule line reading "part 3" happily binds to the "part 1" assignment.
+# It fails silently: something matched, so no unmatched warning is printed.
+#
+# Observed on the built page:
+#   "HW: 2.6, Nomenclature part 3"          -> 2.6, Nomenclature part 1. Daily Homework
+#   "HW: 4.2 part 2, double displacement"   -> 4.2, part 1, Daily Homework
+#
+# Both now resolve correctly, because the right-numbered assignments do exist
+# in Canvas -- the fallback was just returning the first section match instead
+# of looking for them.
+# ---------------------------------------------------------------------------
+
+
+def _part_of(s):
+    """Part number in a title/line, or None."""
+    m = re.search(r"part\s*(\d+)", s or "", re.I)
+    return m.group(1) if m else None
+
+
+def m_daily(raw):
+    """Daily-homework assignment for a schedule line.
+    "3.3 Classwork" OR "3.3 Daily Homework".
+
+    Match order:
+      1. exact normalised title
+      2. same base title once 'classwork'/'daily homework' is stripped
+      3. same leading section number AND the same part number
+    Never crosses part numbers.
+    """
     n = norm(raw)
+    want_part = _part_of(raw)
+
+    # 1. exact
     aid = find(lambda x, t: x.rstrip(". ") == n.rstrip(". "))
-    if aid: return aid
+    if aid:
+        return aid
+
+    # 2. same base title
     base = re.sub(r"classwork|daily homework", "", n).strip(" ,")
     aid = find(lambda x, t: re.sub(r"classwork|daily homework", "", x).strip(" ,") == base
-               and ("classwork" in x or "daily homework" in x))
-    if aid: return aid
+               and ("classwork" in x or "daily homework" in x)
+               and "practice" not in x)
+    if aid:
+        return aid
+
+    # 3. same section + same part  (was: same section, part ignored)
     s = lead_section(raw)
     if s:
-        return find(lambda x, t: x.startswith(s) and ("classwork" in x or "daily homework" in x)
-                    and "practice" not in x)
+        aid = find(lambda x, t: x.startswith(s)
+                   and ("classwork" in x or "daily homework" in x)
+                   and "practice" not in x
+                   and _part_of(x) == want_part)
+        if aid:
+            return aid
+
     return None
+
+
 def m_practice(raw):
+    """Practice copy for a daily-homework line.
+
+    Match order:
+      1. same leading section number AND same part number
+      2. same leading section number, practice has NO part number
+         (a legitimately shared practice, e.g. one covering 3.7 parts 1 and 2)
+      3. no match -> None, so the pill simply gets no practice sub-link
+    Never crosses part numbers.
+    """
     s = lead_section(raw)
-    if not s: return None
-    pm = re.search(r"part\s*(\d+)", raw.lower())
-    if pm:
-        aid = find(lambda x, t: x.startswith(s) and "practice" in x and f"part {pm.group(1)}" in x)
-        if aid: return aid
-    return find(lambda x, t: x.startswith(s) and "practice" in x)
+    if not s:
+        return None
+    want_part = _part_of(raw)
+
+    if want_part:
+        aid = find(lambda x, t: x.startswith(s) and "practice" in x
+                   and _part_of(x) == want_part)
+        if aid:
+            return aid
+
+    aid = find(lambda x, t: x.startswith(s) and "practice" in x
+               and _part_of(x) is None)
+    if aid:
+        return aid
+
+    return None
 def m_homework(text):                   # chapter homework, orig or renamed
     t = text.lower()
     mm = re.search(r"(\d+)\s*-\s*(\d+)", t)
@@ -140,6 +214,11 @@ def emit_due(aid, text, practice_aid=None):
         ev = {"d": dt, "p": 0 if allsame else sorted(pers), "k": "due", "t": text, "hw": key}
         if pkey: ev["hw2"] = pkey
         events.append(ev)
+
+        # ---------------------------------------------------------------------------
+
+
+
 
 # ---- lecture pages ---------------------------------------------------------
 # Joined on the spreadsheet ROW, not the title: notes/map.json records the row
