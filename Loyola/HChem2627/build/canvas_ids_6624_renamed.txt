@@ -18,8 +18,6 @@ ASSIGNMENTS  (graded work + graded quizzes)  (245)
      266638  Semester 1 Final Exam 2026                                    https://loyolahs.instructure.com/courses/6624/assignments/266638
      266581  Exam 7 (chapters 19, 20, 21)                                  https://loyolahs.instructure.com/courses/6624/assignments/266581
      266641  Semester 2 Final Exam, Curved                                 https://loyolahs.instructure.com/courses/6624/assignments/266641
-     266554  Exam 1 Review - Build On                                      https://loyolahs.instructure.com/courses/6624/assignments/266554
-     266555  Exam 1 Review - Not Build On                                  https://loyolahs.instructure.com/courses/6624/assignments/266555
      266570  Exam 4 MC                                                     https://loyolahs.instructure.com/courses/6624/assignments/266570
      266569  Exam 4 FR                                                     https://loyolahs.instructure.com/courses/6624/assignments/266569
      266576  Exam 6 (Chapters 15 and 16)                                   https://loyolahs.instructure.com/courses/6624/assignments/266576
@@ -28,13 +26,13 @@ ASSIGNMENTS  (graded work + graded quizzes)  (245)
      266583  Exam 7 Free Response                                          https://loyolahs.instructure.com/courses/6624/assignments/266583
      266584  Exam 7 Multiple Choice                                        https://loyolahs.instructure.com/courses/6624/assignments/266584
      266595  Introduction                                                  https://loyolahs.instructure.com/courses/6624/assignments/266595
-     266413  1.1, Material Classification, Daily Homework                  https://loyolahs.instructure.com/courses/6624/assignments/266413
-     266415  1.4 to 1.5 units and sig figs, Daily Homework                 https://loyolahs.instructure.com/courses/6624/assignments/266415
-     266417  1.5, operations with sig figs, Daily Homework                 https://loyolahs.instructure.com/courses/6624/assignments/266417
-     266419  1.6, Dimensional analysis part 1, Daily Homework              https://loyolahs.instructure.com/courses/6624/assignments/266419
-     266421  1.6, Dimensional analysis part 2, Daily Homework              https://loyolahs.instructure.com/courses/6624/assignments/266421
-     266423  1.6, Dimensional analysis part 3, Daily Homework              https://loyolahs.instructure.com/courses/6624/assignments/266423
-     266475  02.1, atomic structure part 1, Daily Homework                 https://loyolahs.instructure.com/courses/6624/assignments/266475
+     266413  1.2, Material Classification, Daily Homework                  https://loyolahs.instructure.com/courses/6624/assignments/266413
+     266415  1.5 to 1.6, units and sig figs, Daily Homework                https://loyolahs.instructure.com/courses/6624/assignments/266415
+     266417  1.6, operations with sig figs, Daily Homework                 https://loyolahs.instructure.com/courses/6624/assignments/266417
+     266419  1.7, Dimensional analysis part 1, Daily Homework              https://loyolahs.instructure.com/courses/6624/assignments/266419
+     266421  1.7, Dimensional analysis part 2, Daily Homework              https://loyolahs.instructure.com/courses/6624/assignments/266421
+     266423  1.7, Dimensional analysis part 3, Daily Homework              https://loyolahs.instructure.com/courses/6624/assignments/266423
+     266475  2.2, atomic structure part 1, Daily Homework                  https://loyolahs.instructure.com/courses/6624/assignments/266475
      266424  10.2 Daily Homework                                           https://loyolahs.instructure.com/courses/6624/assignments/266424
      266427  10.3 Daily Homework                                           https://loyolahs.instructure.com/courses/6624/assignments/266427
      266428  10.4 - 10.5 Daily Homework                                    https://loyolahs.instructure.com/courses/6624/assignments/266428
@@ -66,11 +64,11 @@ ASSIGNMENTS  (graded work + graded quizzes)  (245)
      266490  22, Daily Homework, Organic compounds                         https://loyolahs.instructure.com/courses/6624/assignments/266490
      266547  Daily Homework, 19.2 and 19.3                                 https://loyolahs.instructure.com/courses/6624/assignments/266547
      266546  Daily Homework 20.1 - 20.2                                    https://loyolahs.instructure.com/courses/6624/assignments/266546
-     266477  2.2-2.5, atomic structure part 2, Daily Homework              https://loyolahs.instructure.com/courses/6624/assignments/266477
-     266480  2.2-2.5, atomic weight part 3, Daily Homework                 https://loyolahs.instructure.com/courses/6624/assignments/266480
-     266481  2.6, Nomenclature part 1. Daily Homework                      https://loyolahs.instructure.com/courses/6624/assignments/266481
-     266482  2.6, Nomenclature part 2. Daily Homework                      https://loyolahs.instructure.com/courses/6624/assignments/266482
-     266483  2.6, Nomenclature part 3. Daily Homework                      https://loyolahs.instructure.com/courses/6624/assignments/266483
+     266477  2.3, atomic structure part 2, Daily Homework                  https://loyolahs.instructure.com/courses/6624/assignments/266477
+     266480  2.4, atomic weight part 3, Daily Homework                     https://loyolahs.instructure.com/courses/6624/assignments/266480
+     266481  2.8, Nomenclature part 1, Daily Homework                      https://loyolahs.instructure.com/courses/6624/assignments/266481
+     266482  2.8, Nomenclature part 2, Daily Homework                      https://loyolahs.instructure.com/courses/6624/assignments/266482
+     266483  2.8, Nomenclature part 3, Daily Homework                      https://loyolahs.instructure.com/courses/6624/assignments/266483
      266491  3.1 Balancing Equations, Daily Homework                       https://loyolahs.instructure.com/courses/6624/assignments/266491
      266493  3.2 Types of Reactions, Daily Homework                        https://loyolahs.instructure.com/courses/6624/assignments/266493
      266495  3.3 Daily Homework                                            https://loyolahs.instructure.com/courses/6624/assignments/266495
@@ -90,11 +88,11 @@ ASSIGNMENTS  (graded work + graded quizzes)  (245)
      266518  5.5 Daily Homework                                            https://loyolahs.instructure.com/courses/6624/assignments/266518
      266519  5.6 Daily Homework                                            https://loyolahs.instructure.com/courses/6624/assignments/266519
      266520  5.7 Daily Homework                                            https://loyolahs.instructure.com/courses/6624/assignments/266520
-     266521  6.1 - 6.4 Daily Homework                                      https://loyolahs.instructure.com/courses/6624/assignments/266521
-     266523  6.5 Daily Homework                                            https://loyolahs.instructure.com/courses/6624/assignments/266523
+     266521  6.1, 6.2, 6.4 Daily Homework                                  https://loyolahs.instructure.com/courses/6624/assignments/266521
+     266523  6.6 - 6.9 Daily Homework                                      https://loyolahs.instructure.com/courses/6624/assignments/266523
      266525  7.2-7.4 Daily Homework                                        https://loyolahs.instructure.com/courses/6624/assignments/266525
-     266527  8.1, 8.3, 8.4, 8.5 Daily Homework                             https://loyolahs.instructure.com/courses/6624/assignments/266527
-     266528  8.2, 8.6-8.8 Daily Homework                                   https://loyolahs.instructure.com/courses/6624/assignments/266528
+     266527  8.1, 8.3, 8.5 Daily Homework                                  https://loyolahs.instructure.com/courses/6624/assignments/266527
+     266528  8.4, 8.6, 8.7 Daily Homework                                  https://loyolahs.instructure.com/courses/6624/assignments/266528
      266530  9.1 - 9.2 Daily Homework                                      https://loyolahs.instructure.com/courses/6624/assignments/266530
      266533  9.3 Daily Homework                                            https://loyolahs.instructure.com/courses/6624/assignments/266533
      266607  Le Chatliers Worksheet                                        https://loyolahs.instructure.com/courses/6624/assignments/266607
@@ -118,11 +116,11 @@ ASSIGNMENTS  (graded work + graded quizzes)  (245)
      266542  Chapter 19,20 Homework                                        https://loyolahs.instructure.com/courses/6624/assignments/266542
      266633  SNAP! Entropy                                                 https://loyolahs.instructure.com/courses/6624/assignments/266633
      266634  SNAP! Equilibrium                                             https://loyolahs.instructure.com/courses/6624/assignments/266634
-     266414  1.1, Material Classification, Daily Homework Practice         https://loyolahs.instructure.com/courses/6624/assignments/266414
-     266416  1.4 to 1.5 units and sig figs Daily Homework Practice         https://loyolahs.instructure.com/courses/6624/assignments/266416
-     266418  1.5, operations with sig figs, Daily Homework Practice        https://loyolahs.instructure.com/courses/6624/assignments/266418
-     266420  1.6, Dimensional analysis part 1, Daily Homework Practice     https://loyolahs.instructure.com/courses/6624/assignments/266420
-     266422  1.6, Dimensional analysis part 2, Daily Homework Practice     https://loyolahs.instructure.com/courses/6624/assignments/266422
+     266414  1.2, Material Classification, Daily Homework Practice         https://loyolahs.instructure.com/courses/6624/assignments/266414
+     266416  1.5 to 1.6, units and sig figs, Daily Homework Practice       https://loyolahs.instructure.com/courses/6624/assignments/266416
+     266418  1.6, operations with sig figs, Daily Homework Practice        https://loyolahs.instructure.com/courses/6624/assignments/266418
+     266420  1.7, Dimensional analysis part 1, Daily Homework Practice     https://loyolahs.instructure.com/courses/6624/assignments/266420
+     266422  1.7, Dimensional analysis part 2, Daily Homework Practice     https://loyolahs.instructure.com/courses/6624/assignments/266422
      266425  10.2 Daily Homework Practice                                  https://loyolahs.instructure.com/courses/6624/assignments/266425
      266426  10.3 Daily Homework Practice                                  https://loyolahs.instructure.com/courses/6624/assignments/266426
      266429  10.4 - 10.5 Daily Homework Practice                           https://loyolahs.instructure.com/courses/6624/assignments/266429
@@ -147,21 +145,21 @@ ASSIGNMENTS  (graded work + graded quizzes)  (245)
      266465  16.4, pH Calculations, Daily Homework Practice                https://loyolahs.instructure.com/courses/6624/assignments/266465
      266471  19.2 and 19.3 Daily Homework Practice                         https://loyolahs.instructure.com/courses/6624/assignments/266471
      266473  19.4 to 19.6 Daily Homework Practice                          https://loyolahs.instructure.com/courses/6624/assignments/266473
-     266476  2.1, atomic structure part 1, Daily Homework Practice         https://loyolahs.instructure.com/courses/6624/assignments/266476
-     266478  2.2-2.5, atomic structure part 2, Daily Homework Practice     https://loyolahs.instructure.com/courses/6624/assignments/266478
-     266479  2.2-2.5, atomic structure part 3, Daily Homework Practice     https://loyolahs.instructure.com/courses/6624/assignments/266479
+     266476  2.2, atomic structure part 1, Daily Homework Practice         https://loyolahs.instructure.com/courses/6624/assignments/266476
+     266478  2.3, atomic structure part 2, Daily Homework Practice         https://loyolahs.instructure.com/courses/6624/assignments/266478
+     266479  2.4, atomic weight part 3, Daily Homework Practice            https://loyolahs.instructure.com/courses/6624/assignments/266479
      266489  22 Organic compounds Daily Homework Practice                  https://loyolahs.instructure.com/courses/6624/assignments/266489
-     266593  Homework, 8.1, 8.34, 8.4, 8.5                                 https://loyolahs.instructure.com/courses/6624/assignments/266593
-     284578  1.6, Dimensional analysis part 3, Daily Homework Practice     https://loyolahs.instructure.com/courses/6624/assignments/284578
+     266593  Homework, 8.1, 8.3, 8.5                                       https://loyolahs.instructure.com/courses/6624/assignments/266593
+     284578  1.7, Dimensional analysis part 3, Daily Homework Practice     https://loyolahs.instructure.com/courses/6624/assignments/284578
      284579  16.6 Daily Homework, Weak Acid Practice                       https://loyolahs.instructure.com/courses/6624/assignments/284579
      266485  20.3 - 20.4 Daily Homework Practice                           https://loyolahs.instructure.com/courses/6624/assignments/266485
      284580  16.7 Daily Homework, Weak Bases and buffers Practice          https://loyolahs.instructure.com/courses/6624/assignments/284580
      284581  19.7 Daily Homework Practice                                  https://loyolahs.instructure.com/courses/6624/assignments/284581
      266620  20.1 - 20.2 Daily Homework Practice                           https://loyolahs.instructure.com/courses/6624/assignments/266620
      284582  21 Daily Homework Practice                                    https://loyolahs.instructure.com/courses/6624/assignments/284582
-     284583  2.6, Nomenclature part 1. Daily Homework Practice             https://loyolahs.instructure.com/courses/6624/assignments/284583
-     284584  2.6, Nomenclature part 2. Daily Homework Practice             https://loyolahs.instructure.com/courses/6624/assignments/284584
-     284585  2.6, Nomenclature part 3. Daily Homework Practice             https://loyolahs.instructure.com/courses/6624/assignments/284585
+     284583  2.8, Nomenclature part 1, Daily Homework Practice             https://loyolahs.instructure.com/courses/6624/assignments/284583
+     284584  2.8, Nomenclature part 2, Daily Homework Practice             https://loyolahs.instructure.com/courses/6624/assignments/284584
+     284585  2.8, Nomenclature part 3, Daily Homework Practice             https://loyolahs.instructure.com/courses/6624/assignments/284585
      284586  3.1 Balancing Equations, Daily Homework Practice              https://loyolahs.instructure.com/courses/6624/assignments/284586
      284587  3.2 Types of Reactions, Daily Homework Practice               https://loyolahs.instructure.com/courses/6624/assignments/284587
      284588  3.3 Daily Homework Practice                                   https://loyolahs.instructure.com/courses/6624/assignments/284588
@@ -182,11 +180,11 @@ ASSIGNMENTS  (graded work + graded quizzes)  (245)
      284602  5.5 Daily Homework Practice                                   https://loyolahs.instructure.com/courses/6624/assignments/284602
      284603  5.6 Daily Homework Practice                                   https://loyolahs.instructure.com/courses/6624/assignments/284603
      284604  5.7 Daily Homework Practice                                   https://loyolahs.instructure.com/courses/6624/assignments/284604
-     284605  6.1 - 6.4 Daily Homework Practice                             https://loyolahs.instructure.com/courses/6624/assignments/284605
-     284606  6.5 Daily Homework Practice                                   https://loyolahs.instructure.com/courses/6624/assignments/284606
+     284605  6.1, 6.2, 6.4 Daily Homework Practice                         https://loyolahs.instructure.com/courses/6624/assignments/284605
+     284606  6.6 - 6.9 Daily Homework Practice                             https://loyolahs.instructure.com/courses/6624/assignments/284606
      284607  7.2-7.4 Daily Homework Practice                               https://loyolahs.instructure.com/courses/6624/assignments/284607
-     284608  8.1, 8.3, 8.4, 8.5 Daily Homework Practice                    https://loyolahs.instructure.com/courses/6624/assignments/284608
-     284609  8.2, 8.6-8.8 Daily Homework Practice                          https://loyolahs.instructure.com/courses/6624/assignments/284609
+     284608  8.1, 8.3, 8.5 Daily Homework Practice                         https://loyolahs.instructure.com/courses/6624/assignments/284608
+     284609  8.4, 8.6, 8.7 Daily Homework Practice                         https://loyolahs.instructure.com/courses/6624/assignments/284609
      284610  9.1 - 9.2 Daily Homework Practice                             https://loyolahs.instructure.com/courses/6624/assignments/284610
      284611  9.3 Daily Homework Practice                                   https://loyolahs.instructure.com/courses/6624/assignments/284611
      266619  Post-lab Quiz #11                                             https://loyolahs.instructure.com/courses/6624/assignments/266619
@@ -230,6 +228,8 @@ ASSIGNMENTS  (graded work + graded quizzes)  (245)
      266534  Chapter 10 Quiz #9                                            https://loyolahs.instructure.com/courses/6624/assignments/266534
      266635  SNAP! Quiz                                                    https://loyolahs.instructure.com/courses/6624/assignments/266635
      266536  Chapter 11 Quiz #10                                           https://loyolahs.instructure.com/courses/6624/assignments/266536
+     266555  Exam 1 Review - Not Build On                                  https://loyolahs.instructure.com/courses/6624/assignments/266555
+     266554  Exam 1 Review - Build On                                      https://loyolahs.instructure.com/courses/6624/assignments/266554
      266559  Exam 2 Review - Build On                                      https://loyolahs.instructure.com/courses/6624/assignments/266559
      266560  Exam 2 Review - Not Build On                                  https://loyolahs.instructure.com/courses/6624/assignments/266560
      266564  Exam 3, Chapter 4 review, Build On                            https://loyolahs.instructure.com/courses/6624/assignments/266564
@@ -530,12 +530,12 @@ FILES  (study guides / review PDFs / packets)  (481)
     3010653  glassware.png                                                 https://loyolahs.instructure.com/courses/6624/files/3010653
     3010874  haloalkane.png                                                https://loyolahs.instructure.com/courses/6624/files/3010874
     3010964  hexane.png                                                    https://loyolahs.instructure.com/courses/6624/files/3010964
-    3011078  Homework 1 part 1.pdf                                         https://loyolahs.instructure.com/courses/6624/files/3011078
-    3010988  Homework 1 part 2.pdf                                         https://loyolahs.instructure.com/courses/6624/files/3010988
-    3010990  Homework 2.pdf                                                https://loyolahs.instructure.com/courses/6624/files/3010990
-    3011044  Homework 5.pdf                                                https://loyolahs.instructure.com/courses/6624/files/3011044
-    3010989  Homework3.pdf                                                 https://loyolahs.instructure.com/courses/6624/files/3010989
-    3011002  Homework4.pdf                                                 https://loyolahs.instructure.com/courses/6624/files/3011002
+    3046043  Homework 1 part 1.pdf                                         https://loyolahs.instructure.com/courses/6624/files/3046043
+    3046044  Homework 1 part 2.pdf                                         https://loyolahs.instructure.com/courses/6624/files/3046044
+    3046045  Homework 2.pdf                                                https://loyolahs.instructure.com/courses/6624/files/3046045
+    3046046  Homework 5.pdf                                                https://loyolahs.instructure.com/courses/6624/files/3046046
+    3046179  Homework3.pdf                                                 https://loyolahs.instructure.com/courses/6624/files/3046179
+    3046190  Homework4.pdf                                                 https://loyolahs.instructure.com/courses/6624/files/3046190
     3010696  Honors Chem Banner.png                                        https://loyolahs.instructure.com/courses/6624/files/3010696
     3010811  Honors Chem Exam sheet.pdf                                    https://loyolahs.instructure.com/courses/6624/files/3010811
     3010985  Honors Chem Exam sheet.pdf                                    https://loyolahs.instructure.com/courses/6624/files/3010985
@@ -761,8 +761,6 @@ const ASSIGNMENT_IDS = {
   'Semester_1_Final_Exam_2026_2': 266638,
   'Exam_7_chapters_19_20_21': 266581,
   'Semester_2_Final_Exam_Curved': 266641,
-  'Exam_1_Review_Build_On': 266554,
-  'Exam_1_Review_Not_Build_On': 266555,
   'Exam_4_MC': 266570,
   'Exam_4_FR': 266569,
   'Exam_6_Chapters_15_and_16': 266576,
@@ -771,13 +769,13 @@ const ASSIGNMENT_IDS = {
   'Exam_7_Free_Response': 266583,
   'Exam_7_Multiple_Choice': 266584,
   'Introduction': 266595,
-  '1_1_Material_Classification_Daily_Homework': 266413,
-  '1_4_to_1_5_units_and_sig_figs_Daily_Homework': 266415,
-  '1_5_operations_with_sig_figs_Daily_Homework': 266417,
-  '1_6_Dimensional_analysis_part_1_Daily_Homework': 266419,
-  '1_6_Dimensional_analysis_part_2_Daily_Homework': 266421,
-  '1_6_Dimensional_analysis_part_3_Daily_Homework': 266423,
-  '02_1_atomic_structure_part_1_Daily_Homework': 266475,
+  '1_2_Material_Classification_Daily_Homework': 266413,
+  '1_5_to_1_6_units_and_sig_figs_Daily_Homework': 266415,
+  '1_6_operations_with_sig_figs_Daily_Homework': 266417,
+  '1_7_Dimensional_analysis_part_1_Daily_Homework': 266419,
+  '1_7_Dimensional_analysis_part_2_Daily_Homework': 266421,
+  '1_7_Dimensional_analysis_part_3_Daily_Homework': 266423,
+  '2_2_atomic_structure_part_1_Daily_Homework': 266475,
   '10_2_Daily_Homework': 266424,
   '10_3_Daily_Homework': 266427,
   '10_4_10_5_Daily_Homework': 266428,
@@ -809,11 +807,11 @@ const ASSIGNMENT_IDS = {
   '22_Daily_Homework_Organic_compounds': 266490,
   'Daily_Homework_19_2_and_19_3': 266547,
   'Daily_Homework_20_1_20_2': 266546,
-  '2_2_2_5_atomic_structure_part_2_Daily_Homework': 266477,
-  '2_2_2_5_atomic_weight_part_3_Daily_Homework': 266480,
-  '2_6_Nomenclature_part_1_Daily_Homework': 266481,
-  '2_6_Nomenclature_part_2_Daily_Homework': 266482,
-  '2_6_Nomenclature_part_3_Daily_Homework': 266483,
+  '2_3_atomic_structure_part_2_Daily_Homework': 266477,
+  '2_4_atomic_weight_part_3_Daily_Homework': 266480,
+  '2_8_Nomenclature_part_1_Daily_Homework': 266481,
+  '2_8_Nomenclature_part_2_Daily_Homework': 266482,
+  '2_8_Nomenclature_part_3_Daily_Homework': 266483,
   '3_1_Balancing_Equations_Daily_Homework': 266491,
   '3_2_Types_of_Reactions_Daily_Homework': 266493,
   '3_3_Daily_Homework': 266495,
@@ -833,11 +831,11 @@ const ASSIGNMENT_IDS = {
   '5_5_Daily_Homework': 266518,
   '5_6_Daily_Homework': 266519,
   '5_7_Daily_Homework': 266520,
-  '6_1_6_4_Daily_Homework': 266521,
-  '6_5_Daily_Homework': 266523,
+  '6_1_6_2_6_4_Daily_Homework': 266521,
+  '6_6_6_9_Daily_Homework': 266523,
   '7_2_7_4_Daily_Homework': 266525,
-  '8_1_8_3_8_4_8_5_Daily_Homework': 266527,
-  '8_2_8_6_8_8_Daily_Homework': 266528,
+  '8_1_8_3_8_5_Daily_Homework': 266527,
+  '8_4_8_6_8_7_Daily_Homework': 266528,
   '9_1_9_2_Daily_Homework': 266530,
   '9_3_Daily_Homework': 266533,
   'Le_Chatliers_Worksheet': 266607,
@@ -861,11 +859,11 @@ const ASSIGNMENT_IDS = {
   'Chapter_19_20_Homework': 266542,
   'SNAP_Entropy': 266633,
   'SNAP_Equilibrium': 266634,
-  '1_1_Material_Classification_Daily_Homework_Practice': 266414,
-  '1_4_to_1_5_units_and_sig_figs_Daily_Homework_Practice': 266416,
-  '1_5_operations_with_sig_figs_Daily_Homework_Practice': 266418,
-  '1_6_Dimensional_analysis_part_1_Daily_Homework_Practice': 266420,
-  '1_6_Dimensional_analysis_part_2_Daily_Homework_Practice': 266422,
+  '1_2_Material_Classification_Daily_Homework_Practice': 266414,
+  '1_5_to_1_6_units_and_sig_figs_Daily_Homework_Practice': 266416,
+  '1_6_operations_with_sig_figs_Daily_Homework_Practice': 266418,
+  '1_7_Dimensional_analysis_part_1_Daily_Homework_Practice': 266420,
+  '1_7_Dimensional_analysis_part_2_Daily_Homework_Practice': 266422,
   '10_2_Daily_Homework_Practice': 266425,
   '10_3_Daily_Homework_Practice': 266426,
   '10_4_10_5_Daily_Homework_Practice': 266429,
@@ -890,21 +888,21 @@ const ASSIGNMENT_IDS = {
   '16_4_pH_Calculations_Daily_Homework_Practice': 266465,
   '19_2_and_19_3_Daily_Homework_Practice': 266471,
   '19_4_to_19_6_Daily_Homework_Practice': 266473,
-  '2_1_atomic_structure_part_1_Daily_Homework_Practice': 266476,
-  '2_2_2_5_atomic_structure_part_2_Daily_Homework_Practice': 266478,
-  '2_2_2_5_atomic_structure_part_3_Daily_Homework_Practice': 266479,
+  '2_2_atomic_structure_part_1_Daily_Homework_Practice': 266476,
+  '2_3_atomic_structure_part_2_Daily_Homework_Practice': 266478,
+  '2_4_atomic_weight_part_3_Daily_Homework_Practice': 266479,
   '22_Organic_compounds_Daily_Homework_Practice': 266489,
-  'Homework_8_1_8_34_8_4_8_5': 266593,
-  '1_6_Dimensional_analysis_part_3_Daily_Homework_Practice': 284578,
+  'Homework_8_1_8_3_8_5': 266593,
+  '1_7_Dimensional_analysis_part_3_Daily_Homework_Practice': 284578,
   '16_6_Daily_Homework_Weak_Acid_Practice': 284579,
   '20_3_20_4_Daily_Homework_Practice': 266485,
   '16_7_Daily_Homework_Weak_Bases_and_buffers_Practice': 284580,
   '19_7_Daily_Homework_Practice': 284581,
   '20_1_20_2_Daily_Homework_Practice': 266620,
   '21_Daily_Homework_Practice': 284582,
-  '2_6_Nomenclature_part_1_Daily_Homework_Practice': 284583,
-  '2_6_Nomenclature_part_2_Daily_Homework_Practice': 284584,
-  '2_6_Nomenclature_part_3_Daily_Homework_Practice': 284585,
+  '2_8_Nomenclature_part_1_Daily_Homework_Practice': 284583,
+  '2_8_Nomenclature_part_2_Daily_Homework_Practice': 284584,
+  '2_8_Nomenclature_part_3_Daily_Homework_Practice': 284585,
   '3_1_Balancing_Equations_Daily_Homework_Practice': 284586,
   '3_2_Types_of_Reactions_Daily_Homework_Practice': 284587,
   '3_3_Daily_Homework_Practice': 284588,
@@ -925,11 +923,11 @@ const ASSIGNMENT_IDS = {
   '5_5_Daily_Homework_Practice': 284602,
   '5_6_Daily_Homework_Practice': 284603,
   '5_7_Daily_Homework_Practice': 284604,
-  '6_1_6_4_Daily_Homework_Practice': 284605,
-  '6_5_Daily_Homework_Practice': 284606,
+  '6_1_6_2_6_4_Daily_Homework_Practice': 284605,
+  '6_6_6_9_Daily_Homework_Practice': 284606,
   '7_2_7_4_Daily_Homework_Practice': 284607,
-  '8_1_8_3_8_4_8_5_Daily_Homework_Practice': 284608,
-  '8_2_8_6_8_8_Daily_Homework_Practice': 284609,
+  '8_1_8_3_8_5_Daily_Homework_Practice': 284608,
+  '8_4_8_6_8_7_Daily_Homework_Practice': 284609,
   '9_1_9_2_Daily_Homework_Practice': 284610,
   '9_3_Daily_Homework_Practice': 284611,
   'Post_lab_Quiz_11': 266619,
@@ -973,6 +971,8 @@ const ASSIGNMENT_IDS = {
   'Chapter_10_Quiz_9': 266534,
   'SNAP_Quiz': 266635,
   'Chapter_11_Quiz_10': 266536,
+  'Exam_1_Review_Not_Build_On': 266555,
+  'Exam_1_Review_Build_On': 266554,
   'Exam_2_Review_Build_On': 266559,
   'Exam_2_Review_Not_Build_On': 266560,
   'Exam_3_Chapter_4_review_Build_On': 266564,
@@ -1273,12 +1273,12 @@ const FILE_IDS = {
   'glassware': 3010653,
   'haloalkane': 3010874,
   'hexane': 3010964,
-  'Homework_1_part_1': 3011078,
-  'Homework_1_part_2': 3010988,
-  'Homework_2': 3010990,
-  'Homework_5': 3011044,
-  'Homework3': 3010989,
-  'Homework4': 3011002,
+  'Homework_1_part_1': 3046043,
+  'Homework_1_part_2': 3046044,
+  'Homework_2': 3046045,
+  'Homework_5': 3046046,
+  'Homework3': 3046179,
+  'Homework4': 3046190,
   'Honors_Chem_Banner': 3010696,
   'Honors_Chem_Exam_sheet': 3010811,
   'Honors_Chem_Exam_sheet_2': 3010985,
