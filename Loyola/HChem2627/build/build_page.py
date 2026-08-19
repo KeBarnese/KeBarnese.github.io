@@ -70,8 +70,8 @@ def lead_section(s):
 # It fails silently: something matched, so no unmatched warning is printed.
 #
 # Observed on the built page:
-#   "HW: 2.6, Nomenclature part 3"          -> 2.6, Nomenclature part 1. Daily Homework
-#   "HW: 4.2 part 2, double displacement"   -> 4.2, part 1, Daily Homework
+#   "DHW: 2.6, Nomenclature part 3"         -> 2.6, Nomenclature part 1. Daily Homework
+#   "DHW: 4.2 part 2, double displacement"  -> 4.2, part 1, Daily Homework
 #
 # Both now resolve correctly, because the right-numbered assignments do exist
 # in Canvas -- the fallback was just returning the first section match instead
@@ -343,7 +343,8 @@ for r in range(2, ws.max_row + 1):
             if pgid:
                 lect["pg"] = pgid      # -> Canvas lecture page (notes + video)
             buckets.append(("lect", lect, pgid))
-            emit_due(aid, "HW: " + clean(ln), paid)                        # daily homework -> due-day pill + practice sublink
+            emit_due(aid, "DHW: " + clean(ln), paid)                       # DAILY homework -> due-day pill + practice sublink
+                                                                          # (chapter homework is labelled "Chapter HW N" above)
             if not aid: unmatched.append((r, "DAILY: " + ln))
 
     order = {"lect":1,"exam":2,"quiz":3,"lab":4,"due":5,"rev":6}
