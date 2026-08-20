@@ -12,6 +12,7 @@ Output format:  { "<assignment_id>": { "5": "YYYY-MM-DD", "6": ..., "7": ... } }
 A due date with no section override is recorded for all three periods.
 """
 import os, re, sys, json, datetime, urllib.request
+from assignment_kind import classify
 try:
     from zoneinfo import ZoneInfo; TZ = ZoneInfo("America/Los_Angeles")
 except Exception:
@@ -58,7 +59,14 @@ for a in api(f"courses/{COURSE_ID}/assignments?per_page=100&include[]=all_dates"
             for P in (5, 6, 7): per.setdefault(str(P), iso)
         elif d.get("set_type") == "CourseSection" and d.get("set_id") in pmap:
             per[str(pmap[d["set_id"]])] = iso   # section override wins
-    if per: out[str(a["id"])] = {"_title": a.get("name", ""), **per}
+    if per:
+        title = a.get("name", "")
+        # kind drives how build_page.py labels/places the pill (see
+        # assignment_kind.py). Re-classified fresh from the title every pull
+        # -- if classify() ever guesses wrong for a real title, fix the rule
+        # there rather than hand-editing "kind" here, or it'll be overwritten
+        # on the next pull.
+        out[str(a["id"])] = {"_title": title, "kind": classify(title), **per}
 
 out = dict(sorted(out.items(), key=lambda kv: kv[1].get("_title", "")))
 json.dump(out, open("due_dates.json", "w"), indent=1)

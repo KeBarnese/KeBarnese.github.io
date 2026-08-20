@@ -1,23 +1,34 @@
 #!/usr/bin/env python3
 """
-build_page.py — one command: match the Honors-Chem schedule to Canvas IDs and
-write index.html.
+build_page.py (v2) — writes index.html directly from due_dates.json (all
+"due"/"quiz" pills) and lecture_pages.json (all "lect"/"lab"/"exam" occurrence
+pills). The schedule .xlsx is READ ONLY to validate that every date/period
+combo used below is actually a day that section meets -- it is no longer
+parsed for any assignment/lecture text. Column A of the sheet can hold
+anything (old free text, or just a school-day number) without affecting the
+build at all.
 
   python3 build_page.py
 
-Inputs (edit CONFIG below if names change):
-  * INV   : canvas_ids_output.txt   (from canvas_get_ids.py)
-  * SRC   : the schedule .xlsx      (cols: Assignments | Period 5 | 6 | 7)
-  * TPL   : index_template.html     (placeholders __COURSE__/__AIDS__/__EVENTS__)
+Inputs:
+  * INV   : canvas_ids_6624_renamed.txt      (Canvas title/id inventory, used
+            only to find each daily-homework's "practice" sibling assignment)
+  * SRC   : the schedule .xlsx               (cols B/C/D = period 5/6/7 dates;
+            used only to sanity-check dates below, never to place events)
+  * due_dates.json      : source of truth for ALL due/quiz pills
+  * lecture_pages.json  : source of truth for ALL lecture/lab/exam pills
+  * TPL   : index_template.html              (placeholders __COURSE__/__AIDS__/__EVENTS__)
 Output:
   * index.html
 
-The title matchers recognize BOTH the original names ("... Classwork",
-"Homework ch. N") and the renamed ones ("... Daily Homework",
-"Chapter N Homework"), so this keeps working after you rename in Canvas.
+See assignment_kind.py for the title -> kind classifier. If Canvas due dates
+change, re-run canvas_pull_due.py then this script -- no spreadsheet edit
+needed. If a lecture/lab/exam moves, edit lecture_pages.json (or use
+lecture_pages_cli.py) then re-run this script -- also no spreadsheet edit.
 """
 import re, os, sys, json, datetime, pathlib
 from openpyxl import load_workbook
+from assignment_kind import classify
 
 # ---- CONFIG ----------------------------------------------------------------
 COURSE_ID   = "6624"
@@ -26,18 +37,19 @@ SRC         = "Honors_Chem_2627_Schedule_2.xlsx"
 TPL         = "index_template.html"
 OUT         = "../index.html"   # written to the course root (run this from build/)
 FALL_CUTOFF = datetime.date(2026, 12, 20)
-BLANK_ROW_DATE = {50: datetime.date(2026, 12, 15)}
-LINK_DAILY  = True   # link the blue daily-homework pill to its Canvas assignment (+practice)
-NOTES_MAP   = "notes/map.json"        # lecture id -> spreadsheet row (built with the notes)
-PAGES       = "lecture_pages.json"    # lecture/lab/exam id -> Canvas page + hand-editable dates
-                                       # (edit by hand, or with lecture_pages_cli.py)
-# extra fall exam-review assignments placed by hand (matched by title below)
+DUE_JSON    = "due_dates.json"        # source of truth for due/quiz pills
+PAGES       = "lecture_pages.json"    # source of truth for lecture/lab/exam pills
+
+# Exam-review PDFs are hand-placed (see EXTRAS in index_template.html) --
+# these four titles are matched by EXACT title against the Canvas file/page
+# inventory below, same mechanism as before.
 REVIEW_TITLES = {"1": "Exam 1 Review - Build On",
                  "2": "Exam 2 Review - Build On",
                  "3": "Exam 3, Chapter 4 review, Build On",
                  "F": "Semester 1 Final Review"}
 
-# ---- parse inventory -------------------------------------------------------
+# ---- parse Canvas title inventory (only used for practice-link matching
+#      and for resolving the four review-PDF ids above) --------------------
 A, sec = [], None
 for ln in open(INV, encoding="utf-8"):
     if "ASSIGNMENTS" in ln: sec = "A"; continue
@@ -53,342 +65,202 @@ def find(pred):
         if pred(n, t): return i
     return None
 def lead_section(s):
-    m = re.match(r"\s*(\d+\.\d+)", s);  return m.group(1) if m else None
-
-# ---- matchers (accept original + renamed titles) ---------------------------
-# ---------------------------------------------------------------------------
-# PATCH for build_page.py — replace BOTH m_daily() and m_practice() with these.
-#
-# Supersedes m_practice_patch.py, which fixed only half the problem.
-#
-# ROOT CAUSE (same defect in both functions): the last-resort fallback matches
-# on the leading section number alone and ignores the part number --
-#
-#     find(lambda x, t: x.startswith(s) and (...) and "practice" not in x)
-#
-# so a schedule line reading "part 3" happily binds to the "part 1" assignment.
-# It fails silently: something matched, so no unmatched warning is printed.
-#
-# Observed on the built page:
-#   "DHW: 2.6, Nomenclature part 3"         -> 2.6, Nomenclature part 1. Daily Homework
-#   "DHW: 4.2 part 2, double displacement"  -> 4.2, part 1, Daily Homework
-#
-# Both now resolve correctly, because the right-numbered assignments do exist
-# in Canvas -- the fallback was just returning the first section match instead
-# of looking for them.
-# ---------------------------------------------------------------------------
-
-
+    m = re.match(r"\s*(\d+\.\d+)", s); return m.group(1) if m else None
 def _part_of(s):
-    """Part number in a title/line, or None."""
     m = re.search(r"part\s*(\d+)", s or "", re.I)
     return m.group(1) if m else None
 
-
-def m_daily(raw):
-    """Daily-homework assignment for a schedule line.
-    "3.3 Classwork" OR "3.3 Daily Homework".
-
-    Match order:
-      1. exact normalised title
-      2. same base title once 'classwork'/'daily homework' is stripped
-      3. same leading section number AND the same part number
-    Never crosses part numbers.
-    """
-    n = norm(raw)
-    want_part = _part_of(raw)
-
-    # 1. exact
-    aid = find(lambda x, t: x.rstrip(". ") == n.rstrip(". "))
-    if aid:
-        return aid
-
-    # 2. same base title
-    base = re.sub(r"classwork|daily homework", "", n).strip(" ,")
-    aid = find(lambda x, t: re.sub(r"classwork|daily homework", "", x).strip(" ,") == base
-               and ("classwork" in x or "daily homework" in x)
-               and "practice" not in x)
-    if aid:
-        return aid
-
-    # 3. same section + same part  (was: same section, part ignored)
-    s = lead_section(raw)
-    if s:
-        aid = find(lambda x, t: x.startswith(s)
-                   and ("classwork" in x or "daily homework" in x)
-                   and "practice" not in x
-                   and _part_of(x) == want_part)
-        if aid:
-            return aid
-
-    return None
-
-
 def m_practice(raw):
-    """Practice copy for a daily-homework line.
-
-    Match order:
-      1. same leading section number AND same part number
-      2. same leading section number, practice has NO part number
-         (a legitimately shared practice, e.g. one covering 3.7 parts 1 and 2)
-      3. no match -> None, so the pill simply gets no practice sub-link
-    Never crosses part numbers.
-    """
+    """Practice copy for a daily-homework title. Same matching rules as the
+    old spreadsheet-text version, just fed the due_dates.json _title instead."""
     s = lead_section(raw)
     if not s:
         return None
     want_part = _part_of(raw)
-
     if want_part:
         aid = find(lambda x, t: x.startswith(s) and "practice" in x
                    and _part_of(x) == want_part)
         if aid:
             return aid
-
     aid = find(lambda x, t: x.startswith(s) and "practice" in x
                and _part_of(x) is None)
     if aid:
         return aid
-
     return None
-def m_homework(text):                   # chapter homework, orig or renamed
-    t = text.lower()
-    mm = re.search(r"(\d+)\s*-\s*(\d+)", t)
-    if mm:
-        a, b = mm.group(1), mm.group(2)
-        return find(lambda x, tt: "homework" in x and re.search(rf"\b{a}\s*-\s*{b}\b", x))
-    m = re.search(r"(?:homework|hw)\s*#?\s*(\d+)(?:\s*part\s*(\d+))?", t)
-    if not m: return None
-    ch, part = m.group(1), m.group(2)
-    if part:
-        return find(lambda x, tt: "homework" in x and re.search(rf"(ch\.?|chapter)\s*{ch}\b", x)
-                    and f"part {part}" in x)
-    return find(lambda x, tt: "homework" in x and re.search(rf"(ch\.?|chapter)\s*{ch}\b", x)
-                and "part" not in x)
-def m_quiz(text, postlab):
-    m = re.search(r"#\s*(\d+)", text)
-    if not m:
-        return find(lambda x, t: "snap" in x and "quiz" in x) if "snap" in text.lower() else None
-    n = m.group(1)
-    if postlab:
-        return find(lambda x, t: "post" in x and "quiz" in x and re.search(rf"#\s*{n}\b", x))
-    return find(lambda x, t: "quiz" in x and "post" not in x and re.search(rf"#\s*{n}\b", x))
-def m_lab(text):
-    m = re.search(r"(\d+)", text)
-    return find(lambda x, t: re.fullmatch(rf"lab {m.group(1)}", x) is not None) if m else None
+
 def m_review(n):
     want = norm(REVIEW_TITLES.get(n, "")); return find(lambda x, t: x == want)
 
-# ---- walk the schedule -----------------------------------------------------
 def pdate(v):
     if v is None: return None
     if isinstance(v, (datetime.datetime, datetime.date)):
         return v.date() if isinstance(v, datetime.datetime) else v
     m = re.match(r"(\d{4})-(\d{2})-(\d{2})", str(v).strip())
     return datetime.date(int(m[1]), int(m[2]), int(m[3])) if m else None
-def iso(d): return d.strftime("%Y-%m-%d")
-def clean(s): return re.sub(r"\s+", " ", re.sub(r",?\s*classwork\b", "", s, flags=re.I)).strip(" ,")
+def iso(d):
+    return d.strftime("%Y-%m-%d") if isinstance(d, (datetime.date, datetime.datetime)) else d
 
-ws = load_workbook(SRC).active
-AID, events, unmatched = {}, [], []
+AID, events, warnings = {}, [], []
 def key_for(aid):
     if aid is None: return None
-    k = f"A{aid}"          # ID-based key: unique + stable, no truncation collisions
-    AID[k] = aid; return k
+    k = f"A{aid}"
+    AID[k] = aid
+    return k
 
-# due dates come from Canvas (via canvas_pull_due.py) — Canvas is the source of truth
-DUE = json.load(open("due_dates.json")) if os.path.exists("due_dates.json") else {}
-def emit_due(aid, text, practice_aid=None):
-    """Place a linked 'due' pill on each section's Canvas due date (grouped)."""
-    if aid is None: return
-    dd = DUE.get(str(aid))
-    if not dd:
-        unmatched.append(("DUE?", f"{ID2T.get(aid,aid)} has no due date in due_dates.json"))
-        return
-    key = key_for(aid)
-    pkey = key_for(practice_aid) if practice_aid else None
-    g = {}
-    for P in (5, 6, 7):
-        if str(P) in dd: g.setdefault(dd[str(P)], []).append(P)
-    allsame = len(g) == 1 and set(next(iter(g.values()))) == {5, 6, 7}
-    for dt, pers in g.items():
-        ev = {"d": dt, "p": 0 if allsame else sorted(pers), "k": "due", "t": text, "hw": key}
-        if pkey: ev["hw2"] = pkey
-        events.append(ev)
-
-        # ---------------------------------------------------------------------------
-
-
-
-
-# ---- lecture / lab / exam pages --------------------------------------------
-# lecture_pages.json now carries THREE things per id: the Canvas page slug to
-# link to, and (optionally) a "dates" dict {"5":.., "6":.., "7":..} that lets
-# you move that lecture/lab/exam to a different day by hand-editing the json
-# -- no need to touch the schedule .xlsx. An id with no "dates" (or with a
-# period left null) simply falls back to the spreadsheet row's own date for
-# that period, so nothing breaks until you start moving things.
-#
-# Lecture ids are still joined on the spreadsheet ROW via notes/map.json (a
-# retitled lecture stays on the right day). Lab/exam ids are matched directly
-# off the schedule line's text ("Lab 4", "Exam 2 ... part 1", etc.) below.
-LEC_ROW, PAGE_URLS, PAGE_DATES = {}, {}, {}
-if os.path.exists(PAGES):
-    _pg = json.load(open(PAGES))
-    for _id, _entry in _pg.items():
-        if not isinstance(_entry, dict):
-            continue
-        if _entry.get("page_url"):
-            PAGE_URLS[_id] = _entry["page_url"]
-        if _entry.get("dates"):
-            PAGE_DATES[_id] = _entry["dates"]
-    if os.path.exists(NOTES_MAP):
-        _notes = json.load(open(NOTES_MAP))
-        for _l in _notes:
-            if _l["id"] in _pg:
-                LEC_ROW[_l["row"]] = _l["id"]
-        _miss = [l["id"] for l in _notes if l["id"] not in _pg]
-        if _miss:
-            print(f"NOTE: no Canvas page yet for {', '.join(_miss)} — those lecture pills stay unlinked")
-    else:
-        print(f"NOTE: {NOTES_MAP} not found — lecture pills stay unlinked (lab/exam pills unaffected)")
+# ---- calendar validity check (xlsx cols B/C/D only -- never column A) ----
+# Builds {period: set(iso date)} so every due_dates.json / lecture_pages.json
+# date can be sanity-checked against the actual calendar. Non-fatal: a bad
+# date becomes a warning, not a build failure.
+VALID = {5: set(), 6: set(), 7: set()}
+if os.path.exists(SRC):
+    ws = load_workbook(SRC).active
+    for r in range(2, ws.max_row + 1):
+        for col, per in ((2, 5), (3, 6), (4, 7)):
+            d = pdate(ws.cell(r, col).value)
+            if d is not None:
+                VALID[per].add(iso(d))
 else:
-    print(f"NOTE: {PAGES} not found — lecture/lab/exam pills will stay unlinked")
+    warnings.append(("CALENDAR?", f"{SRC} not found -- skipping date sanity checks"))
 
-def per_period_dates(pgid, p):
-    """p is the row's own {5:date,6:date,7:date}. If pgid has a "dates" entry
-    in lecture_pages.json, its (non-null) values override the row's dates,
-    period by period -- that's the hand-edit hook for moving a lecture/lab/exam."""
-    if not pgid or pgid not in PAGE_DATES:
-        return p
-    d = PAGE_DATES[pgid]
-    out = {}
-    for per in (5, 6, 7):
-        v = d.get(str(per))
-        out[per] = pdate(v) if v else p.get(per)
+def check_date(period, d, label):
+    if VALID[5] or VALID[6] or VALID[7]:  # only check if we actually loaded a calendar
+        if d not in VALID[period]:
+            warnings.append(("DATE?", f"{label}: {d} is not a period-{period} school day per {SRC}"))
+
+def groups_from_periods(per_dates):
+    """per_dates: {'5': iso, '6': iso, '7': iso} (missing periods allowed).
+    Returns list of (date, periods) grouped so equal dates collapse to p=0
+    when ALL three periods share it, else a sorted period list."""
+    g = {}
+    for p_str in ("5", "6", "7"):
+        d = per_dates.get(p_str)
+        if d:
+            g.setdefault(d, []).append(int(p_str))
+    all_equal = len(g) == 1 and set(next(iter(g.values()))) == {5, 6, 7}
+    out = []
+    for d, pers in g.items():
+        out.append((d, 0 if all_equal else sorted(pers)))
     return out
 
-def to_groups(p):
-    g = {}
-    for per, dt in p.items():
-        if dt is not None:
-            g.setdefault(dt, []).append(per)
-    return g
+# ---- 1. due/quiz pills, entirely from due_dates.json -----------------------
+DUE = json.load(open(DUE_JSON)) if os.path.exists(DUE_JSON) else {}
 
-for r in range(2, ws.max_row + 1):
-    p = {5: pdate(ws.cell(r,2).value), 6: pdate(ws.cell(r,3).value), 7: pdate(ws.cell(r,4).value)}
-    if all(v is None for v in p.values()):
-        if r in BLANK_ROW_DATE: p = {k: BLANK_ROW_DATE[r] for k in p}
-        else: continue
-    if any(v is None for v in p.values()) or min(p.values()) > FALL_CUTOFF: continue
-    groups = {}
-    for per, d in p.items(): groups.setdefault(d, []).append(per)
-    all_equal = len(groups) == 1
-    pcode = lambda pers: 0 if all_equal else sorted(pers)
-    lines = [x.strip() for x in (ws.cell(r,1).value or "").split("\n") if x.strip()]
+def chapter_hw_label(title):
+    m = re.search(r"chapter\s*(\d+(?:\s*-\s*\d+)?)\s*homework(?:\s*,?\s*part\s*(\d+))?", title, re.I)
+    if not m:
+        return title.strip() + " due"
+    ch, part = m.group(1), m.group(2)
+    lbl = f"Chapter HW {ch}"
+    if part:
+        lbl += f" part {part}"
+    return lbl + " due"
 
-    if r == 2:
-        for d, pers in groups.items():
-            events.append({"d": iso(d), "p": pcode(pers), "k": "info", "t": "First day of class", "hw": None})
+def daily_hw_label(title):
+    stripped = re.sub(r"\s*,?\s*daily homework\s*$", "", title, flags=re.I).strip(" ,")
+    return "DHW: " + stripped
+
+for aid, entry in DUE.items():
+    title = entry.get("_title", "")
+    kind = entry.get("kind") or classify(title)
+    per_dates = {p: entry[p] for p in ("5", "6", "7") if p in entry}
+    if not per_dates:
         continue
 
-    lect_done, buckets = False, []
-    for ln in lines:
-        low = ln.lower()
-        if "review" in low:
-            n = re.search(r"exam\s*(\d+)", low); rn = n.group(1) if n else "1"
-            aid = m_review(rn)
-            if not aid: unmatched.append((r, ln))
-            buckets.append(("rev", {"t": f"Exam {rn} Review", "hw": key_for(aid)}, None))
-        elif "exam" in low:
-            # "Exam 2 ... part 1" / "Chapter 3 exam #2 part 2" -> EXAM2_DAY1 / EXAM2_DAY2
-            pgid = None
-            n_num = re.search(r"exam\s*#?\s*(\d+)", low)
-            n_day = re.search(r"part\s*(\d+)", low)
-            if n_num and n_day:
-                cand = f"EXAM{n_num.group(1)}_DAY{n_day.group(1)}"
-                if cand in PAGE_URLS: pgid = cand
-            ex = {"t": ln, "hw": None}
-            if pgid: ex["pg"] = pgid
-            buckets.append(("exam", ex, pgid))
-        elif "quiz" in low:
-            aid = m_quiz(ln, "post" in low)
-            if not aid: unmatched.append((r, ln))
-            buckets.append(("quiz", {"t": ln, "hw": key_for(aid)}, None))
-        elif low.startswith("lab") and "due" not in low:
-            aid = m_lab(ln); n = re.search(r"(\d+)", ln)
-            labnum = n.group(1) if n else None
-            pgid = f"LAB{labnum}" if labnum and f"LAB{labnum}" in PAGE_URLS else None
-            if not aid: unmatched.append((r, ln))
-            lab = {"t": f"Lab {labnum or ''}".strip(), "hw": key_for(aid)}
-            if pgid: lab["pg"] = pgid
-            buckets.append(("lab", lab, pgid))
-            emit_due(aid, f"Lab {labnum or ''} due".strip())   # lab report due on its Canvas due date
-        elif "due" in low:
-            if low.startswith("lab"):
-                pass                                                       # lab due already emitted on the lab day
-            else:
-                aid = m_homework(ln)
-                lbl = re.sub(r"(?i)\s*due\.?$", "", ln)
-                lbl = re.sub(r"(?i)homework\s*#?\s*", "Chapter HW ", lbl).strip()
-                emit_due(aid, lbl + " due")                                # chapter homework -> Canvas due date
-                if not aid: unmatched.append((r, ln))
-        else:
-            if lect_done: continue
-            lect_done = True
-            aid = m_daily(ln)            # matched only to link the HW due pill; the lesson pill itself is unlinked
-            paid = m_practice(ln)
-            lect = {"t": clean(ln), "hw": None}
-            pgid = LEC_ROW.get(r)
-            if pgid:
-                lect["pg"] = pgid      # -> Canvas lecture page (notes + video)
-            buckets.append(("lect", lect, pgid))
-            emit_due(aid, "DHW: " + clean(ln), paid)                       # DAILY homework -> due-day pill + practice sublink
-                                                                          # (chapter homework is labelled "Chapter HW N" above)
-            if not aid: unmatched.append((r, "DAILY: " + ln))
+    hw2 = None
+    if kind == "daily_homework":
+        label = daily_hw_label(title)
+        paid = m_practice(title)
+        hw2 = key_for(paid) if paid else None
+        k = "due"
+    elif kind == "chapter_homework":
+        label = chapter_hw_label(title)
+        k = "due"
+    elif kind == "lab_due":
+        label = title.strip() + " due"
+        k = "due"
+    elif kind in ("quiz", "postlab_quiz"):
+        label = title
+        k = "quiz"
+    elif kind == "info":
+        label = title
+        k = "info"
+    else:  # "other" -- unclassified, still shown, still flagged
+        label = title.strip() + " due"
+        k = "due"
+        warnings.append(("KIND?", f"{aid} ({title!r}) fell through to 'other' -- "
+                                    f"check assignment_kind.classify() or add an override"))
 
-    order = {"lect":1,"exam":2,"quiz":3,"lab":4,"due":5,"rev":6}
-    for kind, ex, pgid in sorted(buckets, key=lambda b: order[b[0]]):
-        # lecture_pages.json dates (if set for this id) override the row's own
-        # per-period dates here -- this is what lets you "move" a lecture/lab/
-        # exam day just by editing the json.
-        bp = per_period_dates(pgid, p)
-        bgroups = to_groups(bp)
-        ballequal = len(bgroups) == 1
-        for d, pers in bgroups.items():
-            pc = 0 if ballequal else sorted(pers)
-            ev = {"d": iso(d), "p": pc, "k": kind}; ev.update(ex); ev.setdefault("hw", None)
-            events.append(ev)
+    hw = key_for(aid)
+    for d, pers in groups_from_periods(per_dates):
+        for p in ([5, 6, 7] if pers == 0 else pers):
+            check_date(p, d, f"due_dates.json {aid} ({title})")
+        ev = {"d": d, "p": pers, "k": k, "t": label, "hw": hw}
+        if hw2:
+            ev["hw2"] = hw2
+        events.append(ev)
 
-# hand-placed fall reviews (Exam 2 / Exam 3 / Fall Final) -> assignment ids
-for rn in ("2", "3", "F"):
-    aid = m_review(rn)
-    if aid: key_for(aid)
-    else: unmatched.append(("EXTRA", "review " + rn))
+# ---- 2. lecture/lab/exam occurrence pills, entirely from lecture_pages.json
+PAGE_URLS = {}
+if os.path.exists(PAGES):
+    PG = json.load(open(PAGES))
+else:
+    PG = {}
+    warnings.append(("PAGES?", f"{PAGES} not found -- no lecture/lab/exam pills will be built"))
 
-ordk = {"info":0,"lect":1,"exam":2,"quiz":3,"lab":4,"due":5,"rev":6}
-events.sort(key=lambda e: (e["d"], ordk.get(e["k"], 9)))
+KIND2K = {"lecture": "lect", "lab": "lab", "exam": "exam"}
+for pid, entry in PG.items():
+    if not isinstance(entry, dict):
+        continue
+    etype = entry.get("type")
+    k = KIND2K.get(etype)
+    if k is None:
+        warnings.append(("PAGETYPE?", f"{pid} has unknown type {etype!r} -- skipped"))
+        continue
+    dates = entry.get("dates") or {}
+    per_dates = {p: dates[p] for p in ("5", "6", "7") if dates.get(p)}
+    if not per_dates:
+        warnings.append(("NODATE", f"{pid} ({entry.get('title')}) has no dates set -- skipped"))
+        continue
+    if entry.get("page_url"):
+        PAGE_URLS[pid] = entry["page_url"]
+    for d, pers in groups_from_periods(per_dates):
+        for p in ([5, 6, 7] if pers == 0 else pers):
+            check_date(p, d, f"{PAGES} {pid} ({entry.get('title')})")
+        ev = {"d": d, "p": pers, "k": k, "t": entry.get("title", pid), "hw": None}
+        if pid in PAGE_URLS:
+            ev["pg"] = pid
+        events.append(ev)
+
+events.sort(key=lambda e: (e["d"], {"info":0,"lect":1,"exam":2,"quiz":3,"lab":4,"due":5,"rev":6}.get(e["k"], 9)))
 
 # ---- assemble the page -----------------------------------------------------
 events_js = "const EVENTS = " + json.dumps(events, separators=(",", ":")) \
     .replace("},{", "},\n  {").replace("[{", "[\n  {").replace("}]", "}\n];") + ";"
 aids_js = "const ASSIGNMENT_IDS = {\n" + "".join(f"  '{k}': {v},\n" for k, v in AID.items()) + "};"
-
-# EXTRAS reviews reference ID-based keys (must match key_for)
-rev_keys = {rn: f"A{m_review(rn)}" for rn in ("2", "3", "F")}
-
-tpl = pathlib.Path(TPL).read_text()
 pages_js = "const PAGE_URLS = {\n" + "".join(
     f"  '{k}': '{v}',\n" for k, v in sorted(PAGE_URLS.items())) + "};"
+
+tpl = pathlib.Path(TPL).read_text()
 tpl = tpl.replace("__COURSE__", COURSE_ID).replace("__AIDS__", aids_js) \
          .replace("__PAGES__", pages_js).replace("__EVENTS__", events_js)
-# point the hand-placed EXTRAS reviews at the matched keys
-tpl = tpl.replace("'Exam_2_Review_Build_On'", f"'{rev_keys['2']}'")
-tpl = tpl.replace("'Exam_3_Chapter_4_review_Build_On'", f"'{rev_keys['3']}'")
-tpl = tpl.replace("'Semester_1_Final_Review'", f"'{rev_keys['F']}'")
+
+# point the hand-placed EXTRAS reviews (all four, including Exam 1) at the
+# matched Canvas file/page ids
+for rn, placeholder in (("1", "'Exam_1_Review_Build_On'"),
+                        ("2", "'Exam_2_Review_Build_On'"),
+                        ("3", "'Exam_3_Chapter_4_review_Build_On'"),
+                        ("F", "'Semester_1_Final_Review'")):
+    aid = m_review(rn)
+    if aid is None:
+        warnings.append(("REVIEW?", f"Exam {rn} review PDF title not found in {INV}"))
+        continue
+    tpl = tpl.replace(placeholder, f"'A{aid}'")
+    key_for(aid)
+
 pathlib.Path(OUT).write_text(tpl)
 
 print(f"course {COURSE_ID}: {len(events)} events, {len(AID)} assignment ids matched, "
       f"{len(PAGE_URLS)} lecture/lab/exam pages linked")
-print(f"UNMATCHED ({len(unmatched)}):")
-for r, t in unmatched: print(f"  row {r}: {t}")
+print(f"WARNINGS ({len(warnings)}):")
+for tag, t in warnings:
+    print(f"  [{tag}] {t}")

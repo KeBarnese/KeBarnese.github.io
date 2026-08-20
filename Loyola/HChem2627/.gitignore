@@ -1,0 +1,13 @@
+## macOS
+.DS_Store
+build/.DS_Store
+
+## Python build artifacts
+build/__pycache__/
+*.pyc
+
+## Excel transient lock file (appears while the schedule is open)
+build/~$*.xlsx
+
+## your own scratch/holding folder -- fine to just delete instead
+build/_to_delete/
