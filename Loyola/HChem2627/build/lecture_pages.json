@@ -489,34 +489,6 @@
    "7": "2026-12-07"
   }
  },
- "L36": {
-  "type": "lecture",
-  "title": "9.1--9.2 Molecular Shapes and VSEPR",
-  "page_url": "l36-9-dot-1-9-dot-2-molecular-shapes-and-vsepr",
-  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l36-9-dot-1-9-dot-2-molecular-shapes-and-vsepr",
-  "file_id": 3011288,
-  "videos": 1,
-  "published": false,
-  "dates": {
-   "5": "2026-12-10",
-   "6": "2026-12-10",
-   "7": "2026-12-10"
-  }
- },
- "L37": {
-  "type": "lecture",
-  "title": "9.3 Molecular Polarity",
-  "page_url": "l37-9-dot-3-molecular-polarity",
-  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/l37-9-dot-3-molecular-polarity",
-  "file_id": 3011289,
-  "videos": 1,
-  "published": false,
-  "dates": {
-   "5": "2026-12-10",
-   "6": "2026-12-10",
-   "7": "2026-12-10"
-  }
- },
  "LAB1": {
   "type": "lab",
   "title": "Lab 1",
@@ -548,7 +520,7 @@
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/lab-3",
   "published": false,
   "dates": {
-  "5": "2026-09-22",
+   "5": "2026-09-22",
    "6": "2026-09-22",
    "7": "2026-09-22"
   }
@@ -575,18 +547,6 @@
    "5": "2026-11-06",
    "6": "2026-11-10",
    "7": "2026-11-10"
-  }
- },
- "LAB6": {
-  "type": "lab",
-  "title": "Lab 6",
-  "page_url": "lab-6",
-  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/lab-6",
-  "published": false,
-  "dates": {
-   "5": "2026-12-14",
-   "6": "2026-12-14",
-   "7": "2026-12-14"
   }
  },
  "EXAM1_DAY1": {
@@ -663,26 +623,14 @@
  },
  "FINAL_DAY1": {
   "type": "exam",
-  "title": "Semester 1 Final Exam (Day 1)",
+  "title": "Final Exam Review",
   "page_url": "semester-1-final-exam",
   "html_url": "https://loyolahs.instructure.com/courses/6624/pages/semester-1-final-exam",
   "published": false,
   "dates": {
-   "5": null,
-   "6": null,
-   "7": null
-  }
- },
- "FINAL_DAY2": {
-  "type": "exam",
-  "title": "Semester 1 Final Exam (Day 2)",
-  "page_url": "semester-1-final-exam",
-  "html_url": "https://loyolahs.instructure.com/courses/6624/pages/semester-1-final-exam",
-  "published": false,
-  "dates": {
-   "5": null,
-   "6": null,
-   "7": null
+   "5": "2026-12-14",
+   "6": "2026-12-14",
+   "7": "2026-12-14"
   }
  }
 }

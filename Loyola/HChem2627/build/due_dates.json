@@ -1,457 +1,597 @@
 {
  "266413": {
   "_title": "1.2, Material Classification, Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-08-21",
   "6": "2026-08-21",
-  "7": "2026-08-21",
-  "kind": "daily_homework"
+  "7": "2026-08-21"
  },
  "266415": {
   "_title": "1.5 to 1.6, units and sig figs, Daily Homework",
+  "kind": "daily_homework",
   "6": "2026-08-24",
   "5": "2026-08-24",
-  "7": "2026-08-25",
-  "kind": "daily_homework"
+  "7": "2026-08-25"
  },
  "266417": {
   "_title": "1.6, operations with sig figs, Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-08-26",
   "6": "2026-08-26",
-  "7": "2026-08-26",
-  "kind": "daily_homework"
+  "7": "2026-08-26"
  },
  "266419": {
   "_title": "1.7, Dimensional analysis part 1, Daily Homework",
+  "kind": "daily_homework",
   "7": "2026-08-31",
   "5": "2026-08-31",
-  "6": "2026-08-31",
-  "kind": "daily_homework"
+  "6": "2026-08-31"
  },
  "266421": {
   "_title": "1.7, Dimensional analysis part 2, Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-09-01",
   "6": "2026-09-02",
-  "7": "2026-09-02",
-  "kind": "daily_homework"
+  "7": "2026-09-02"
  },
  "266423": {
   "_title": "1.7, Dimensional analysis part 3, Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-09-03",
   "6": "2026-09-03",
-  "7": "2026-09-03",
-  "kind": "daily_homework"
+  "7": "2026-09-03"
  },
  "266475": {
   "_title": "2.2, atomic structure part 1, Daily Homework",
+  "kind": "daily_homework",
   "7": "2026-09-10",
   "5": "2026-09-10",
-  "6": "2026-09-10",
-  "kind": "daily_homework"
+  "6": "2026-09-10"
  },
  "266477": {
   "_title": "2.3, atomic structure part 2, Daily Homework",
+  "kind": "daily_homework",
   "6": "2026-09-10",
   "7": "2026-09-10",
-  "5": "2026-09-10",
-  "kind": "daily_homework"
+  "5": "2026-09-10"
  },
  "266480": {
   "_title": "2.4, atomic weight part 3, Daily Homework",
+  "kind": "daily_homework",
   "7": "2026-09-14",
   "5": "2026-09-14",
-  "6": "2026-09-14",
-  "kind": "daily_homework"
+  "6": "2026-09-14"
  },
  "266481": {
   "_title": "2.8, Nomenclature part 1, Daily Homework",
+  "kind": "daily_homework",
   "6": "2026-09-15",
   "5": "2026-09-15",
-  "7": "2026-09-15",
-  "kind": "daily_homework"
+  "7": "2026-09-15"
  },
  "266482": {
   "_title": "2.8, Nomenclature part 2, Daily Homework",
+  "kind": "daily_homework",
   "7": "2026-09-15",
   "5": "2026-09-15",
-  "6": "2026-09-15",
-  "kind": "daily_homework"
+  "6": "2026-09-15"
  },
  "266483": {
   "_title": "2.8, Nomenclature part 3, Daily Homework",
+  "kind": "daily_homework",
   "7": "2026-09-17",
   "5": "2026-09-17",
-  "6": "2026-09-17",
-  "kind": "daily_homework"
+  "6": "2026-09-17"
  },
  "266491": {
   "_title": "3.1 Balancing Equations, Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-09-22",
   "6": "2026-09-22",
-  "7": "2026-09-22",
-  "kind": "daily_homework"
+  "7": "2026-09-22"
  },
  "266493": {
   "_title": "3.2 Types of Reactions, Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-09-23",
   "6": "2026-09-25",
-  "7": "2026-09-25",
-  "kind": "daily_homework"
+  "7": "2026-09-25"
  },
  "266495": {
   "_title": "3.3 Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-09-25",
   "7": "2026-09-29",
-  "6": "2026-09-29",
-  "kind": "daily_homework"
+  "6": "2026-09-29"
  },
  "266497": {
   "_title": "3.4 Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-09-30",
   "6": "2026-10-01",
-  "7": "2026-10-01",
-  "kind": "daily_homework"
+  "7": "2026-10-01"
  },
  "266498": {
   "_title": "3.5 part 1, Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-10-02",
   "6": "2026-10-02",
-  "7": "2026-10-02",
-  "kind": "daily_homework"
+  "7": "2026-10-02"
  },
  "266499": {
   "_title": "3.5 part 2, Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-10-02",
   "6": "2026-10-02",
-  "7": "2026-10-02",
-  "kind": "daily_homework"
+  "7": "2026-10-02"
  },
  "266501": {
   "_title": "3.6 Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-10-05",
   "6": "2026-10-06",
-  "7": "2026-10-06",
-  "kind": "daily_homework"
+  "7": "2026-10-06"
  },
  "266504": {
   "_title": "3.7 Daily Homework, part 1",
+  "kind": "daily_homework",
   "6": "2026-10-07",
   "5": "2026-10-07",
-  "7": "2026-10-08",
-  "kind": "daily_homework"
+  "7": "2026-10-08"
  },
  "266505": {
   "_title": "3.7 Daily Homework, part 2",
+  "kind": "daily_homework",
   "5": "2026-10-09",
   "6": "2026-10-09",
-  "7": "2026-10-09",
-  "kind": "daily_homework"
+  "7": "2026-10-09"
  },
  "266506": {
   "_title": "4.1 and 4.3 Daily Homework",
+  "kind": "daily_homework",
   "6": "2026-10-20",
   "5": "2026-10-20",
-  "7": "2026-10-20",
-  "kind": "daily_homework"
+  "7": "2026-10-20"
  },
  "266508": {
   "_title": "4.2 part 2, double displacement Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-10-22",
   "6": "2026-10-22",
-  "7": "2026-10-22",
-  "kind": "daily_homework"
+  "7": "2026-10-22"
  },
  "266510": {
   "_title": "4.2, part 1, Daily Homework",
+  "kind": "daily_homework",
   "6": "2026-10-20",
   "7": "2026-10-20",
-  "5": "2026-10-20",
-  "kind": "daily_homework"
+  "5": "2026-10-20"
  },
  "266511": {
   "_title": "4.3 Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-10-23",
   "6": "2026-10-23",
-  "7": "2026-10-26",
-  "kind": "daily_homework"
+  "7": "2026-10-26"
  },
  "266513": {
   "_title": "4.5 and 4.6 Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-10-27",
   "6": "2026-10-27",
-  "7": "2026-10-27",
-  "kind": "daily_homework"
+  "7": "2026-10-27"
  },
  "266515": {
   "_title": "5.1 to 5.3 Daily Homework",
+  "kind": "daily_homework",
   "6": "2026-10-28",
   "5": "2026-10-28",
-  "7": "2026-10-29",
-  "kind": "daily_homework"
+  "7": "2026-10-29"
  },
  "266517": {
   "_title": "5.4  Daily Homework",
+  "kind": "daily_homework",
   "6": "2026-11-02",
   "7": "2026-11-02",
-  "5": "2026-11-02",
-  "kind": "daily_homework"
+  "5": "2026-11-02"
  },
  "266518": {
   "_title": "5.5 Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-11-03",
   "6": "2026-11-03",
-  "7": "2026-11-03",
-  "kind": "daily_homework"
+  "7": "2026-11-03"
  },
  "266519": {
   "_title": "5.6 Daily Homework",
+  "kind": "daily_homework",
   "7": "2026-11-04",
   "5": "2026-11-05",
-  "6": "2026-11-05",
-  "kind": "daily_homework"
+  "6": "2026-11-05"
  },
  "266520": {
   "_title": "5.7 Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-11-06",
   "7": "2026-11-10",
-  "6": "2026-11-10",
-  "kind": "daily_homework"
+  "6": "2026-11-10"
  },
  "266521": {
   "_title": "6.1, 6.2, 6.4 Daily Homework",
+  "kind": "daily_homework",
   "6": "2026-11-18",
   "5": "2026-11-18",
-  "7": "2026-11-18",
-  "kind": "daily_homework"
+  "7": "2026-11-18"
  },
  "266523": {
   "_title": "6.6 - 6.9 Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-11-19",
   "6": "2026-11-19",
-  "7": "2026-11-20",
-  "kind": "daily_homework"
+  "7": "2026-11-20"
  },
  "266525": {
   "_title": "7.2-7.4 Daily Homework",
+  "kind": "daily_homework",
   "6": "2026-12-03",
   "5": "2026-12-03",
-  "7": "2026-12-03",
-  "kind": "daily_homework"
+  "7": "2026-12-03"
  },
  "266527": {
   "_title": "8.1, 8.3, 8.5 Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-12-07",
   "7": "2026-12-07",
-  "6": "2026-12-07",
-  "kind": "daily_homework"
+  "6": "2026-12-07"
  },
  "266528": {
   "_title": "8.4, 8.6, 8.7 Daily Homework",
+  "kind": "daily_homework",
   "5": "2026-12-08",
   "6": "2026-12-08",
-  "7": "2026-12-09",
-  "kind": "daily_homework"
+  "7": "2026-12-09"
  },
  "266530": {
   "_title": "9.1 - 9.2 Daily Homework",
+  "kind": "daily_homework",
   "6": "2026-12-14",
   "5": "2026-12-14",
-  "7": "2026-12-14",
-  "kind": "daily_homework"
+  "7": "2026-12-14"
  },
  "266533": {
   "_title": "9.3 Daily Homework",
+  "kind": "daily_homework",
   "6": "2026-12-14",
   "5": "2026-12-14",
-  "7": "2026-12-14",
-  "kind": "daily_homework"
+  "7": "2026-12-14"
  },
  "266586": {
   "_title": "Chapter 1 Homework part 1",
+  "kind": "chapter_homework",
   "6": "2026-08-31",
   "7": "2026-08-31",
-  "5": "2026-08-31",
-  "kind": "chapter_homework"
+  "5": "2026-08-31"
  },
  "266587": {
   "_title": "Chapter 1 Homework part 2",
+  "kind": "chapter_homework",
   "5": "2026-09-10",
   "6": "2026-09-10",
-  "7": "2026-09-10",
-  "kind": "chapter_homework"
+  "7": "2026-09-10"
  },
  "266588": {
   "_title": "Chapter 2 Homework",
+  "kind": "chapter_homework",
   "6": "2026-09-18",
   "5": "2026-09-18",
-  "7": "2026-09-21",
-  "kind": "chapter_homework"
+  "7": "2026-09-21"
  },
  "266589": {
   "_title": "Chapter 3 Homework",
+  "kind": "chapter_homework",
   "5": "2026-10-19",
   "6": "2026-10-19",
-  "7": "2026-10-19",
-  "kind": "chapter_homework"
+  "7": "2026-10-19"
  },
  "266590": {
   "_title": "Chapter 4 Homework",
+  "kind": "chapter_homework",
   "5": "2026-11-12",
   "7": "2026-11-13",
-  "6": "2026-11-13",
-  "kind": "chapter_homework"
+  "6": "2026-11-13"
  },
  "266591": {
   "_title": "Chapter 5 Homework",
+  "kind": "chapter_homework",
   "5": "2026-11-16",
   "7": "2026-11-16",
-  "6": "2026-11-16",
-  "kind": "chapter_homework"
+  "6": "2026-11-16"
  },
  "266592": {
-  "_title": "Chapter 6-9 Homework",
-  "5": "2026-12-15",
-  "6": "2026-12-15",
-  "7": "2026-12-15",
-  "kind": "chapter_homework"
+  "_title": "Chapter 6-8 Homework",
+  "kind": "chapter_homework",
+  "5": "2026-12-14",
+  "6": "2026-12-14",
+  "7": "2026-12-14"
+ },
+ "266551": {
+  "_title": "Exam 1 (Chapters 1 & 2)",
+  "kind": "gradebook_total",
+  "5": "2026-09-17",
+  "6": "2026-09-17",
+  "7": "2026-09-17"
+ },
+ "266556": {
+  "_title": "Exam 2 (Ch. 3)",
+  "kind": "gradebook_total",
+  "5": "2026-10-15",
+  "6": "2026-10-15",
+  "7": "2026-10-15"
+ },
+ "266561": {
+  "_title": "Exam 3 (ch. 4-5)",
+  "kind": "gradebook_total",
+  "5": "2026-11-11",
+  "6": "2026-11-11",
+  "7": "2026-11-11"
  },
  "266595": {
   "_title": "Introduction",
+  "kind": "daily_homework",
   "5": "2026-08-18",
   "6": "2026-08-18",
-  "7": "2026-08-18",
-  "kind": "info"
+  "7": "2026-08-18"
  },
  "266596": {
   "_title": "Lab 1",
+  "kind": "lab_due",
   "5": "2026-08-31",
   "6": "2026-08-31",
-  "7": "2026-08-31",
-  "kind": "lab_due"
+  "7": "2026-08-31"
  },
  "266599": {
   "_title": "Lab 2",
+  "kind": "lab_due",
   "5": "2026-09-18",
   "6": "2026-09-18",
-  "7": "2026-09-21",
-  "kind": "lab_due"
+  "7": "2026-09-21"
  },
  "266600": {
   "_title": "Lab 3",
+  "kind": "lab_due",
   "5": "2026-09-30",
   "7": "2026-10-01",
-  "6": "2026-10-01",
-  "kind": "lab_due"
+  "6": "2026-10-01"
  },
  "266601": {
   "_title": "Lab 4",
+  "kind": "lab_due",
   "5": "2026-10-19",
   "6": "2026-10-19",
-  "7": "2026-10-19",
-  "kind": "lab_due"
+  "7": "2026-10-19"
  },
  "266602": {
   "_title": "Lab 5",
+  "kind": "lab_due",
   "5": "2026-11-12",
   "6": "2026-11-13",
-  "7": "2026-11-13",
-  "kind": "lab_due"
+  "7": "2026-11-13"
  },
- "266603": {
-  "_title": "Lab 6",
-  "5": "2026-12-15",
-  "7": "2026-12-15",
-  "6": "2026-12-15",
-  "kind": "lab_due"
+ "285697": {
+  "_title": "Planner & Notes Check 1",
+  "kind": "planner_check",
+  "5": "2026-08-24",
+  "6": "2026-08-24",
+  "7": "2026-08-25"
+ },
+ "285698": {
+  "_title": "Planner & Notes Check 2",
+  "kind": "planner_check",
+  "5": "2026-09-08",
+  "6": "2026-09-09",
+  "7": "2026-09-09"
+ },
+ "285699": {
+  "_title": "Planner & Notes Check 3",
+  "kind": "planner_check",
+  "5": "2026-09-22",
+  "6": "2026-09-22",
+  "7": "2026-09-22"
+ },
+ "285700": {
+  "_title": "Planner & Notes Check 4",
+  "kind": "planner_check",
+  "5": "2026-10-05",
+  "6": "2026-10-06",
+  "7": "2026-10-06"
+ },
+ "285701": {
+  "_title": "Planner & Notes Check 5",
+  "kind": "planner_check",
+  "5": "2026-10-19",
+  "6": "2026-10-19",
+  "7": "2026-10-19"
+ },
+ "285702": {
+  "_title": "Planner & Notes Check 6",
+  "kind": "planner_check",
+  "5": "2026-11-02",
+  "6": "2026-11-02",
+  "7": "2026-11-02"
+ },
+ "285703": {
+  "_title": "Planner & Notes Check 7",
+  "kind": "planner_check",
+  "5": "2026-11-16",
+  "6": "2026-11-16",
+  "7": "2026-11-16"
+ },
+ "285704": {
+  "_title": "Planner & Notes Check 8",
+  "kind": "planner_check",
+  "5": "2026-12-01",
+  "6": "2026-12-02",
+  "7": "2026-12-02"
+ },
+ "285705": {
+  "_title": "Planner & Notes Check 9",
+  "kind": "planner_check",
+  "5": "2026-12-14",
+  "6": "2026-12-14",
+  "7": "2026-12-14"
  },
  "266609": {
   "_title": "Post-Lab Quiz #1",
+  "kind": "postlab_quiz",
   "6": "2026-08-27",
   "5": "2026-08-27",
-  "7": "2026-08-28",
-  "kind": "postlab_quiz"
+  "7": "2026-08-28"
  },
  "266610": {
   "_title": "Post-Lab Quiz #2",
+  "kind": "postlab_quiz",
   "5": "2026-09-08",
   "6": "2026-09-09",
-  "7": "2026-09-09",
-  "kind": "postlab_quiz"
+  "7": "2026-09-09"
  },
  "266611": {
   "_title": "Post-Lab Quiz #3",
+  "kind": "postlab_quiz",
   "5": "2026-09-23",
   "6": "2026-09-28",
-  "7": "2026-09-28",
-  "kind": "postlab_quiz"
+  "7": "2026-09-28"
  },
  "266612": {
   "_title": "Post-Lab Quiz #4",
+  "kind": "postlab_quiz",
   "5": "2026-10-13",
   "6": "2026-10-14",
-  "7": "2026-10-14",
-  "kind": "postlab_quiz"
+  "7": "2026-10-14"
  },
  "266613": {
   "_title": "Post-Lab Quiz #5",
+  "kind": "postlab_quiz",
   "6": "2026-11-16",
   "5": "2026-11-16",
-  "7": "2026-11-16",
-  "kind": "postlab_quiz"
+  "7": "2026-11-16"
  },
  "266622": {
   "_title": "Quiz #1 1.1 - 1.5",
+  "kind": "quiz",
   "7": "2026-08-31",
   "6": "2026-08-31",
-  "5": "2026-08-31",
-  "kind": "quiz"
+  "5": "2026-08-31"
  },
  "266627": {
   "_title": "Quiz #2 Dimensional Analysis",
+  "kind": "quiz",
   "5": "2026-09-10",
   "6": "2026-09-10",
-  "7": "2026-09-10",
-  "kind": "quiz"
+  "7": "2026-09-10"
  },
  "266628": {
   "_title": "Quiz #3 inorganic nomenclature",
-  "5": "2026-09-17",
-  "7": "2026-09-17",
-  "6": "2026-09-17",
-  "kind": "quiz"
+  "kind": "quiz",
+  "5": "2026-09-14",
+  "6": "2026-09-14",
+  "7": "2026-09-14"
  },
  "266629": {
   "_title": "Quiz #5, ion review",
-  "6": "2026-10-23",
-  "5": "2026-10-23",
-  "7": "2026-10-26",
-  "kind": "quiz"
+  "kind": "quiz",
+  "5": "2026-10-20",
+  "6": "2026-10-20",
+  "7": "2026-10-20"
  },
  "266630": {
   "_title": "Quiz #6 Chapter 4",
+  "kind": "quiz",
   "5": "2026-11-02",
   "7": "2026-11-02",
-  "6": "2026-11-02",
-  "kind": "quiz"
+  "6": "2026-11-02"
  },
  "266631": {
   "_title": "Quiz #7 (ch. 6)",
-  "6": "2026-12-08",
-  "5": "2026-12-08",
-  "7": "2026-12-09",
-  "kind": "quiz"
+  "kind": "quiz",
+  "5": "2026-12-03",
+  "6": "2026-12-03",
+  "7": "2026-12-03"
+ },
+ "266632": {
+  "_title": "Quiz #8, Chapters 7-8",
+  "kind": "quiz",
+  "5": "2026-12-10",
+  "6": "2026-12-10",
+  "7": "2026-12-10"
  },
  "266636": {
   "_title": "Safety Contract",
+  "kind": "lab_due",
   "5": "2026-08-24",
   "6": "2026-08-24",
-  "7": "2026-08-24",
-  "kind": "other"
+  "7": "2026-08-25"
+ },
+ "266638": {
+  "_title": "Semester 1 Final Exam 2026",
+  "kind": "gradebook_total",
+  "5": "2026-12-15",
+  "6": "2026-12-15",
+  "7": "2026-12-15"
+ },
+ "285690": {
+  "_title": "Worksheet 1: Dimensional Analysis",
+  "kind": "worksheet",
+  "5": "2026-09-01",
+  "6": "2026-09-02",
+  "7": "2026-09-02"
+ },
+ "285691": {
+  "_title": "Worksheet 2: Nomenclature",
+  "kind": "worksheet",
+  "5": "2026-09-15",
+  "6": "2026-09-15",
+  "7": "2026-09-15"
+ },
+ "285692": {
+  "_title": "Worksheet 3: Stoichiometry / Limiting Reactant",
+  "kind": "worksheet",
+  "5": "2026-10-13",
+  "6": "2026-10-14",
+  "7": "2026-10-14"
+ },
+ "285693": {
+  "_title": "Worksheet 4: Net Ionic Equations",
+  "kind": "worksheet",
+  "5": "2026-10-23",
+  "6": "2026-10-23",
+  "7": "2026-10-26"
+ },
+ "285694": {
+  "_title": "Worksheet 5: Enthalpies of Formation",
+  "kind": "worksheet",
+  "7": "2026-11-04",
+  "5": "2026-11-05",
+  "6": "2026-11-05"
+ },
+ "285695": {
+  "_title": "Worksheet 6: Electron Configuration",
+  "kind": "worksheet",
+  "5": "2026-12-01",
+  "6": "2026-12-02",
+  "7": "2026-12-02"
+ },
+ "285696": {
+  "_title": "Worksheet 7: Lewis Structures",
+  "kind": "worksheet",
+  "5": "2026-12-10",
+  "6": "2026-12-10",
+  "7": "2026-12-10"
  },
  "266645": {
   "_title": "quiz #4",
-  "6": "2026-10-20",
-  "7": "2026-10-20",
-  "5": "2026-10-20",
-  "kind": "quiz"
+  "kind": "quiz",
+  "5": "2026-10-13",
+  "6": "2026-10-14",
+  "7": "2026-10-14"
  }
 }

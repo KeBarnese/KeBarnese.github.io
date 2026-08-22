@@ -159,11 +159,25 @@ def daily_hw_label(title):
     stripped = re.sub(r"\s*,?\s*daily homework\s*$", "", title, flags=re.I).strip(" ,")
     return "DHW: " + stripped
 
+def worksheet_label(title):
+    """'Worksheet 3: Stoichiometry / Limiting Reactant' -> 'WS: Stoichiometry /
+    Limiting Reactant'. Keeps the pill narrow enough for the 5-column grid."""
+    t = re.sub(r"^\s*worksheet\s*\d*\s*[:.\-]?\s*", "", title.strip(), flags=re.I)
+    t = re.sub(r"\s*worksheet\s*$", "", t, flags=re.I).strip(" :.-")
+    return "WS: " + (t or title.strip())
+
 for aid, entry in DUE.items():
     title = entry.get("_title", "")
     kind = entry.get("kind") or classify(title)
     per_dates = {p: entry[p] for p in ("5", "6", "7") if p in entry}
     if not per_dates:
+        continue
+
+    # Points-only gradebook containers get NO pill: the per-exam totals hold
+    # Day 1 + Day 2 summed and the final holds the curved score, while the
+    # calendar's exam pills come from lecture_pages.json. Skipping them here is
+    # what keeps one exam from appearing twice on the same day.
+    if kind == "gradebook_total":
         continue
 
     hw2 = None
@@ -178,6 +192,13 @@ for aid, entry in DUE.items():
     elif kind == "lab_due":
         label = title.strip() + " due"
         k = "due"
+    elif kind == "worksheet":
+        # done and collected in class, so the pill marks the class day itself
+        label = worksheet_label(title)
+        k = "ws"
+    elif kind == "planner_check":
+        label = title.strip()
+        k = "chk"
     elif kind in ("quiz", "postlab_quiz"):
         label = title
         k = "quiz"
@@ -231,7 +252,8 @@ for pid, entry in PG.items():
             ev["pg"] = pid
         events.append(ev)
 
-events.sort(key=lambda e: (e["d"], {"info":0,"lect":1,"exam":2,"quiz":3,"lab":4,"due":5,"rev":6}.get(e["k"], 9)))
+events.sort(key=lambda e: (e["d"], {"info":0,"lect":1,"exam":2,"quiz":3,"ws":4,
+                                    "lab":5,"due":6,"chk":7,"rev":8}.get(e["k"], 9)))
 
 # ---- assemble the page -----------------------------------------------------
 events_js = "const EVENTS = " + json.dumps(events, separators=(",", ":")) \
